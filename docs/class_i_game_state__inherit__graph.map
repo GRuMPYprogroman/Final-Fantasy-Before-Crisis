@@ -1,0 +1,11 @@
+<map id="IGameState" name="IGameState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="209,283,390,464"/>
+<area shape="rect" id="Node000003" href="$class_combat_state.html" title=" " alt="" coords="5,752,185,896"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,478,199,513,171,574,147,638,114,753,109,751,142,636,166,572,194,511,215,475"/>
+<area shape="rect" id="Node000004" href="$class_gameplay_state.html" title=" " alt="" coords="209,763,389,885"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="302,479,302,763,297,763,297,479"/>
+<area shape="rect" id="Node000005" href="$class_menu_state.html" title=" " alt="" coords="414,512,598,1136"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="383,475,404,511,416,534,411,536,400,513,379,478"/>
+<area shape="rect" id="Node000002" href="$class_i_subject.html" title=" " alt="" coords="207,5,391,235"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="302,250,302,283,297,283,297,250"/>
+</map>

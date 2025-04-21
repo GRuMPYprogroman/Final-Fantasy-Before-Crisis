@@ -1,0 +1,9 @@
+<map id="Before Crisis/MissionManager.h" name="Before Crisis/MissionManager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,213,32"/>
+<area shape="rect" id="Node000002" href="$_i_mission_manager_8h.html" title=" " alt="" coords="43,80,175,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,33,112,64,106,64,106,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="42,155,96,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,109,86,142,81,140,100,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,155,178,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="118,106,137,140,132,142,114,109"/>
+</map>
