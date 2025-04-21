@@ -1,0 +1,19 @@
+﻿  CharacterManager.cpp
+  CombatManager.cpp
+  CombatState.cpp
+  DialogueManager.cpp
+D:\VS STUDIO PROJECTS\Before Crisis\Before Crisis\Before Crisis\DialogueManager.cpp(27,64): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  GameManager.cpp
+  GameplayState.cpp
+  GameUtils.cpp
+  Level.cpp
+  main.cpp
+  MenuState.cpp
+  MissionManager.cpp
+  Monster.cpp
+  UIManager.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 445 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Before Crisis.vcxproj -> D:\VS STUDIO PROJECTS\Before Crisis\Before Crisis\x64\Release\Before Crisis.exe

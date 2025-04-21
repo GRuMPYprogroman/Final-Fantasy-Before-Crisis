@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{b813acdb-3920-429d-b23f-0f6e11c606cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="State Managment">
+      <UniqueIdentifier>{4703f8bb-6bd9-41b6-b866-97881ab17a4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity-Component-System">
+      <UniqueIdentifier>{4e6419b4-caae-436f-bed8-522be91cf52d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core Game Logic">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource and Audio Managment">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="UI and Utilities">
+      <UniqueIdentifier>{d5d298c2-dece-486d-8d0a-f10d7f41f3d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game-Specific Classes">
+      <UniqueIdentifier>{5406bed9-2263-43da-b093-16980fbe95d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Additional Utilities">
+      <UniqueIdentifier>{0d443b8f-c4c1-4a90-9ba0-52a8f71d5ebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{c6367311-7272-43cc-b4be-65826bce029c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WorldState.h">
+      <Filter>Resource and Audio Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="IDialogueManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameState.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUtils.h">
+      <Filter>UI and Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="ICombatManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IMissionManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>UI and Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveData.h">
+      <Filter>UI and Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CombatState.h">
+      <Filter>State Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayState.h">
+      <Filter>State Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>State Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Core Game Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Core Game Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="CombatManager.h">
+      <Filter>Entity-Component-System</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogueManager.h">
+      <Filter>Entity-Component-System</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Game-Specific Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="MissionManager.h">
+      <Filter>Entity-Component-System</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterManager.h">
+      <Filter>Game-Specific Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Game-Specific Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaType.h">
+      <Filter>Game-Specific Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterType.h">
+      <Filter>Game-Specific Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="StateStack.h">
+      <Filter>Core Game Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="IObserver.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ISubject.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Core Game Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>State Managment</Filter>
+    </ClCompile>
+    <ClCompile Include="GameplayState.cpp">
+      <Filter>State Managment</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatState.cpp">
+      <Filter>State Managment</Filter>
+    </ClCompile>
+    <ClCompile Include="GameUtils.cpp">
+      <Filter>UI and Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Core Game Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>UI and Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatManager.cpp">
+      <Filter>Entity-Component-System</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogueManager.cpp">
+      <Filter>Entity-Component-System</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Game-Specific Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionManager.cpp">
+      <Filter>Entity-Component-System</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterManager.cpp">
+      <Filter>Game-Specific Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Game-Specific Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Additional Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="StateStack.cpp">
+      <Filter>Core Game Logic</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
