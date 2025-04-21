@@ -1,0 +1,16 @@
+<map id="Before Crisis/CharacterManager.h" name="Before Crisis/CharacterManager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="258,5,477,32"/>
+<area shape="rect" id="Node000002" href="$_character_manager_8cpp.html" title=" " alt="" coords="5,80,239,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,39,166,82,164,77,309,34"/>
+<area shape="rect" id="Node000003" href="$_combat_manager_8h.html" title=" " alt="" coords="263,80,472,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="370,48,370,80,365,80,365,48"/>
+<area shape="rect" id="Node000005" href="$_game_manager_8h.html" title=" " alt="" coords="410,155,607,181"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="425,36,457,53,485,78,497,97,504,118,511,154,505,155,499,119,492,99,481,82,454,58,422,41"/>
+<area shape="rect" id="Node000004" href="$_combat_manager_8cpp.html" title=" " alt="" coords="164,155,386,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="341,119,293,156,290,152,338,114"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="407,112,485,152,483,156,404,116"/>
+<area shape="rect" id="Node000006" href="$_game_manager_8cpp.html" title=" " alt="" coords="299,229,510,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="480,192,424,231,421,227,477,188"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="534,229,688,256"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="541,188,595,227,592,231,538,193"/>
+</map>

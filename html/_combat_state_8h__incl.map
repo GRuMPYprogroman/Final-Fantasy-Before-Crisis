@@ -1,0 +1,16 @@
+<map id="Before Crisis/CombatState.h" name="Before Crisis/CombatState.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,5,294,32"/>
+<area shape="rect" id="Node000002" href="$_i_game_state_8h.html" title=" " alt="" coords="148,80,250,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,33,202,64,197,64,197,33"/>
+<area shape="rect" id="Node000003" href="$_i_subject_8h.html" title=" " alt="" coords="92,155,173,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,109,156,145,152,141,186,105"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="197,155,335,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="213,105,246,141,242,145,209,109"/>
+<area shape="rect" id="Node000004" href="$_i_observer_8h.html" title=" " alt="" coords="5,229,95,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="120,184,77,221,74,217,117,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="70,304,112,331"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="132,183,102,290,96,288,127,181"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="170,229,239,256"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="147,180,183,216,180,220,143,184"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="60,255,79,289,74,292,55,258"/>
+</map>
