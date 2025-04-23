@@ -104,8 +104,14 @@
     <ClInclude Include="ISubject.h">
       <Filter>Interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="IRenderService.h">
+    <ClInclude Include="RenderService.h">
       <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Resource and Audio Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioVariables.h">
+      <Filter>Resource and Audio Managment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -151,8 +157,11 @@
     <ClCompile Include="main.cpp">
       <Filter>Additional Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="StateStack.cpp">
-      <Filter>Core Game Logic</Filter>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Resource and Audio Managment</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioService.h">
+      <Filter>Services</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

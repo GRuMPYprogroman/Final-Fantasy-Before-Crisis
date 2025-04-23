@@ -3,8 +3,9 @@
 #include "json.hpp"
 #include <fstream>
 
-MenuState::MenuState(sf::Font&& font_, std::shared_ptr<IRenderService> renderService_)
-	: renderService(renderService_)
+MenuState::MenuState(sf::Font&& font_, std::shared_ptr<RenderService> renderService_, std::shared_ptr<AudioService> audio_service)
+	: renderService(renderService_),
+	  audio_service_(audio_service)
 {
 	font = std::make_shared<sf::Font>(font_);
 	title = std::make_shared<sf::Text>(*font);
@@ -52,14 +53,6 @@ MenuState::MenuState(sf::Font&& font_, std::shared_ptr<IRenderService> renderSer
 			offset += button->getBackgroundSize().y;
 
 		}
-	}
-}
-
-MenuState::~MenuState()
-{
-	for (auto& observer: list_observer_)
-	{
-		list_observer_.remove(observer);
 	}
 }
 

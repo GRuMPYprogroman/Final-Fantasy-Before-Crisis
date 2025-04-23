@@ -2,27 +2,21 @@
 
 
 GameManager::GameManager()
-	: //dialogueManager(std::make_unique<DialogueManager>()),
-    character(std::make_unique<Character>()),
-    //combatManager(std::make_unique<CombatManager>()),
-    missionManager(std::make_unique<MissionManager>()),
-    isRunning(true)
+	: states(std::make_unique<StateStack>()),
+	  renderer(std::make_shared<Renderer>(1200, 900)),
+	  isRunning(true)
 {
-    renderer = std::make_shared<Renderer>(1200, 900);
-}
-
-void GameManager::ChangeState(std::unique_ptr<IGameState> newState)
-{
-	currentState = std::move(newState);
+    audio->init();
 }
 
 void GameManager::Run()
 {
     sf::Clock clock;
-    ChangeState(std::make_unique<MenuState>(sf::Font("../fonts/Kenney Pixel Square.ttf"),renderer));
+    states->pushState(std::make_unique<MenuState>(sf::Font("../fonts/Kenney Pixel Square.ttf"), renderer,audio));
     while (isRunning) {
         std::optional<sf::Event> event;
         renderer->Clear();
+        auto state = states->topState();
         while (event = renderer->getRenderWindow().pollEvent()) {
             if (event->is<sf::Event::Closed>()) isRunning = false;
 
@@ -30,11 +24,12 @@ void GameManager::Run()
                 ChangeState(std::make_unique<MenuState>(*this, sf::Font{ "../fonts/Kenney Pixel Square.ttf" }));
             }**/
 
-            currentState->handleInput(event.value());
+            state->handleInput(event.value());
         }
         float deltaTime = clock.restart().asSeconds();
-        currentState->update(deltaTime);
-        currentState->render();
+        state->update(deltaTime);
+        for (const auto& state : states->getStates())
+            state->render();
         renderer->Display();
     }
 }

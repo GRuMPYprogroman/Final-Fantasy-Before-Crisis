@@ -143,6 +143,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AreaType.h" />
+    <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="AudioVariables.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="CharacterManager.h" />
     <ClInclude Include="CombatManager.h" />
@@ -151,7 +153,7 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameplayState.h" />
     <ClInclude Include="IObserver.h" />
-    <ClInclude Include="IRenderService.h" />
+    <ClInclude Include="RenderService.h" />
     <ClInclude Include="ISubject.h" />
     <ClInclude Include="MonsterType.h" />
     <ClInclude Include="SaveData.h" />
@@ -169,6 +171,8 @@
     <ClInclude Include="Renderer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="AudioService.h" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="CharacterManager.cpp" />
     <ClCompile Include="CombatManager.cpp" />
@@ -183,7 +187,6 @@
     <ClCompile Include="MissionManager.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="StateStack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

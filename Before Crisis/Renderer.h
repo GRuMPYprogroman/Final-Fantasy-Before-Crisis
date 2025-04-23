@@ -5,12 +5,12 @@
 #include "Button.h"
 #include "Level.h"
 #include "IObserver.h"
-#include "IRenderService.h"
+#include "RenderService.h"
 
 class Button;
 class Level;
 
-class Renderer : public IObserver, public IRenderService
+class Renderer : public IObserver, public RenderService
 {
 private:
     sf::RenderWindow window;

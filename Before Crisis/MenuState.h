@@ -1,13 +1,11 @@
 #pragma once
 #include "IGameState.h"
 #include "Renderer.h"
+#include "AudioManager.h"
 #include "Button.h"
 #include <vector>
 #include <variant>
 
-class Button;
-class IObserver;
-class Renderer;
 
 class MenuState : public IGameState
 {
@@ -16,13 +14,14 @@ private:
 	std::vector<std::shared_ptr<Button>> buttons;
 	std::shared_ptr<sf::Font>font;
 	std::shared_ptr <sf::Text> title;
-	std::shared_ptr<IRenderService> renderService;
+	std::shared_ptr<RenderService> renderService;
+	std::shared_ptr<AudioService> audio_service_;
 	bool isMainMenu = true;
 	void SaveGame();
 	void LoadGame();
 public:
-	MenuState(sf::Font&& font, std::shared_ptr<IRenderService> renderService_);
-	~MenuState() override;
+	MenuState(sf::Font&& font, std::shared_ptr<RenderService> renderService_, std::shared_ptr<AudioService> audio_service);
+	~MenuState() override = default;
 	void update(float& deltaTime) override;
 	void render() override;
 	void handleInput(const sf::Event& event) override;

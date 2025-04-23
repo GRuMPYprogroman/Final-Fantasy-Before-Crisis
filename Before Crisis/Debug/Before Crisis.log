@@ -1,9 +1,18 @@
-﻿  Button.cpp
-D:\VS STUDIO PROJECTS\Before Crisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Button.cpp')
+﻿  GameManager.cpp
+D:\VS STUDIO PROJECTS\Final Fantasy Before Crisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'GameManager.cpp')
       D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
-      D:\VS STUDIO PROJECTS\Before Crisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
+      D:\VS STUDIO PROJECTS\Final Fantasy Before Crisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  Before Crisis.vcxproj -> D:\VS STUDIO PROJECTS\Before Crisis\Before Crisis\Debug\Before Crisis.exe
+  main.cpp
+D:\VS STUDIO PROJECTS\Final Fantasy Before Crisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'main.cpp')
+      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      D:\VS STUDIO PROJECTS\Final Fantasy Before Crisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  Generating Code...
+  Before Crisis.vcxproj -> D:\VS STUDIO PROJECTS\Final Fantasy Before Crisis\Before Crisis\Debug\Before Crisis.exe
