@@ -1,0 +1,27 @@
+<map id="detail::binary_reader::get_to" name="detail::binary_reader::get_to">
+<area shape="rect" id="Node000001" title="get_to read into a primitive type" alt="" coords="5,235,144,277"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1parse__error.html#a07046ea9f33d28f120af188ed674d6df" title="create a parse error exception" alt="" coords="202,176,327,219"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,232,186,219,188,224,145,237"/>
+<area shape="rect" id="Node000011" href="$classdetail_1_1binary__reader.html#a39c740811882a0023f6386858a5d5270" title=" " alt="" coords="192,268,337,311"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="144,266,177,271,176,277,143,271"/>
+<area shape="rect" id="Node000003" href="$namespacedetail.html#a266fb3d4bf633ad6c506434cc91164da" title=" " alt="" coords="602,243,701,269"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="296,173,336,150,384,132,428,121,465,115,500,118,542,132,573,151,600,176,638,227,633,231,596,180,570,155,540,137,499,123,465,120,430,126,386,137,339,155,298,178"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1exception.html#a6b4a786b5c1c25dd3edaceb1bf2d5120" title=" " alt="" coords="401,147,525,189"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="327,185,385,177,386,182,328,191"/>
+<area shape="rect" id="Node000007" href="$classdetail_1_1exception.html#a8f1eb56b9964c8dd84d89d0da98d883b" title=" " alt="" coords="385,213,541,240"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="328,204,370,210,369,216,327,209"/>
+<area shape="rect" id="Node000008" href="$classdetail_1_1parse__error.html#a7703a00cc97c4590e56254b62b479ff5" title=" " alt="" coords="400,29,526,72"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="285,174,329,132,383,88,401,78,404,82,387,93,332,136,289,177"/>
+<area shape="rect" id="Node000010" href="$classdetail_1_1parse__error.html#a19cdccb06cba79d7b4efc51f501ced8b" title=" " alt="" coords="400,264,526,307"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="314,217,386,250,398,255,396,260,384,254,312,222"/>
+<area shape="rect" id="Node000004" href="$namespacedetail.html#a89f967b745cf8df11ba9d59f93d97753" title=" " alt="" coords="769,217,896,244"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="701,246,753,239,753,244,702,252"/>
+<area shape="rect" id="Node000005" href="$namespacedetail.html#ac185140ed8c8fcc07a302a890b714b0d" title=" " alt="" coords="762,268,903,295"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="702,260,747,267,746,272,701,266"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="542,236,587,243,587,249,541,241"/>
+<area shape="rect" id="Node000009" href="$classdetail_1_1exception.html#a528d6bc77e88490bbb84cde2222b7ff0" title=" " alt="" coords="589,29,714,72"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="526,48,574,48,574,53,526,53"/>
+<area shape="poly" id="edge10_Node000009_Node000009" title=" " alt="" coords="617,29,615,19,621,10,633,5,652,3,671,5,683,11,680,16,670,10,651,8,635,10,625,14,620,21,622,28"/>
+<area shape="poly" id="edge12_Node000010_Node000003" title=" " alt="" coords="526,273,586,263,587,269,527,278"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="338,309,384,318,435,324,489,324,541,316,583,299,619,277,622,281,585,304,542,321,489,330,435,329,383,323,337,314"/>
+</map>

@@ -1,0 +1,31 @@
+<map id="json_pointer::json_pointer" name="json_pointer::json_pointer">
+<area shape="rect" id="Node000001" title="create JSON pointer" alt="" coords="5,113,129,156"/>
+<area shape="rect" id="Node000002" href="$classjson__pointer.html#a59261861b1753054dff970e6760c6ba4" title="split the string input to reference tokens" alt="" coords="177,121,300,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,132,161,132,161,137,129,137"/>
+<area shape="rect" id="Node000003" href="$namespacedetail.html#a266fb3d4bf633ad6c506434cc91164da" title=" " alt="" coords="744,63,844,89"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,118,372,64,445,36,521,15,566,6,603,3,639,5,684,15,726,31,762,52,760,56,724,36,683,20,638,11,603,8,567,12,522,20,446,41,374,69,265,123"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1parse__error.html#a07046ea9f33d28f120af188ed674d6df" title="create a parse error exception" alt="" coords="348,113,473,156"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="300,132,333,132,333,137,300,137"/>
+<area shape="rect" id="Node000012" href="$namespacedetail.html#a0e971234e72db1e314aa87298e84d1d0" title="string unescaping as described in RFC 6901 (Sect. 4)" alt="" coords="352,243,469,269"/>
+<area shape="poly" id="edge15_Node000002_Node000012" title=" " alt="" coords="261,147,379,231,376,236,258,151"/>
+<area shape="rect" id="Node000004" href="$namespacedetail.html#a89f967b745cf8df11ba9d59f93d97753" title=" " alt="" coords="911,37,1038,64"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="843,67,895,59,896,65,844,72"/>
+<area shape="rect" id="Node000005" href="$namespacedetail.html#ac185140ed8c8fcc07a302a890b714b0d" title=" " alt="" coords="904,88,1045,115"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="844,80,889,87,888,92,843,86"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="428,111,467,73,492,54,520,40,550,32,580,28,640,30,697,41,745,55,744,60,696,46,640,35,580,34,551,37,522,45,495,59,470,77,431,115"/>
+<area shape="rect" id="Node000007" href="$classdetail_1_1exception.html#a6b4a786b5c1c25dd3edaceb1bf2d5120" title=" " alt="" coords="540,55,665,97"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="473,113,524,97,526,102,475,118"/>
+<area shape="rect" id="Node000008" href="$classdetail_1_1exception.html#a8f1eb56b9964c8dd84d89d0da98d883b" title=" " alt="" coords="524,121,681,148"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="474,132,509,132,509,137,474,137"/>
+<area shape="rect" id="Node000009" href="$classdetail_1_1parse__error.html#a7703a00cc97c4590e56254b62b479ff5" title=" " alt="" coords="540,239,665,281"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="436,155,475,190,523,225,531,229,528,234,520,229,471,194,432,159"/>
+<area shape="rect" id="Node000011" href="$classdetail_1_1parse__error.html#a19cdccb06cba79d7b4efc51f501ced8b" title=" " alt="" coords="540,172,665,215"/>
+<area shape="poly" id="edge13_Node000006_Node000011" title=" " alt="" coords="475,151,526,167,524,172,473,157"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="648,118,733,92,735,97,649,123"/>
+<area shape="rect" id="Node000010" href="$classdetail_1_1exception.html#a528d6bc77e88490bbb84cde2222b7ff0" title=" " alt="" coords="732,239,856,281"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="666,257,716,257,716,263,666,263"/>
+<area shape="poly" id="edge12_Node000010_Node000010" title=" " alt="" coords="759,239,758,229,763,220,776,214,794,212,813,215,825,221,823,226,812,220,794,217,777,219,767,224,763,230,764,238"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="660,169,682,158,727,128,764,98,768,102,730,132,685,162,663,174"/>
+<area shape="rect" id="Node000013" href="$namespacedetail.html#a6fd295e53b1dd4f46e235e6afee26d5e" title="replace all occurrences of a substring by another string" alt="" coords="521,305,684,332"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="453,267,522,291,543,298,542,303,520,296,451,273"/>
+</map>

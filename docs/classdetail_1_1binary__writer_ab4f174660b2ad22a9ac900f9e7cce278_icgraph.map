@@ -1,0 +1,9 @@
+<map id="detail::binary_writer::ubjson_prefix" name="detail::binary_writer::ubjson_prefix">
+<area shape="rect" id="Node000001" title="determine the type prefix of container values" alt="" coords="385,29,519,72"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1binary__writer.html#a377616a7e3ca05a134a4cbbed79e3db8" title=" " alt="" coords="203,29,337,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,53,337,53,337,48,369,48"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="299,16,288,10,270,8,253,10,243,14,239,21,240,28,235,29,233,19,239,10,251,5,270,3,290,5,301,11"/>
+<area shape="rect" id="Node000003" href="$classdetail_1_1binary__writer.html#acc812709459a57148af6f5a584aae491" title=" " alt="" coords="5,29,155,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="187,62,155,62,155,57,187,57"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="170,39,203,39,202,45,170,44"/>
+</map>

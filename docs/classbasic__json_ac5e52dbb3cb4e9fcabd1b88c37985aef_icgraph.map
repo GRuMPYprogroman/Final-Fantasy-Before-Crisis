@@ -1,0 +1,6 @@
+<map id="basic_json::type" name="basic_json::type">
+<area shape="rect" id="Node000001" title="return the type of the JSON value (explicit)" alt="" coords="205,37,321,64"/>
+<area shape="rect" id="Node000002" href="$classbasic__json.html#a940e724a2e8d5400ab772eb22af0387c" title=" " alt="" coords="5,29,157,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,53,157,53,157,48,189,48"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="110,16,99,10,81,8,64,10,54,14,50,21,51,28,46,29,45,19,50,10,63,5,81,3,101,5,113,11"/>
+</map>

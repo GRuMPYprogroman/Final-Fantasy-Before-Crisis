@@ -1,0 +1,5 @@
+<map id="detail::iterator_traits&lt; T, enable_if_t&lt; !std::is_pointer&lt; T &gt;::value &gt; &gt;" name="detail::iterator_traits&lt; T, enable_if_t&lt; !std::is_pointer&lt; T &gt;::value &gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,174,224"/>
+<area shape="rect" id="Node000002" href="$structdetail_1_1iterator__types.html" title=" " alt="" coords="10,5,170,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,90,92,123,87,123,87,90"/>
+</map>

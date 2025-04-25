@@ -1,0 +1,5 @@
+<map id="detail::has_to_json&lt; BasicJsonType, T, enable_if_t&lt; !is_basic_json&lt; T &gt;::value &gt; &gt;" name="detail::has_to_json&lt; BasicJsonType, T, enable_if_t&lt; !is_basic_json&lt; T &gt;::value &gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,150,256"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="30,5,126,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,90,80,123,75,123,75,90"/>
+</map>

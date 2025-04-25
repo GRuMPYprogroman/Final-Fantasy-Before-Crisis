@@ -112,58 +112,90 @@ $(function(){initNavTree('class_state_stack.html',''); initResizable(true); });
 
 <p><code>#include &lt;<a class="el" href="_state_stack_8h_source.html">StateStack.h</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for StateStack:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_state_stack__inherit__graph.png" border="0" usemap="#a_state_stack_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_state_stack_inherit__map" id="a_state_stack_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,213,201,464"/>
+<area shape="rect" href="class_state_service.html" title=" " alt="" coords="5,5,201,165"/>
+<area shape="poly" title=" " alt="" coords="106,180,106,214,101,214,101,180"/>
+</map>
+</div>
+<div class="dynheader">
 Collaboration diagram for StateStack:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state_stack__coll__graph.png" border="0" usemap="#a_state_stack_coll__map" alt="Collaboration graph"/></div>
 <map name="a_state_stack_coll__map" id="a_state_stack_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,206,277"/>
+<area shape="rect" title=" " alt="" coords="5,213,201,464"/>
+<area shape="rect" href="class_state_service.html" title=" " alt="" coords="5,5,201,165"/>
+<area shape="poly" title=" " alt="" coords="106,180,106,214,101,214,101,180"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30c22239c533f2ee18fbf2e282bb5363" id="r_a30c22239c533f2ee18fbf2e282bb5363"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30c22239c533f2ee18fbf2e282bb5363">StateStack</a> (sf::RenderWindow &amp;<a class="el" href="#a5988aaeda98b8e28051c96672058bcb4">window</a>)</td></tr>
-<tr class="separator:a30c22239c533f2ee18fbf2e282bb5363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4c1d957eb9c78d0b1fcab2bc1d17ccb" id="r_ad4c1d957eb9c78d0b1fcab2bc1d17ccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4c1d957eb9c78d0b1fcab2bc1d17ccb">pushState</a> (std::unique_ptr&lt; <a class="el" href="class_i_game_state.html">IGameState</a> &gt; state)</td></tr>
-<tr class="separator:ad4c1d957eb9c78d0b1fcab2bc1d17ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e050a57b798295c2344f1318765b5ee" id="r_a7e050a57b798295c2344f1318765b5ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e050a57b798295c2344f1318765b5ee">popState</a> ()</td></tr>
-<tr class="separator:a7e050a57b798295c2344f1318765b5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a75a530f15246767197192df86ed812" id="r_a9a75a530f15246767197192df86ed812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a75a530f15246767197192df86ed812">update</a> (float deltaTime)</td></tr>
-<tr class="separator:a9a75a530f15246767197192df86ed812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab948f3f8573184f6c2c0ebb61ec079b6" id="r_ab948f3f8573184f6c2c0ebb61ec079b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab948f3f8573184f6c2c0ebb61ec079b6">render</a> (sf::RenderWindow &amp;<a class="el" href="#a5988aaeda98b8e28051c96672058bcb4">window</a>)</td></tr>
-<tr class="separator:ab948f3f8573184f6c2c0ebb61ec079b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d56f77c17d2084d7e70eaaab9370ecb" id="r_a8d56f77c17d2084d7e70eaaab9370ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d56f77c17d2084d7e70eaaab9370ecb">pushState</a> (std::unique_ptr&lt; <a class="el" href="class_i_game_state.html">IGameState</a> &gt; state) override</td></tr>
+<tr class="separator:a8d56f77c17d2084d7e70eaaab9370ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa915b78d6cfa2ee57a3c3018e3703e37" id="r_aa915b78d6cfa2ee57a3c3018e3703e37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa915b78d6cfa2ee57a3c3018e3703e37">popState</a> () override</td></tr>
+<tr class="separator:aa915b78d6cfa2ee57a3c3018e3703e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1327fa62e27e2584815b2be97b726b" id="r_ade1327fa62e27e2584815b2be97b726b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade1327fa62e27e2584815b2be97b726b">empty</a> () const</td></tr>
+<tr class="separator:ade1327fa62e27e2584815b2be97b726b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af361fdcbe7b85252d63947d439833bfd" id="r_af361fdcbe7b85252d63947d439833bfd"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_i_game_state.html">IGameState</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af361fdcbe7b85252d63947d439833bfd">getStates</a> () const</td></tr>
+<tr class="separator:af361fdcbe7b85252d63947d439833bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20616aab58449e434023036896baa49" id="r_aa20616aab58449e434023036896baa49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_game_state.html">IGameState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa20616aab58449e434023036896baa49">topState</a> () const</td></tr>
+<tr class="separator:aa20616aab58449e434023036896baa49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_state_service"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_state_service')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_state_service.html">StateService</a></td></tr>
+<tr class="memitem:ac723286ffefdfd00632bb4d8196fbccb inherit pub_methods_class_state_service" id="r_ac723286ffefdfd00632bb4d8196fbccb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state_service.html#ac723286ffefdfd00632bb4d8196fbccb">~StateService</a> ()=default</td></tr>
+<tr class="separator:ac723286ffefdfd00632bb4d8196fbccb inherit pub_methods_class_state_service"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4182aa04cf9c2e4bb5073e2854c5fc07" id="r_a4182aa04cf9c2e4bb5073e2854c5fc07"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_i_game_state.html">IGameState</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4182aa04cf9c2e4bb5073e2854c5fc07">states</a></td></tr>
 <tr class="separator:a4182aa04cf9c2e4bb5073e2854c5fc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5988aaeda98b8e28051c96672058bcb4" id="r_a5988aaeda98b8e28051c96672058bcb4"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5988aaeda98b8e28051c96672058bcb4">window</a></td></tr>
-<tr class="separator:a5988aaeda98b8e28051c96672058bcb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a30c22239c533f2ee18fbf2e282bb5363" name="a30c22239c533f2ee18fbf2e282bb5363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30c22239c533f2ee18fbf2e282bb5363">&#9670;&#160;</a></span>StateStack()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ade1327fa62e27e2584815b2be97b726b" name="ade1327fa62e27e2584815b2be97b726b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1327fa62e27e2584815b2be97b726b">&#9670;&#160;</a></span>empty()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">StateStack::StateStack </td>
+          <td class="memname">bool StateStack::empty </td>
           <td>(</td>
-          <td class="paramtype">sf::RenderWindow &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
-          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7e050a57b798295c2344f1318765b5ee" name="a7e050a57b798295c2344f1318765b5ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e050a57b798295c2344f1318765b5ee">&#9670;&#160;</a></span>popState()</h2>
+<a id="af361fdcbe7b85252d63947d439833bfd" name="af361fdcbe7b85252d63947d439833bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af361fdcbe7b85252d63947d439833bfd">&#9670;&#160;</a></span>getStates()</h2>
 
 <div class="memitem">
 <div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_i_game_state.html">IGameState</a> &gt; &gt; &amp; StateStack::getStates </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa915b78d6cfa2ee57a3c3018e3703e37" name="aa915b78d6cfa2ee57a3c3018e3703e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa915b78d6cfa2ee57a3c3018e3703e37">&#9670;&#160;</a></span>popState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void StateStack::popState </td>
@@ -172,15 +204,25 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_state_service.html#aa07130ca5330cdff934ec26f26f74e38">StateService</a>.</p>
 
 </div>
 </div>
-<a id="ad4c1d957eb9c78d0b1fcab2bc1d17ccb" name="ad4c1d957eb9c78d0b1fcab2bc1d17ccb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4c1d957eb9c78d0b1fcab2bc1d17ccb">&#9670;&#160;</a></span>pushState()</h2>
+<a id="a8d56f77c17d2084d7e70eaaab9370ecb" name="a8d56f77c17d2084d7e70eaaab9370ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d56f77c17d2084d7e70eaaab9370ecb">&#9670;&#160;</a></span>pushState()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void StateStack::pushState </td>
@@ -189,38 +231,28 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_state_service.html#a129ce0cca64c34391628bc61fec3ebc6">StateService</a>.</p>
 
 </div>
 </div>
-<a id="ab948f3f8573184f6c2c0ebb61ec079b6" name="ab948f3f8573184f6c2c0ebb61ec079b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab948f3f8573184f6c2c0ebb61ec079b6">&#9670;&#160;</a></span>render()</h2>
+<a id="aa20616aab58449e434023036896baa49" name="aa20616aab58449e434023036896baa49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20616aab58449e434023036896baa49">&#9670;&#160;</a></span>topState()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StateStack::render </td>
+          <td class="memname"><a class="el" href="class_i_game_state.html">IGameState</a> * StateStack::topState </td>
           <td>(</td>
-          <td class="paramtype">sf::RenderWindow &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9a75a530f15246767197192df86ed812" name="a9a75a530f15246767197192df86ed812"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a75a530f15246767197192df86ed812">&#9670;&#160;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateStack::update </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
-          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,28 +271,6 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="class_i_game_state.html">IGameState</a>&gt; &gt; StateStack::states</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5988aaeda98b8e28051c96672058bcb4" name="a5988aaeda98b8e28051c96672058bcb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5988aaeda98b8e28051c96672058bcb4">&#9670;&#160;</a></span>window</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::RenderWindow&amp; StateStack::window</td>
         </tr>
       </table>
   </td>

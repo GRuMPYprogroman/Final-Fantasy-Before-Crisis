@@ -1,0 +1,19 @@
+<map id="detail::binary_writer::write_bjdata_ndarray" name="detail::binary_writer::write_bjdata_ndarray">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,89,155,132"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1binary__writer.html#aab9bf30c969ca7694eed2bfd39d9274a" title=" " alt="" coords="631,80,765,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,86,158,67,202,51,303,21,385,5,425,3,467,5,569,25,616,44,657,68,655,73,614,49,568,31,466,10,425,8,385,10,304,26,204,56,160,72,121,91"/>
+<area shape="rect" id="Node000003" href="$classdetail_1_1binary__writer.html#a377616a7e3ca05a134a4cbbed79e3db8" title=" " alt="" coords="203,89,337,132"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,117,187,117,187,122,155,122"/>
+<area shape="poly" id="edge6_Node000003_Node000001" title=" " alt="" coords="202,105,170,104,170,99,202,99"/>
+<area shape="poly" id="edge10_Node000003_Node000003" title=" " alt="" coords="233,89,232,79,238,70,251,65,270,63,290,65,303,71,300,76,289,70,270,68,252,70,241,75,237,81,239,88"/>
+<area shape="rect" id="Node000004" href="$classdetail_1_1binary__writer.html#a2822d4a58bbb0dc2198686da430e8906" title=" " alt="" coords="410,40,544,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="337,92,394,78,395,84,338,97"/>
+<area shape="rect" id="Node000005" href="$classdetail_1_1binary__writer.html#ab4f174660b2ad22a9ac900f9e7cce278" title="determine the type prefix of container values" alt="" coords="410,189,544,232"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="306,130,386,175,399,181,397,185,384,180,303,135"/>
+<area shape="rect" id="Node000007" href="$classdetail_1_1binary__writer.html#a6df4a13e59faa87a72b0fbe8c5f838ba" title=" " alt="" coords="385,107,568,165"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="338,116,370,120,369,126,337,122"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1binary__writer.html#ab695ec5f8626b333a681c15adf5ab5e4" title=" " alt="" coords="616,151,780,193"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="544,196,601,186,602,191,545,202"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="568,119,615,112,616,117,569,124"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="569,148,601,154,601,159,568,154"/>
+</map>

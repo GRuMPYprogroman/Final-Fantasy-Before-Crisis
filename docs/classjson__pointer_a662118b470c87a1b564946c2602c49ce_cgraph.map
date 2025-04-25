@@ -1,0 +1,24 @@
+<map id="json_pointer::pop_back" name="json_pointer::pop_back">
+<area shape="rect" id="Node000001" title="remove last reference token" alt="" coords="5,95,161,121"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1out__of__range.html#a79ea0d3ec02a853629dc827e045ecff5" title=" " alt="" coords="209,57,344,100"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,94,193,89,194,94,161,99"/>
+<area shape="rect" id="Node000010" href="$classjson__pointer.html#a5c3d08bd0a0e99c3377db33600c68a64" title="return whether pointer points to the root document" alt="" coords="209,124,344,151"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="161,117,194,122,193,127,160,122"/>
+<area shape="rect" id="Node000003" href="$namespacedetail.html#a266fb3d4bf633ad6c506434cc91164da" title=" " alt="" coords="609,36,708,63"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,55,345,32,391,14,435,5,470,3,549,13,608,28,607,33,548,19,470,8,435,10,393,19,348,36,309,59"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1exception.html#a6b4a786b5c1c25dd3edaceb1bf2d5120" title=" " alt="" coords="408,28,532,71"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="344,66,392,58,393,64,345,71"/>
+<area shape="rect" id="Node000007" href="$classdetail_1_1exception.html#a8f1eb56b9964c8dd84d89d0da98d883b" title=" " alt="" coords="392,95,548,121"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="345,86,377,91,377,97,344,92"/>
+<area shape="rect" id="Node000008" href="$classdetail_1_1out__of__range.html#a5be01a3b83b50a3775c6978946be4a18" title=" " alt="" coords="402,169,538,212"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="324,98,345,110,425,159,422,163,343,114,321,103"/>
+<area shape="rect" id="Node000004" href="$namespacedetail.html#a89f967b745cf8df11ba9d59f93d97753" title=" " alt="" coords="776,11,903,37"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="708,40,760,33,760,38,709,45"/>
+<area shape="rect" id="Node000005" href="$namespacedetail.html#ac185140ed8c8fcc07a302a890b714b0d" title=" " alt="" coords="769,61,910,88"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="709,54,754,60,753,65,708,59"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="515,92,598,65,600,70,516,97"/>
+<area shape="poly" id="edge11_Node000008_Node000008" title=" " alt="" coords="434,169,433,159,439,151,451,145,470,143,491,145,503,151,500,156,489,150,470,148,453,150,442,155,438,161,439,168"/>
+<area shape="rect" id="Node000009" href="$classdetail_1_1exception.html#a528d6bc77e88490bbb84cde2222b7ff0" title=" " alt="" coords="596,169,721,212"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="538,188,581,188,581,193,538,193"/>
+<area shape="poly" id="edge10_Node000009_Node000009" title=" " alt="" coords="624,169,622,159,628,151,640,145,659,143,678,145,690,151,687,156,677,150,658,148,642,150,632,155,627,161,629,168"/>
+</map>

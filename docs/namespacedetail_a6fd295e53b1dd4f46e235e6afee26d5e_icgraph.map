@@ -1,0 +1,19 @@
+<map id="detail::replace_substring" name="detail::replace_substring">
+<area shape="rect" id="Node000001" title="replace all occurrences of a substring by another string" alt="" coords="577,147,740,173"/>
+<area shape="rect" id="Node000002" href="$namespacedetail.html#af2a9ce4740e0b45d33129e2c8e53a0a8" title="string escaping as described in RFC 6901 (Sect. 4)" alt="" coords="420,120,522,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="561,149,523,143,523,138,562,144"/>
+<area shape="rect" id="Node000006" href="$namespacedetail.html#a0e971234e72db1e314aa87298e84d1d0" title="string unescaping as described in RFC 6901 (Sect. 4)" alt="" coords="413,172,529,199"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="562,176,530,180,530,175,562,170"/>
+<area shape="rect" id="Node000003" href="$classbasic__json.html#a940e724a2e8d5400ab772eb22af0387c" title=" " alt="" coords="214,29,365,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,115,364,86,339,75,341,70,366,82,428,110"/>
+<area shape="rect" id="Node000004" href="$classjson__pointer.html#a89528f614c6b3c387d71abfee814be50" title=" " alt="" coords="222,120,357,147"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="405,136,357,136,357,131,405,131"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="318,16,307,10,289,8,272,10,262,14,258,21,260,28,254,29,253,19,259,10,271,5,289,3,309,5,321,11"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="320,107,310,101,289,99,270,101,260,105,258,111,263,118,258,121,253,111,256,102,269,95,289,93,311,96,323,102"/>
+<area shape="rect" id="Node000005" href="$classbasic__json.html#a5cd6c211f030b109f7ef361250366bb0" title=" " alt="" coords="5,109,166,152"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="206,135,166,134,166,129,206,130"/>
+<area shape="rect" id="Node000007" href="$classjson__pointer.html#a59261861b1753054dff970e6760c6ba4" title="split the string input to reference tokens" alt="" coords="228,176,351,203"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="398,190,352,191,352,185,398,184"/>
+<area shape="rect" id="Node000008" href="$classjson__pointer.html#a5288b8f5d6ff6faca37f664b98a16ecd" title="create JSON pointer" alt="" coords="24,176,147,219"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="212,195,148,198,147,192,212,190"/>
+</map>

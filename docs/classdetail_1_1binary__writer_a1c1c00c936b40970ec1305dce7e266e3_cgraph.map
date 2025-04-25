@@ -1,0 +1,9 @@
+<map id="detail::binary_writer::write_bson_integer" name="detail::binary_writer::write_bson_integer">
+<area shape="rect" id="Node000001" title="Writes a BSON element with key name and integer value." alt="" coords="5,39,144,81"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1binary__writer.html#aec35b5420c48539db2959ef88ae296d5" title="Writes the given element_type and name to the output adapter." alt="" coords="192,5,366,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,46,176,41,177,46,145,51"/>
+<area shape="rect" id="Node000004" href="$classdetail_1_1binary__writer.html#aab9bf30c969ca7694eed2bfd39d9274a" title=" " alt="" coords="212,72,346,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="145,69,197,77,196,83,144,74"/>
+<area shape="rect" id="Node000003" href="$classdetail_1_1binary__writer.html#a2822d4a58bbb0dc2198686da430e8906" title=" " alt="" coords="414,5,548,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,24,399,24,399,29,367,29"/>
+</map>

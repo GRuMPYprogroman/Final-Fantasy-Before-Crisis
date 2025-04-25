@@ -1,0 +1,18 @@
+<map id="detail::binary_writer::calc_bson_array_size" name="detail::binary_writer::calc_bson_array_size">
+<area shape="rect" id="Node000001" title=" " alt="" coords="820,5,975,48"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1binary__writer.html#accdf775201461343bd5a2c420b4d6db9" title="Calculates the size necessary to serialize the JSON value j with its name." alt="" coords="599,5,772,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="804,38,772,38,772,33,804,33"/>
+<area shape="rect" id="Node000003" href="$classdetail_1_1binary__writer.html#a3da500027916d93a83e7922006ddc331" title="Writes a BSON element with key name and array value." alt="" coords="618,72,753,115"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="814,56,754,75,752,70,812,51"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="787,15,819,15,819,21,787,20"/>
+<area shape="rect" id="Node000004" href="$classdetail_1_1binary__writer.html#a882debd723dd172f42e0690f84d4b94f" title="Serializes the JSON value j to BSON and associates it with the key name." alt="" coords="406,72,551,115"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="603,105,552,105,552,99,603,100"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="567,82,618,82,618,88,567,87"/>
+<area shape="rect" id="Node000005" href="$classdetail_1_1binary__writer.html#a93441bda8d804f4e93742f3cf3868da4" title=" " alt="" coords="224,43,358,85"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="390,82,358,77,359,72,391,77"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1binary__writer.html#a1aae361b7492825979cbb80245b9c0d6" title=" " alt="" coords="23,35,158,77"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="208,63,158,61,158,56,208,58"/>
+<area shape="rect" id="Node000007" href="$classdetail_1_1binary__writer.html#aec965617342a951a3b60f89fcf2e633d" title="Writes a BSON element with key name and object value." alt="" coords="5,101,176,144"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="209,91,167,103,165,98,208,85"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="191,112,406,96,406,101,192,118"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="detail::is_complete_type&lt; T, decltype(void(sizeof(T)))&gt;" name="detail::is_complete_type&lt; T, decltype(void(sizeof(T)))&gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="40,123,185,224"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,102,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,87,93,122,88,124,72,89"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="126,5,216,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,89,137,124,132,122,147,87"/>
+</map>

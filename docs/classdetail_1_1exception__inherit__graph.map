@@ -1,0 +1,15 @@
+<map id="detail::exception" name="detail::exception">
+<area shape="rect" id="Node000001" title="general exception of the basic_json class" alt="" coords="422,123,617,480"/>
+<area shape="rect" id="Node000003" href="$classdetail_1_1invalid__iterator.html" title="exception indicating errors with iterators" alt="" coords="5,613,191,768"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="411,369,307,441,254,484,206,530,171,571,142,615,137,612,167,568,202,526,251,480,304,437,408,364"/>
+<area shape="rect" id="Node000004" href="$classdetail_1_1other__error.html" title="exception indicating other library errors" alt="" coords="216,613,402,768"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="418,494,353,615,348,612,414,492"/>
+<area shape="rect" id="Node000005" href="$classdetail_1_1out__of__range.html" title="exception indicating access out of the defined range" alt="" coords="427,613,613,768"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="522,495,522,614,517,614,517,495"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1parse__error.html" title="exception indicating a parse error" alt="" coords="637,528,823,853"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="626,492,645,527,640,530,621,494"/>
+<area shape="rect" id="Node000007" href="$classdetail_1_1type__error.html" title="exception indicating executing a member function with a wrong type" alt="" coords="848,613,1053,768"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="631,366,735,438,788,481,838,526,874,568,906,612,902,615,870,571,834,530,785,485,732,442,628,370"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="473,5,566,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="522,90,522,123,517,123,517,90"/>
+</map>

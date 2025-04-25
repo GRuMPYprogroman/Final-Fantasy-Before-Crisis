@@ -1,0 +1,10 @@
+<map id="Before Crisis/AudioManager.h" name="Before Crisis/AudioManager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="63,5,258,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,124,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,35,95,73,92,68,142,30"/>
+<area shape="rect" id="Node000003" href="$_audio_variables_8h.html" title=" " alt="" coords="147,155,265,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,32,188,106,199,139,194,141,183,107,161,33"/>
+<area shape="rect" id="Node000004" href="$_audio_service_8h.html" title=" " alt="" coords="198,80,307,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,30,227,68,223,73,175,35"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="247,109,224,143,220,140,242,106"/>
+</map>

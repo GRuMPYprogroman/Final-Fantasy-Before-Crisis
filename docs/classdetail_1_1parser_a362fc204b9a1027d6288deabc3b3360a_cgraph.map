@@ -1,0 +1,45 @@
+<map id="detail::parser::sax_parse_internal" name="detail::parser::sax_parse_internal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,469,131,512"/>
+<area shape="poly" id="edge25_Node000001_Node000001" title=" " alt="" coords="31,469,30,459,36,450,49,445,68,443,89,445,101,451,99,456,87,450,68,448,50,450,39,455,35,461,37,468"/>
+<area shape="rect" id="Node000002" href="$namespacedetail.html#a266fb3d4bf633ad6c506434cc91164da" title=" " alt="" coords="604,293,703,320"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,481,352,448,464,426,509,413,542,400,568,385,591,367,629,330,633,334,595,371,571,390,544,405,510,418,465,431,352,454,132,486"/>
+<area shape="rect" id="Node000005" href="$classdetail_1_1out__of__range.html#a79ea0d3ec02a853629dc827e045ecff5" title=" " alt="" coords="191,331,326,373"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="98,467,214,381,217,385,101,471"/>
+<area shape="rect" id="Node000010" href="$classdetail_1_1parse__error.html#a07046ea9f33d28f120af188ed674d6df" title="create a parse error exception" alt="" coords="196,152,322,195"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="80,467,235,207,239,209,85,470"/>
+<area shape="rect" id="Node000013" href="$classdetail_1_1parser.html#a13621f12e55437efd6c1af970f071a92" title=" " alt="" coords="179,499,339,541"/>
+<area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="131,498,164,503,163,508,131,503"/>
+<area shape="rect" id="Node000015" href="$classdetail_1_1parser.html#aea40f4e5d5dd7f2860282804e1df5a6d" title="get next token from lexer" alt="" coords="198,565,320,608"/>
+<area shape="poly" id="edge24_Node000001_Node000015" title=" " alt="" coords="106,510,180,551,191,556,188,561,177,556,103,515"/>
+<area shape="rect" id="Node000016" href="$namespacedetail.html#a93d9378fbe8786072ec07745cbb4cc0b" title=" " alt="" coords="187,656,330,683"/>
+<area shape="poly" id="edge26_Node000001_Node000016" title=" " alt="" coords="87,511,127,562,180,618,219,646,216,650,177,622,123,566,82,514"/>
+<area shape="rect" id="Node000003" href="$namespacedetail.html#a89f967b745cf8df11ba9d59f93d97753" title=" " alt="" coords="771,268,898,295"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="703,297,755,290,755,295,704,302"/>
+<area shape="rect" id="Node000004" href="$namespacedetail.html#ac185140ed8c8fcc07a302a890b714b0d" title=" " alt="" coords="764,319,905,345"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="704,311,749,317,748,323,703,316"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="322,371,371,384,427,392,485,393,543,383,566,373,589,359,627,329,630,333,592,363,569,377,544,388,486,399,426,398,370,389,321,376"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1exception.html#a6b4a786b5c1c25dd3edaceb1bf2d5120" title=" " alt="" coords="403,240,527,283"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="307,328,386,292,398,287,400,292,388,297,309,332"/>
+<area shape="rect" id="Node000007" href="$classdetail_1_1exception.html#a8f1eb56b9964c8dd84d89d0da98d883b" title=" " alt="" coords="387,189,543,216"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="275,328,322,277,352,250,386,226,395,220,398,225,388,230,355,254,325,281,279,332"/>
+<area shape="rect" id="Node000008" href="$classdetail_1_1out__of__range.html#a5be01a3b83b50a3775c6978946be4a18" title=" " alt="" coords="398,331,533,373"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="327,349,382,349,382,355,327,355"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="517,214,545,226,589,253,627,281,623,285,586,257,542,230,515,219"/>
+<area shape="poly" id="edge12_Node000008_Node000008" title=" " alt="" coords="429,331,428,321,434,312,446,306,465,304,486,306,498,313,495,317,484,312,465,309,448,311,437,316,433,322,434,330"/>
+<area shape="rect" id="Node000009" href="$classdetail_1_1exception.html#a528d6bc77e88490bbb84cde2222b7ff0" title=" " alt="" coords="591,116,716,159"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="499,328,541,293,592,231,630,171,635,174,596,234,545,297,502,332"/>
+<area shape="poly" id="edge11_Node000009_Node000009" title=" " alt="" coords="619,116,617,106,623,97,635,91,654,89,673,92,685,98,682,103,672,97,653,95,637,97,627,101,622,107,624,115"/>
+<area shape="poly" id="edge14_Node000010_Node000002" title=" " alt="" coords="292,149,344,122,408,98,443,91,478,90,512,95,545,108,571,136,599,182,643,278,639,280,594,185,567,140,542,113,511,100,478,95,444,96,410,103,346,127,295,154"/>
+<area shape="poly" id="edge15_Node000010_Node000006" title=" " alt="" coords="312,193,400,231,398,236,310,198"/>
+<area shape="poly" id="edge16_Node000010_Node000007" title=" " alt="" coords="322,180,372,187,371,192,321,185"/>
+<area shape="rect" id="Node000011" href="$classdetail_1_1parse__error.html#a7703a00cc97c4590e56254b62b479ff5" title=" " alt="" coords="402,5,528,48"/>
+<area shape="poly" id="edge17_Node000010_Node000011" title=" " alt="" coords="281,150,328,108,385,64,403,54,406,58,389,69,331,112,285,154"/>
+<area shape="rect" id="Node000012" href="$classdetail_1_1parse__error.html#a19cdccb06cba79d7b4efc51f501ced8b" title=" " alt="" coords="402,123,528,165"/>
+<area shape="poly" id="edge19_Node000010_Node000012" title=" " alt="" coords="321,162,387,152,388,158,322,167"/>
+<area shape="poly" id="edge18_Node000011_Node000009" title=" " alt="" coords="512,46,545,64,609,105,607,110,542,69,509,51"/>
+<area shape="poly" id="edge20_Node000012_Node000002" title=" " alt="" coords="527,164,545,175,573,200,599,227,638,279,633,282,595,231,570,204,542,179,524,168"/>
+<area shape="poly" id="edge22_Node000013_Node000002" title=" " alt="" coords="340,523,388,522,441,515,494,501,542,478,577,446,606,408,627,368,641,334,646,336,631,370,610,411,581,450,545,482,495,506,442,521,389,527,340,529"/>
+<area shape="rect" id="Node000014" href="$classdetail_1_1lexer__base.html#aadef66e89ad828e5f69479c85887fa6d" title="return name of values of type token_type (only used for errors)" alt="" coords="399,549,531,592"/>
+<area shape="poly" id="edge23_Node000013_Node000014" title=" " alt="" coords="340,537,385,548,384,553,339,542"/>
+<area shape="poly" id="edge27_Node000016_Node000016" title=" " alt="" coords="226,657,220,647,224,638,238,631,259,629,282,632,294,638,291,643,280,637,259,635,239,637,228,641,226,647,231,654"/>
+</map>

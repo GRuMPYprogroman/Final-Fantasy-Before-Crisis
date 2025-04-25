@@ -1,0 +1,14 @@
+<map id="detail::lexer::scan_number" name="detail::lexer::scan_number">
+<area shape="rect" id="Node000001" title="scan a number literal" alt="" coords="5,99,130,141"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1lexer.html#ad59cacf0fdfe48d78b218e49da85797b" title="add a character to token_buffer" alt="" coords="183,5,300,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,96,133,69,176,42,187,36,189,41,179,46,136,73,98,100"/>
+<area shape="rect" id="Node000003" href="$classdetail_1_1lexer.html#a558196cb9fc24015d009969c9df8707b" title=" " alt="" coords="185,56,299,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,99,178,85,180,90,131,104"/>
+<area shape="rect" id="Node000004" href="$classdetail_1_1lexer.html#a049f7268496ebdbb16573a5ef1bc96b7" title="reset token_buffer; current character is beginning of token" alt="" coords="179,107,304,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="130,117,164,117,164,123,130,123"/>
+<area shape="rect" id="Node000005" href="$classdetail_1_1lexer.html#a56bab6981f9c24f2195b192cdafbce11" title=" " alt="" coords="179,181,305,208"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="120,140,196,172,194,177,118,144"/>
+<area shape="rect" id="Node000006" href="$classdetail_1_1lexer.html#af15c2d2e743728d99bb6d749a03e5555" title="unget current character (read it again on next get)" alt="" coords="178,232,306,259"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="90,140,129,179,179,218,188,223,185,227,176,222,126,183,86,144"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="212,182,207,173,210,163,222,157,242,155,263,157,274,164,271,168,261,162,242,160,224,162,214,167,212,172,216,180"/>
+</map>

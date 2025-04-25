@@ -1,0 +1,13 @@
+<map id="detail::lexer::unget" name="detail::lexer::unget">
+<area shape="rect" id="Node000001" title="unget current character (read it again on next get)" alt="" coords="378,80,506,107"/>
+<area shape="rect" id="Node000002" href="$classdetail_1_1lexer.html#a7182c4e7a87e32686cc06be2c31cbc5f" title="scan a comment" alt="" coords="192,5,316,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="387,77,315,51,317,46,389,72"/>
+<area shape="rect" id="Node000004" href="$classdetail_1_1lexer.html#aab65133db39717a496764cb97fcf3f46" title="scan a number literal" alt="" coords="192,72,316,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="362,96,316,96,316,91,362,91"/>
+<area shape="rect" id="Node000005" href="$classdetail_1_1lexer.html#a04ae0c7807a761f4162ff42290be5490" title="skip the UTF&#45;8 byte order mark" alt="" coords="178,139,330,165"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="383,114,300,141,298,136,382,109"/>
+<area shape="rect" id="Node000003" href="$classdetail_1_1lexer.html#a6497d12a0c35b355b3e22da69d6819f9" title=" " alt="" coords="5,80,130,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,56,108,82,106,77,177,51"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="176,96,130,96,130,91,176,91"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="194,136,111,110,113,105,195,131"/>
+</map>
