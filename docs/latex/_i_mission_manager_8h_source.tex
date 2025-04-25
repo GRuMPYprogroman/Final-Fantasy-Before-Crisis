@@ -1,0 +1,27 @@
+\doxysection{IMission\+Manager.\+h}
+\hypertarget{_i_mission_manager_8h_source}{}\label{_i_mission_manager_8h_source}\index{Before Crisis/IMissionManager.h@{Before Crisis/IMissionManager.h}}
+\mbox{\hyperlink{_i_mission_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_mission}{Mission}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_mission_a711d98087b47109cae4120618def28f4}{name}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_mission_ac9112d439c47cbe48e326c01a094732c}{completed}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_mission_a174acf9cfacc827141decc3c2027b590}{rewardExp}};}
+\DoxyCodeLine{00010\ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_mission_manager}{IMissionManager}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector<Mission>\ \mbox{\hyperlink{class_i_mission_manager_ae8c13f789c6a820a86c6fe893212329e}{missions}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_mission_manager_a0839fba8fc3eda5b96bd58023d41651a}{\string~IMissionManager}}()\ \ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_mission_manager_a102ee0604f356e341950e63606bbf5e8}{AddMission}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_mission}{Mission}}\&\ mission)\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_mission_manager_add16a061c558c7e7a049d5a6a37399c2}{CompleteMission}}(\textcolor{keyword}{const}\ std::string\&\ missionName)\ =\ 0;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<Mission>\ \mbox{\hyperlink{class_i_mission_manager_a50a1e42b0a3bb6885f8371156e8e8794}{GetActiveMissions}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00021\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Menu\+State.\+h}
+\hypertarget{_menu_state_8h_source}{}\label{_menu_state_8h_source}\index{Before Crisis/MenuState.h@{Before Crisis/MenuState.h}}
+\mbox{\hyperlink{_menu_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_state_8h}{IGameState.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_renderer_8h}{Renderer.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_audio_manager_8h}{AudioManager.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_service_8h}{StateService.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_stack_8h}{StateStack.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_button_8h}{Button.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menu_state_acd81850a4d80613cacc508107de29f40}{MenuState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_game_state}{IGameState}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector<std::shared\_ptr<Button>>\ \mbox{\hyperlink{class_menu_state_a57062ca9cc3b39594a29e3cc0e6f053c}{buttons}};}
+\DoxyCodeLine{00014\ \ \ \ \ std::shared\_ptr<sf::Font>\mbox{\hyperlink{class_menu_state_acfc542e4725ee6900cd65ab0184b16c3}{font}};}
+\DoxyCodeLine{00015\ \ \ \ \ std::shared\_ptr\ <sf::Text>\ \mbox{\hyperlink{class_menu_state_a96902a152aca31431084c9bb617fc880}{title}};}
+\DoxyCodeLine{00016\ \ \ \ \ std::shared\_ptr<RenderService>\ \mbox{\hyperlink{class_menu_state_afdb96d1a01fe363df2a3d259c5ff3c7a}{render\_service\_}};}
+\DoxyCodeLine{00017\ \ \ \ \ std::shared\_ptr<AudioService>\ \mbox{\hyperlink{class_menu_state_ad1f46cc6bc2f3863302f5772ba4de2bd}{audio\_service\_}};}
+\DoxyCodeLine{00018\ \ \ \ \ std::shared\_ptr<StateService>\ \mbox{\hyperlink{class_menu_state_abe1b6c8d2e2a7c5391b7718f2b8cd537}{state\_service\_}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_menu_state_a9d97a07a7be5f389c409c7b38d9f9780}{isMainMenu}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_state_aa5937619449691c8bbe50cd1283d05c8}{SaveGame}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_state_acfe08b9a0d84377ef1628e9db2e99404}{LoadGame}}();}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_menu_state_acd81850a4d80613cacc508107de29f40}{MenuState}}(\textcolor{keyword}{const}\ sf::Font\&\ font\_,\ std::shared\_ptr<RenderService>\ render\_service,\ std::shared\_ptr<AudioService>\ audio\_service,\ std::shared\_ptr<StateService>\ state\_service);}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_menu_state_a1af2b7fbd42f0ffb93e4740cb65e1900}{\string~MenuState}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_state_a183397f44188a3ba70fe7ffdf71fe738}{update}}(\textcolor{keywordtype}{float}\&\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_state_ac216e0b4c7f5c5d39520165c45af0da6}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_state_a718bc1b44fe68805f787ceb337e252e3}{handleInput}}(\textcolor{keyword}{const}\ sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+
+\end{DoxyCode}

@@ -1,0 +1,19 @@
+\doxysection{ISubject.\+h}
+\hypertarget{_i_subject_8h_source}{}\label{_i_subject_8h_source}\index{Before Crisis/ISubject.h@{Before Crisis/ISubject.h}}
+\mbox{\hyperlink{_i_subject_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_observer_8h}{IObserver.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <any>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_subject}{ISubject}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_subject_ae7264a3f132816d45581a1b31845ecac}{\string~ISubject}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_subject_a49b5debdf1d06d9f9911d2369aa032b1}{Attach}}(std::shared\_ptr<IObserver>\ observer)\ =\ 0;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_subject_a790eabbfafd693f9ac55173cc774c314}{Detach}}(std::shared\_ptr<IObserver>\ observer)\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_subject_a8f3bfcf0c2f45f07b3a8ab4f9e71ee5a}{Notify}}(std::any\ message)\ =\ 0;}
+\DoxyCodeLine{00013\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,16 @@
+\doxysection{State\+Service.\+h}
+\hypertarget{_state_service_8h_source}{}\label{_state_service_8h_source}\index{Before Crisis/StateService.h@{Before Crisis/StateService.h}}
+\mbox{\hyperlink{_state_service_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_game_state}{IGameState}};}
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_state_service}{StateService}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_state_service_ac723286ffefdfd00632bb4d8196fbccb}{\string~StateService}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_service_a129ce0cca64c34391628bc61fec3ebc6}{pushState}}(std::unique\_ptr<IGameState>\ state)\ =\ 0;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_service_aa07130ca5330cdff934ec26f26f74e38}{popState}}()\ =\ 0;}
+\DoxyCodeLine{00010\ \};}
+
+\end{DoxyCode}

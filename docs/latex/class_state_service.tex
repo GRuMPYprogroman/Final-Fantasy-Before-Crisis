@@ -1,0 +1,70 @@
+\doxysection{State\+Service Class Reference}
+\hypertarget{class_state_service}{}\label{class_state_service}\index{StateService@{StateService}}
+
+
+{\ttfamily \#include $<$State\+Service.\+h$>$}
+
+
+
+Inheritance diagram for State\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_state_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for State\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_state_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_state_service_ac723286ffefdfd00632bb4d8196fbccb}{\texorpdfstring{$\sim$}{\string~}\+State\+Service}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_state_service_a129ce0cca64c34391628bc61fec3ebc6}{push\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_game_state}{IGame\+State}} $>$ state)=0
+\item 
+virtual void \mbox{\hyperlink{class_state_service_aa07130ca5330cdff934ec26f26f74e38}{pop\+State}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_state_service_ac723286ffefdfd00632bb4d8196fbccb}\index{StateService@{StateService}!````~StateService@{\texorpdfstring{$\sim$}{\string~}StateService}}
+\index{````~StateService@{\texorpdfstring{$\sim$}{\string~}StateService}!StateService@{StateService}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StateService()}{\string~StateService()}}
+{\footnotesize\ttfamily \label{class_state_service_ac723286ffefdfd00632bb4d8196fbccb} 
+virtual State\+Service\+::\texorpdfstring{$\sim$}{\string~}\+State\+Service (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_state_service_aa07130ca5330cdff934ec26f26f74e38}\index{StateService@{StateService}!popState@{popState}}
+\index{popState@{popState}!StateService@{StateService}}
+\doxysubsubsection{\texorpdfstring{popState()}{popState()}}
+{\footnotesize\ttfamily \label{class_state_service_aa07130ca5330cdff934ec26f26f74e38} 
+virtual void State\+Service\+::pop\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_state_stack_aa915b78d6cfa2ee57a3c3018e3703e37}{State\+Stack}}.
+
+\Hypertarget{class_state_service_a129ce0cca64c34391628bc61fec3ebc6}\index{StateService@{StateService}!pushState@{pushState}}
+\index{pushState@{pushState}!StateService@{StateService}}
+\doxysubsubsection{\texorpdfstring{pushState()}{pushState()}}
+{\footnotesize\ttfamily \label{class_state_service_a129ce0cca64c34391628bc61fec3ebc6} 
+virtual void State\+Service\+::push\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_game_state}{IGame\+State}} $>$}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_state_stack_a8d56f77c17d2084d7e70eaaab9370ecb}{State\+Stack}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_state_service_8h}{State\+Service.\+h}}\end{DoxyCompactItemize}

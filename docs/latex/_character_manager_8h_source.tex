@@ -1,0 +1,30 @@
+\doxysection{Character\+Manager.\+h}
+\hypertarget{_character_manager_8h_source}{}\label{_character_manager_8h_source}\index{Before Crisis/CharacterManager.h@{Before Crisis/CharacterManager.h}}
+\mbox{\hyperlink{_character_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}string"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_stats}{Stats}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stats_a19278025fc7728ba9013e4f73cec6fb4}{hp}};}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stats_a6ed2ac1f844187e041a81f89b68a2c97}{mp}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stats_aeeebf306c2233d7526a355de47f016ef}{strength}};}
+\DoxyCodeLine{00009\ \};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_character_adc27bdd255876169bad2ed0bae0cffb5}{Character}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_stats}{Stats}}\ \mbox{\hyperlink{class_character_a5b9124b740c94b382c9da466bea6036c}{stats}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_character_af15a478fe650b87f59cbe5d071697307}{level}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_character_a3f7a513e47876c6176a3f0c613627f74}{exp}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_character_adc27bdd255876169bad2ed0bae0cffb5}{Character}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_aa73c9df310b6c7743c040a287682f7c9}{EquipItem}}(\textcolor{keyword}{const}\ std::string\&\ item);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_a33af7f16039e7a89def651dda375198d}{GainExp}}(\textcolor{keywordtype}{int}\ amount);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_adaea2c0e796426764830f52a78df6a1c}{TakeDamage}}(\textcolor{keywordtype}{int}\ damage)\ \{\ \mbox{\hyperlink{class_character_a5b9124b740c94b382c9da466bea6036c}{stats}}.hp\ -\/=\ damage;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_stats}{Stats}}\ \mbox{\hyperlink{class_character_ae47e9cfa1715353a9da981548a9cc97d}{GetStats}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_character_a5b9124b740c94b382c9da466bea6036c}{stats}};\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_character_abb83440dcbb15817ac4bf609e8a73f68}{GetLevel}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_character_af15a478fe650b87f59cbe5d071697307}{level}};\ \}}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+
+\end{DoxyCode}

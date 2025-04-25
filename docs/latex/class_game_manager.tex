@@ -1,0 +1,91 @@
+\doxysection{Game\+Manager Class Reference}
+\hypertarget{class_game_manager}{}\label{class_game_manager}\index{GameManager@{GameManager}}
+
+
+{\ttfamily \#include $<$Game\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Game\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_game_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_manager_aa0e2424dc1a39d380e5b6605b179bf05}{Game\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_game_manager_a0098f9338a6129374ccfaeb1c7093d1b}{Run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderer}{Renderer}} $>$ \mbox{\hyperlink{class_game_manager_a4f2645f57f092228cde47423014b3191}{renderer}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_state_stack}{State\+Stack}} $>$ \mbox{\hyperlink{class_game_manager_a44eb2ab87c956f9dd1ad4f4005385e2a}{states}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} $>$ \mbox{\hyperlink{class_game_manager_a456765cded8afd0804eea448346624ef}{audio}}
+\item 
+bool \mbox{\hyperlink{class_game_manager_a7e31b7ecb96c23cfd02002b00bbaca2c}{is\+Running}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_manager_aa0e2424dc1a39d380e5b6605b179bf05}\index{GameManager@{GameManager}!GameManager@{GameManager}}
+\index{GameManager@{GameManager}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GameManager()}{GameManager()}}
+{\footnotesize\ttfamily \label{class_game_manager_aa0e2424dc1a39d380e5b6605b179bf05} 
+Game\+Manager\+::\+Game\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_manager_a0098f9338a6129374ccfaeb1c7093d1b}\index{GameManager@{GameManager}!Run@{Run}}
+\index{Run@{Run}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_game_manager_a0098f9338a6129374ccfaeb1c7093d1b} 
+void Game\+Manager\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+if (event-\/\texorpdfstring{$>$}{>}is$<$sf\+::\+Event\+::\+Key\+Pressed$>$ \&\& event-\/\texorpdfstring{$>$}{>}get\+If$<$sf\+::\+Event\+::\+Key\+Pressed$>$()-\/\texorpdfstring{$>$}{>}scancode == sf\+::\+Keyboard\+::\+Scancode\+::\+Escape) \{ Change\+State(std\+::make\+\_\+unique$<$\+Menu\+State$>$(\texorpdfstring{$\ast$}{*}this, sf\+::\+Font\{ "{}../fonts/\+Kenney Pixel Square.\+ttf"{} \})); \}Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{class_game_manager_a0098f9338a6129374ccfaeb1c7093d1b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_manager_a456765cded8afd0804eea448346624ef}\index{GameManager@{GameManager}!audio@{audio}}
+\index{audio@{audio}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{audio}{audio}}
+{\footnotesize\ttfamily \label{class_game_manager_a456765cded8afd0804eea448346624ef} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_audio_manager}{Audio\+Manager}}$>$ Game\+Manager\+::audio\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a7e31b7ecb96c23cfd02002b00bbaca2c}\index{GameManager@{GameManager}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{isRunning}{isRunning}}
+{\footnotesize\ttfamily \label{class_game_manager_a7e31b7ecb96c23cfd02002b00bbaca2c} 
+bool Game\+Manager\+::is\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a4f2645f57f092228cde47423014b3191}\index{GameManager@{GameManager}!renderer@{renderer}}
+\index{renderer@{renderer}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily \label{class_game_manager_a4f2645f57f092228cde47423014b3191} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_renderer}{Renderer}}$>$ Game\+Manager\+::renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_manager_a44eb2ab87c956f9dd1ad4f4005385e2a}\index{GameManager@{GameManager}!states@{states}}
+\index{states@{states}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{states}{states}}
+{\footnotesize\ttfamily \label{class_game_manager_a44eb2ab87c956f9dd1ad4f4005385e2a} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_state_stack}{State\+Stack}}$>$ Game\+Manager\+::states\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_game_manager_8h}{Game\+Manager.\+h}}\item 
+Before Crisis/\mbox{\hyperlink{_game_manager_8cpp}{Game\+Manager.\+cpp}}\end{DoxyCompactItemize}

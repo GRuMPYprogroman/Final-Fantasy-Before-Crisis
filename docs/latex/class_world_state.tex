@@ -1,0 +1,113 @@
+\doxysection{World\+State Class Reference}
+\hypertarget{class_world_state}{}\label{class_world_state}\index{WorldState@{WorldState}}
+
+
+{\ttfamily \#include $<$World\+State.\+h$>$}
+
+
+
+Collaboration diagram for World\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_world_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_world_state_aad1be11541cf7896d76bcdc48c327929}{Set\+Variable}} (const std\+::string \&key, int value)
+\item 
+int \mbox{\hyperlink{class_world_state_a2a428e40c7efda04e162fe41cd580724}{Get\+Variable}} (const std\+::string \&key) const
+\item 
+void \mbox{\hyperlink{class_world_state_a54ac0b996ebeb30eef891497ac840cf7}{Add\+Career\+Points}} (int points)
+\item 
+int \mbox{\hyperlink{class_world_state_ae5d5e281e4b9b1354758f22e203ce737}{Get\+Rank}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_world_state_a41cb88760159b9335e922989655e4ba7}{Update\+Rank}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, int $>$ \mbox{\hyperlink{class_world_state_a11f32ab97141ab124585642d68f32101}{variables}}
+\item 
+int \mbox{\hyperlink{class_world_state_a95416f72695ff33c75f3c81b79e7d732}{career\+Points}} = 0
+\item 
+int \mbox{\hyperlink{class_world_state_a4bff30ed39fa75396b83b34c95a9b307}{rank}} = 3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_world_state_a54ac0b996ebeb30eef891497ac840cf7}\index{WorldState@{WorldState}!AddCareerPoints@{AddCareerPoints}}
+\index{AddCareerPoints@{AddCareerPoints}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{AddCareerPoints()}{AddCareerPoints()}}
+{\footnotesize\ttfamily \label{class_world_state_a54ac0b996ebeb30eef891497ac840cf7} 
+void World\+State\+::\+Add\+Career\+Points (\begin{DoxyParamCaption}\item[{int}]{points}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_world_state_a54ac0b996ebeb30eef891497ac840cf7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_world_state_ae5d5e281e4b9b1354758f22e203ce737}\index{WorldState@{WorldState}!GetRank@{GetRank}}
+\index{GetRank@{GetRank}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{GetRank()}{GetRank()}}
+{\footnotesize\ttfamily \label{class_world_state_ae5d5e281e4b9b1354758f22e203ce737} 
+int World\+State\+::\+Get\+Rank (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_world_state_a2a428e40c7efda04e162fe41cd580724}\index{WorldState@{WorldState}!GetVariable@{GetVariable}}
+\index{GetVariable@{GetVariable}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{GetVariable()}{GetVariable()}}
+{\footnotesize\ttfamily \label{class_world_state_a2a428e40c7efda04e162fe41cd580724} 
+int World\+State\+::\+Get\+Variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_world_state_aad1be11541cf7896d76bcdc48c327929}\index{WorldState@{WorldState}!SetVariable@{SetVariable}}
+\index{SetVariable@{SetVariable}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{SetVariable()}{SetVariable()}}
+{\footnotesize\ttfamily \label{class_world_state_aad1be11541cf7896d76bcdc48c327929} 
+void World\+State\+::\+Set\+Variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{, }\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_world_state_a41cb88760159b9335e922989655e4ba7}\index{WorldState@{WorldState}!UpdateRank@{UpdateRank}}
+\index{UpdateRank@{UpdateRank}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{UpdateRank()}{UpdateRank()}}
+{\footnotesize\ttfamily \label{class_world_state_a41cb88760159b9335e922989655e4ba7} 
+void World\+State\+::\+Update\+Rank (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_world_state_a41cb88760159b9335e922989655e4ba7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_world_state_a95416f72695ff33c75f3c81b79e7d732}\index{WorldState@{WorldState}!careerPoints@{careerPoints}}
+\index{careerPoints@{careerPoints}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{careerPoints}{careerPoints}}
+{\footnotesize\ttfamily \label{class_world_state_a95416f72695ff33c75f3c81b79e7d732} 
+int World\+State\+::career\+Points = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_world_state_a4bff30ed39fa75396b83b34c95a9b307}\index{WorldState@{WorldState}!rank@{rank}}
+\index{rank@{rank}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{rank}{rank}}
+{\footnotesize\ttfamily \label{class_world_state_a4bff30ed39fa75396b83b34c95a9b307} 
+int World\+State\+::rank = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_world_state_a11f32ab97141ab124585642d68f32101}\index{WorldState@{WorldState}!variables@{variables}}
+\index{variables@{variables}!WorldState@{WorldState}}
+\doxysubsubsection{\texorpdfstring{variables}{variables}}
+{\footnotesize\ttfamily \label{class_world_state_a11f32ab97141ab124585642d68f32101} 
+std\+::map$<$std\+::string, int$>$ World\+State\+::variables\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_world_state_8h}{World\+State.\+h}}\end{DoxyCompactItemize}

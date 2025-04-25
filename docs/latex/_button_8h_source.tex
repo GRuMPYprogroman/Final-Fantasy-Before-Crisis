@@ -1,0 +1,35 @@
+\doxysection{Button.\+h}
+\hypertarget{_button_8h_source}{}\label{_button_8h_source}\index{Before Crisis/Button.h@{Before Crisis/Button.h}}
+\mbox{\hyperlink{_button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/Audio.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_audio_service_8h}{AudioService.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_audio_variables_8h}{AudioVariables.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_ae1d17357303f8e1e63ab2afd50e154b7}{Button}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ std::unique\_ptr<sf::RectangleShape>\ \mbox{\hyperlink{class_button_aa37c11f5ce27a23c30076dcdfc9c5f5b}{background}};}
+\DoxyCodeLine{00012\ \ \ \ \ std::unique\_ptr<sf::Text>\ \mbox{\hyperlink{class_button_af2d4fe08192d562d51064a377a32d04c}{label}};}
+\DoxyCodeLine{00013\ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{class_button_a30b76ab312dc7f66e67596ae20540ec2}{onClick}};}
+\DoxyCodeLine{00014\ \ \ \ \ std::shared\_ptr<AudioService>\ \mbox{\hyperlink{class_button_a7e18f75947a68f2872cf948b9d5c13a3}{audio\_service\_}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_button_a38e200731f4c2d5a043cee9332c761c8}{isHovered}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ sf::SoundBuffer\ \mbox{\hyperlink{class_button_a53089df4984eb7a93ec54403c73a1f2b}{soundBuffer}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ sf::Sound\ \mbox{\hyperlink{class_button_a0d53340e224dd4e2878c1230dcaae116}{hoverSound}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_button_ae1d17357303f8e1e63ab2afd50e154b7}{Button}}(\textcolor{keyword}{const}\ std::string\&\ text,\ sf::Font\&\ font,\ sf::Vector2f\ position,\ std::function<\textcolor{keywordtype}{void}()>\ \mbox{\hyperlink{class_button_a30b76ab312dc7f66e67596ae20540ec2}{onClick}},\ std::shared\_ptr<AudioService>\ audio\_service);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_ad8e030c1c8846d43f3126047d4a3667f}{update}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_a32a313d433f93a8fc20e43f77186b10d}{handleInput}}(\textcolor{keyword}{const}\ sf::Event\&\ event,sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_button_a65af77f11e261b5e8cd37927f966bd1c}{getBackground}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{class_button_aa37c11f5ce27a23c30076dcdfc9c5f5b}{background}};\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_button_ab573e747ff08e3aad9b166bb0bcdb906}{getLabel}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{class_button_af2d4fe08192d562d51064a377a32d04c}{label}};\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_a93438906f229fb6e2ba63103140dbd9f}{setPosition}}(sf::Vector2f\ pos);}
+\DoxyCodeLine{00028\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_button_a0d5cf175880c416744d3010f2c3b81d6}{getBackgroundSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_button_aa37c11f5ce27a23c30076dcdfc9c5f5b}{background}}-\/>getSize();\ \}}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

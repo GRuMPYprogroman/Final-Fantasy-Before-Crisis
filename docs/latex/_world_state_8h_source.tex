@@ -1,0 +1,32 @@
+\doxysection{World\+State.\+h}
+\hypertarget{_world_state_8h_source}{}\label{_world_state_8h_source}\index{Before Crisis/WorldState.h@{Before Crisis/WorldState.h}}
+\mbox{\hyperlink{_world_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_world_state}{WorldState}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ std::map<std::string,\ int>\ \mbox{\hyperlink{class_world_state_a11f32ab97141ab124585642d68f32101}{variables}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_world_state_a95416f72695ff33c75f3c81b79e7d732}{careerPoints}}\ =\ 0;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_world_state_a4bff30ed39fa75396b83b34c95a9b307}{rank}}\ =\ 3;\ \textcolor{comment}{//\ START\ AS\ 3RD\ CLASS}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_state_a41cb88760159b9335e922989655e4ba7}{UpdateRank}}()}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_world_state_a95416f72695ff33c75f3c81b79e7d732}{careerPoints}}\ >=\ 100\ \&\&\ \mbox{\hyperlink{class_world_state_a4bff30ed39fa75396b83b34c95a9b307}{rank}}\ >\ 1)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_world_state_a4bff30ed39fa75396b83b34c95a9b307}{rank}}-\/-\/;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_world_state_a95416f72695ff33c75f3c81b79e7d732}{careerPoints}}\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_state_aad1be11541cf7896d76bcdc48c327929}{SetVariable}}(\textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keywordtype}{int}\ value)\ \{\ \mbox{\hyperlink{class_world_state_a11f32ab97141ab124585642d68f32101}{variables}}[key]\ =\ value;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_world_state_a2a428e40c7efda04e162fe41cd580724}{GetVariable}}(\textcolor{keyword}{const}\ std::string\&\ key)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_world_state_a11f32ab97141ab124585642d68f32101}{variables}}.at(key);\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_state_a54ac0b996ebeb30eef891497ac840cf7}{AddCareerPoints}}(\textcolor{keywordtype}{int}\ points)\ \{\ \mbox{\hyperlink{class_world_state_a95416f72695ff33c75f3c81b79e7d732}{careerPoints}}\ +=\ points;\ \mbox{\hyperlink{class_world_state_a41cb88760159b9335e922989655e4ba7}{UpdateRank}}();\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_world_state_ae5d5e281e4b9b1354758f22e203ce737}{GetRank}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_world_state_a4bff30ed39fa75396b83b34c95a9b307}{rank}};\ \}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+
+\end{DoxyCode}

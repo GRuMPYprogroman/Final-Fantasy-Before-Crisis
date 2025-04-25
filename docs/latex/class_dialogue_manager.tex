@@ -1,0 +1,93 @@
+\doxysection{Dialogue\+Manager Class Reference}
+\hypertarget{class_dialogue_manager}{}\label{class_dialogue_manager}\index{DialogueManager@{DialogueManager}}
+
+
+{\ttfamily \#include $<$Dialogue\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Dialogue\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_dialogue_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dialogue\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_dialogue_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dialogue_manager_adbf006def906be673d67fd083607c6e5}{Dialogue\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_dialogue_manager_a94286cbf31278f16da4af62601616d01}{Load\+Dialogue}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{class_dialogue_manager_aaeaa5f5bc513b17cb7f47fb534e69293}{Start\+Dialogue}} (int player\+Rank) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_dialogue_manager}{IDialogue\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_dialogue_manager_a2c3a87a4b299736bb51151a807449d05}{\texorpdfstring{$\sim$}{\string~}\+IDialogue\+Manager}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_dialogue_node}{Dialogue\+Node}} $>$ \mbox{\hyperlink{class_dialogue_manager_afada6502471f5de11931dc16e7c1f7d4}{nodes}}
+\item 
+int \mbox{\hyperlink{class_dialogue_manager_ae397528874fac29aba049193fb402a6a}{current\+Node}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dialogue_manager_adbf006def906be673d67fd083607c6e5}\index{DialogueManager@{DialogueManager}!DialogueManager@{DialogueManager}}
+\index{DialogueManager@{DialogueManager}!DialogueManager@{DialogueManager}}
+\doxysubsubsection{\texorpdfstring{DialogueManager()}{DialogueManager()}}
+{\footnotesize\ttfamily \label{class_dialogue_manager_adbf006def906be673d67fd083607c6e5} 
+Dialogue\+Manager\+::\+Dialogue\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dialogue_manager_a94286cbf31278f16da4af62601616d01}\index{DialogueManager@{DialogueManager}!LoadDialogue@{LoadDialogue}}
+\index{LoadDialogue@{LoadDialogue}!DialogueManager@{DialogueManager}}
+\doxysubsubsection{\texorpdfstring{LoadDialogue()}{LoadDialogue()}}
+{\footnotesize\ttfamily \label{class_dialogue_manager_a94286cbf31278f16da4af62601616d01} 
+void Dialogue\+Manager\+::\+Load\+Dialogue (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_dialogue_manager_aaeaa5f5bc513b17cb7f47fb534e69293}\index{DialogueManager@{DialogueManager}!StartDialogue@{StartDialogue}}
+\index{StartDialogue@{StartDialogue}!DialogueManager@{DialogueManager}}
+\doxysubsubsection{\texorpdfstring{StartDialogue()}{StartDialogue()}}
+{\footnotesize\ttfamily \label{class_dialogue_manager_aaeaa5f5bc513b17cb7f47fb534e69293} 
+void Dialogue\+Manager\+::\+Start\+Dialogue (\begin{DoxyParamCaption}\item[{int}]{player\+Rank}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dialogue_manager_af2b356766c2b76403d081bd6b2aea458}{IDialogue\+Manager}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_dialogue_manager_ae397528874fac29aba049193fb402a6a}\index{DialogueManager@{DialogueManager}!currentNode@{currentNode}}
+\index{currentNode@{currentNode}!DialogueManager@{DialogueManager}}
+\doxysubsubsection{\texorpdfstring{currentNode}{currentNode}}
+{\footnotesize\ttfamily \label{class_dialogue_manager_ae397528874fac29aba049193fb402a6a} 
+int Dialogue\+Manager\+::current\+Node\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_dialogue_manager_afada6502471f5de11931dc16e7c1f7d4}\index{DialogueManager@{DialogueManager}!nodes@{nodes}}
+\index{nodes@{nodes}!DialogueManager@{DialogueManager}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily \label{class_dialogue_manager_afada6502471f5de11931dc16e7c1f7d4} 
+std\+::vector$<$\mbox{\hyperlink{struct_dialogue_node}{Dialogue\+Node}}$>$ Dialogue\+Manager\+::nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_dialogue_manager_8h}{Dialogue\+Manager.\+h}}\end{DoxyCompactItemize}

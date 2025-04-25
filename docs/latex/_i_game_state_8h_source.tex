@@ -1,0 +1,16 @@
+\doxysection{IGame\+State.\+h}
+\hypertarget{_i_game_state_8h_source}{}\label{_i_game_state_8h_source}\index{Before Crisis/IGameState.h@{Before Crisis/IGameState.h}}
+\mbox{\hyperlink{_i_game_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_game_state}{IGameState}}\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_game_state_a5311fda56b33975b3dd82d3d506ce95c}{\string~IGameState}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_game_state_ad51599eee9ee365e81397d1f22abf808}{update}}(\textcolor{keywordtype}{float}\&\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_game_state_affbd7c4c8361e3f5995fd37a3a06d862}{render}}()\ =\ 0;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_game_state_a97e15ee3dcd0f98bc0af9a9220439474}{handleInput}}(\textcolor{keyword}{const}\ sf::Event\&\ event)\ =\ 0;}
+\DoxyCodeLine{00010\ \};}
+
+\end{DoxyCode}

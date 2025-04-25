@@ -1,0 +1,102 @@
+\doxysection{Mission\+Manager Class Reference}
+\hypertarget{class_mission_manager}{}\label{class_mission_manager}\index{MissionManager@{MissionManager}}
+
+
+{\ttfamily \#include $<$Mission\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Mission\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_mission_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mission\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_mission_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mission_manager_a43758c0b04143e119400d7867173a6c9}{Mission\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_mission_manager_ae37235126f6867e7f51f0974eb2328e9}{Add\+Mission}} (const \mbox{\hyperlink{struct_mission}{Mission}} \&mission) override
+\item 
+void \mbox{\hyperlink{class_mission_manager_a8c889b22cafa5521fe8177792655b602}{Complete\+Mission}} (const std\+::string \&mission\+Name) override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_mission}{Mission}} $>$ \mbox{\hyperlink{class_mission_manager_a83918c2c39b9ee1054853217d047c0a4}{Get\+Active\+Missions}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_mission_manager}{IMission\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_mission_manager_a0839fba8fc3eda5b96bd58023d41651a}{\texorpdfstring{$\sim$}{\string~}\+IMission\+Manager}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_mission}{Mission}} $>$ \mbox{\hyperlink{class_mission_manager_afbddf33b90a063a1ccccc9bd00005edc}{missions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mission_manager_a43758c0b04143e119400d7867173a6c9}\index{MissionManager@{MissionManager}!MissionManager@{MissionManager}}
+\index{MissionManager@{MissionManager}!MissionManager@{MissionManager}}
+\doxysubsubsection{\texorpdfstring{MissionManager()}{MissionManager()}}
+{\footnotesize\ttfamily \label{class_mission_manager_a43758c0b04143e119400d7867173a6c9} 
+Mission\+Manager\+::\+Mission\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mission_manager_ae37235126f6867e7f51f0974eb2328e9}\index{MissionManager@{MissionManager}!AddMission@{AddMission}}
+\index{AddMission@{AddMission}!MissionManager@{MissionManager}}
+\doxysubsubsection{\texorpdfstring{AddMission()}{AddMission()}}
+{\footnotesize\ttfamily \label{class_mission_manager_ae37235126f6867e7f51f0974eb2328e9} 
+void Mission\+Manager\+::\+Add\+Mission (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_mission}{Mission}} \&}]{mission}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mission_manager_a102ee0604f356e341950e63606bbf5e8}{IMission\+Manager}}.
+
+\Hypertarget{class_mission_manager_a8c889b22cafa5521fe8177792655b602}\index{MissionManager@{MissionManager}!CompleteMission@{CompleteMission}}
+\index{CompleteMission@{CompleteMission}!MissionManager@{MissionManager}}
+\doxysubsubsection{\texorpdfstring{CompleteMission()}{CompleteMission()}}
+{\footnotesize\ttfamily \label{class_mission_manager_a8c889b22cafa5521fe8177792655b602} 
+void Mission\+Manager\+::\+Complete\+Mission (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mission\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mission_manager_add16a061c558c7e7a049d5a6a37399c2}{IMission\+Manager}}.
+
+\Hypertarget{class_mission_manager_a83918c2c39b9ee1054853217d047c0a4}\index{MissionManager@{MissionManager}!GetActiveMissions@{GetActiveMissions}}
+\index{GetActiveMissions@{GetActiveMissions}!MissionManager@{MissionManager}}
+\doxysubsubsection{\texorpdfstring{GetActiveMissions()}{GetActiveMissions()}}
+{\footnotesize\ttfamily \label{class_mission_manager_a83918c2c39b9ee1054853217d047c0a4} 
+std\+::vector$<$ \mbox{\hyperlink{struct_mission}{Mission}} $>$ Mission\+Manager\+::\+Get\+Active\+Missions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mission_manager_a50a1e42b0a3bb6885f8371156e8e8794}{IMission\+Manager}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_mission_manager_afbddf33b90a063a1ccccc9bd00005edc}\index{MissionManager@{MissionManager}!missions@{missions}}
+\index{missions@{missions}!MissionManager@{MissionManager}}
+\doxysubsubsection{\texorpdfstring{missions}{missions}}
+{\footnotesize\ttfamily \label{class_mission_manager_afbddf33b90a063a1ccccc9bd00005edc} 
+std\+::vector$<$\mbox{\hyperlink{struct_mission}{Mission}}$>$ Mission\+Manager\+::missions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_mission_manager_8h}{Mission\+Manager.\+h}}\item 
+Before Crisis/\mbox{\hyperlink{_mission_manager_8cpp}{Mission\+Manager.\+cpp}}\end{DoxyCompactItemize}

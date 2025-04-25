@@ -1,0 +1,108 @@
+\doxysection{Character Class Reference}
+\hypertarget{class_character}{}\label{class_character}\index{Character@{Character}}
+
+
+{\ttfamily \#include $<$Character\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_character__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_character_adc27bdd255876169bad2ed0bae0cffb5}{Character}} ()
+\item 
+void \mbox{\hyperlink{class_character_aa73c9df310b6c7743c040a287682f7c9}{Equip\+Item}} (const std\+::string \&item)
+\item 
+void \mbox{\hyperlink{class_character_a33af7f16039e7a89def651dda375198d}{Gain\+Exp}} (int amount)
+\item 
+void \mbox{\hyperlink{class_character_adaea2c0e796426764830f52a78df6a1c}{Take\+Damage}} (int damage)
+\item 
+\mbox{\hyperlink{struct_stats}{Stats}} \mbox{\hyperlink{class_character_ae47e9cfa1715353a9da981548a9cc97d}{Get\+Stats}} () const
+\item 
+int \mbox{\hyperlink{class_character_abb83440dcbb15817ac4bf609e8a73f68}{Get\+Level}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_stats}{Stats}} \mbox{\hyperlink{class_character_a5b9124b740c94b382c9da466bea6036c}{stats}}
+\item 
+int \mbox{\hyperlink{class_character_af15a478fe650b87f59cbe5d071697307}{level}}
+\item 
+int \mbox{\hyperlink{class_character_a3f7a513e47876c6176a3f0c613627f74}{exp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_character_adc27bdd255876169bad2ed0bae0cffb5}\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}}
+{\footnotesize\ttfamily \label{class_character_adc27bdd255876169bad2ed0bae0cffb5} 
+Character\+::\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_character_aa73c9df310b6c7743c040a287682f7c9}\index{Character@{Character}!EquipItem@{EquipItem}}
+\index{EquipItem@{EquipItem}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{EquipItem()}{EquipItem()}}
+{\footnotesize\ttfamily \label{class_character_aa73c9df310b6c7743c040a287682f7c9} 
+void Character\+::\+Equip\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{item}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_character_a33af7f16039e7a89def651dda375198d}\index{Character@{Character}!GainExp@{GainExp}}
+\index{GainExp@{GainExp}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{GainExp()}{GainExp()}}
+{\footnotesize\ttfamily \label{class_character_a33af7f16039e7a89def651dda375198d} 
+void Character\+::\+Gain\+Exp (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_character_abb83440dcbb15817ac4bf609e8a73f68}\index{Character@{Character}!GetLevel@{GetLevel}}
+\index{GetLevel@{GetLevel}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{GetLevel()}{GetLevel()}}
+{\footnotesize\ttfamily \label{class_character_abb83440dcbb15817ac4bf609e8a73f68} 
+int Character\+::\+Get\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_character_ae47e9cfa1715353a9da981548a9cc97d}\index{Character@{Character}!GetStats@{GetStats}}
+\index{GetStats@{GetStats}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{GetStats()}{GetStats()}}
+{\footnotesize\ttfamily \label{class_character_ae47e9cfa1715353a9da981548a9cc97d} 
+\mbox{\hyperlink{struct_stats}{Stats}} Character\+::\+Get\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_character_adaea2c0e796426764830f52a78df6a1c}\index{Character@{Character}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily \label{class_character_adaea2c0e796426764830f52a78df6a1c} 
+void Character\+::\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_character_a3f7a513e47876c6176a3f0c613627f74}\index{Character@{Character}!exp@{exp}}
+\index{exp@{exp}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{exp}{exp}}
+{\footnotesize\ttfamily \label{class_character_a3f7a513e47876c6176a3f0c613627f74} 
+int Character\+::exp\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_character_af15a478fe650b87f59cbe5d071697307}\index{Character@{Character}!level@{level}}
+\index{level@{level}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily \label{class_character_af15a478fe650b87f59cbe5d071697307} 
+int Character\+::level\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_character_a5b9124b740c94b382c9da466bea6036c}\index{Character@{Character}!stats@{stats}}
+\index{stats@{stats}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{stats}{stats}}
+{\footnotesize\ttfamily \label{class_character_a5b9124b740c94b382c9da466bea6036c} 
+\mbox{\hyperlink{struct_stats}{Stats}} Character\+::stats\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_character_manager_8h}{Character\+Manager.\+h}}\item 
+Before Crisis/\mbox{\hyperlink{_character_manager_8cpp}{Character\+Manager.\+cpp}}\end{DoxyCompactItemize}

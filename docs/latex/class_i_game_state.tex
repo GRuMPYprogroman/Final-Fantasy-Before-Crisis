@@ -1,0 +1,82 @@
+\doxysection{IGame\+State Class Reference}
+\hypertarget{class_i_game_state}{}\label{class_i_game_state}\index{IGameState@{IGameState}}
+
+
+{\ttfamily \#include $<$IGame\+State.\+h$>$}
+
+
+
+Inheritance diagram for IGame\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_game_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for IGame\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_i_game_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_game_state_a5311fda56b33975b3dd82d3d506ce95c}{\texorpdfstring{$\sim$}{\string~}\+IGame\+State}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_i_game_state_ad51599eee9ee365e81397d1f22abf808}{update}} (float \&delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_game_state_affbd7c4c8361e3f5995fd37a3a06d862}{render}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_game_state_a97e15ee3dcd0f98bc0af9a9220439474}{handle\+Input}} (const sf\+::\+Event \&event)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_game_state_a5311fda56b33975b3dd82d3d506ce95c}\index{IGameState@{IGameState}!````~IGameState@{\texorpdfstring{$\sim$}{\string~}IGameState}}
+\index{````~IGameState@{\texorpdfstring{$\sim$}{\string~}IGameState}!IGameState@{IGameState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IGameState()}{\string~IGameState()}}
+{\footnotesize\ttfamily \label{class_i_game_state_a5311fda56b33975b3dd82d3d506ce95c} 
+virtual IGame\+State\+::\texorpdfstring{$\sim$}{\string~}\+IGame\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_game_state_a97e15ee3dcd0f98bc0af9a9220439474}\index{IGameState@{IGameState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!IGameState@{IGameState}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily \label{class_i_game_state_a97e15ee3dcd0f98bc0af9a9220439474} 
+virtual void IGame\+State\+::handle\+Input (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_combat_state_ab5979e8c5e34db8696f5a9a8046ab17d}{Combat\+State}}, \mbox{\hyperlink{class_gameplay_state_a4aa179bc6a95fbd4e8765ddaf7277c8b}{Gameplay\+State}}, and \mbox{\hyperlink{class_menu_state_a718bc1b44fe68805f787ceb337e252e3}{Menu\+State}}.
+
+\Hypertarget{class_i_game_state_affbd7c4c8361e3f5995fd37a3a06d862}\index{IGameState@{IGameState}!render@{render}}
+\index{render@{render}!IGameState@{IGameState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_i_game_state_affbd7c4c8361e3f5995fd37a3a06d862} 
+virtual void IGame\+State\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_combat_state_a5b7b0a9011cd67b7504493c1f681e1a1}{Combat\+State}}, and \mbox{\hyperlink{class_menu_state_ac216e0b4c7f5c5d39520165c45af0da6}{Menu\+State}}.
+
+\Hypertarget{class_i_game_state_ad51599eee9ee365e81397d1f22abf808}\index{IGameState@{IGameState}!update@{update}}
+\index{update@{update}!IGameState@{IGameState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_i_game_state_ad51599eee9ee365e81397d1f22abf808} 
+virtual void IGame\+State\+::update (\begin{DoxyParamCaption}\item[{float \&}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_combat_state_a2e156d5bd70dbc4f6792c5e742760b7b}{Combat\+State}}, \mbox{\hyperlink{class_gameplay_state_aa86fa9d35649b1049388ab528bca0c3c}{Gameplay\+State}}, and \mbox{\hyperlink{class_menu_state_a183397f44188a3ba70fe7ffdf71fe738}{Menu\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_i_game_state_8h}{IGame\+State.\+h}}\end{DoxyCompactItemize}

@@ -1,9 +1,0 @@
-<map id="detail::is_default_constructible&lt; const std::tuple&lt; Ts... &gt; &gt;" name="detail::is_default_constructible&lt; const std::tuple&lt; Ts... &gt; &gt;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="119,272,255,373"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,131,179,216"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,227,157,271,153,274,125,230"/>
-<area shape="rect" id="Node000003" href="$structdetail_1_1conjunction.html" title=" " alt="" coords="203,123,363,224"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,238,221,274,217,271,240,235"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="238,5,328,75"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="286,90,286,123,280,123,280,90"/>
-</map>

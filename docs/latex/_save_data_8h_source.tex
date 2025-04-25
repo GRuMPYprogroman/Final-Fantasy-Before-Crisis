@@ -1,0 +1,17 @@
+\doxysection{Save\+Data.\+h}
+\hypertarget{_save_data_8h_source}{}\label{_save_data_8h_source}\index{Before Crisis/SaveData.h@{Before Crisis/SaveData.h}}
+\mbox{\hyperlink{_save_data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_save_data}{SaveData}}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_data_aa05c391bbcb9b6e5d8dad8700d494ff0}{playerX}}\ =\ 0;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_data_a39610f346b64b5b6708171e1ae964cad}{playerY}}\ =\ 0;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_data_a242df46f9d28a1b4f389b7f244d74589}{playerHP}}\ =\ 100;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//(mission\ progress,\ inventory)}}
+\DoxyCodeLine{00009\ \};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \mbox{\hyperlink{_save_data_8h_ac13a046a7982845efd22615f19d71901}{NLOHMANN\_DEFINE\_TYPE\_NON\_INTRUSIVE}}(\mbox{\hyperlink{struct_save_data}{SaveData}},\ playerX,\ playerY,\ playerHP);}
+
+\end{DoxyCode}

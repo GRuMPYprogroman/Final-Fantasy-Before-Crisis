@@ -1,0 +1,106 @@
+\doxysection{Audio\+Service Class Reference}
+\hypertarget{class_audio_service}{}\label{class_audio_service}\index{AudioService@{AudioService}}
+
+
+{\ttfamily \#include $<$Audio\+Service.\+h$>$}
+
+
+
+Inheritance diagram for Audio\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_audio_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Audio\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{class_audio_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_audio_service_a6a00833c2e72f697660d9ecf46d5f739}{\texorpdfstring{$\sim$}{\string~}\+Audio\+Service}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_audio_service_a77752b023b5c10f3fac8b0b8ab2cd987}{play\+Sound}} (\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}} id, float volume=100.f, float pitch=1.f)=0
+\item 
+virtual void \mbox{\hyperlink{class_audio_service_a69a8cec143952613ce6462fdc93c9fda}{play\+Music}} (\mbox{\hyperlink{_audio_variables_8h_a68946471db0c45b6ce503ef14572f078}{Music\+ID}} id, float fade\+In\+Sec=2.f)=0
+\item 
+virtual void \mbox{\hyperlink{class_audio_service_a8d7d1d6ec9b6a5248b584e66232b1fce}{stop\+Music}} (float fade\+Out\+Sec=2.f)=0
+\item 
+virtual void \mbox{\hyperlink{class_audio_service_afe54833581689c17c47af852fb49fcf4}{set\+Master\+Volume}} (float vol)=0
+\item 
+virtual void \mbox{\hyperlink{class_audio_service_ab82787d31669a29e25ee1414cc11b6ec}{update}} (float dt)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_audio_service_a6a00833c2e72f697660d9ecf46d5f739}\index{AudioService@{AudioService}!````~AudioService@{\texorpdfstring{$\sim$}{\string~}AudioService}}
+\index{````~AudioService@{\texorpdfstring{$\sim$}{\string~}AudioService}!AudioService@{AudioService}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AudioService()}{\string~AudioService()}}
+{\footnotesize\ttfamily \label{class_audio_service_a6a00833c2e72f697660d9ecf46d5f739} 
+virtual Audio\+Service\+::\texorpdfstring{$\sim$}{\string~}\+Audio\+Service (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_service_a69a8cec143952613ce6462fdc93c9fda}\index{AudioService@{AudioService}!playMusic@{playMusic}}
+\index{playMusic@{playMusic}!AudioService@{AudioService}}
+\doxysubsubsection{\texorpdfstring{playMusic()}{playMusic()}}
+{\footnotesize\ttfamily \label{class_audio_service_a69a8cec143952613ce6462fdc93c9fda} 
+virtual void Audio\+Service\+::play\+Music (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_audio_variables_8h_a68946471db0c45b6ce503ef14572f078}{Music\+ID}}}]{id}{, }\item[{float}]{fade\+In\+Sec}{ = {\ttfamily 2.f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_audio_manager_a73760d6a91b6c7ca353e6518a4d4360a}{Audio\+Manager}}.
+
+\Hypertarget{class_audio_service_a77752b023b5c10f3fac8b0b8ab2cd987}\index{AudioService@{AudioService}!playSound@{playSound}}
+\index{playSound@{playSound}!AudioService@{AudioService}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily \label{class_audio_service_a77752b023b5c10f3fac8b0b8ab2cd987} 
+virtual void Audio\+Service\+::play\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}}}]{id}{, }\item[{float}]{volume}{ = {\ttfamily 100.f}, }\item[{float}]{pitch}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_audio_manager_ae8e55be0b8ce52441b753df6f653cc01}{Audio\+Manager}}.
+
+\Hypertarget{class_audio_service_afe54833581689c17c47af852fb49fcf4}\index{AudioService@{AudioService}!setMasterVolume@{setMasterVolume}}
+\index{setMasterVolume@{setMasterVolume}!AudioService@{AudioService}}
+\doxysubsubsection{\texorpdfstring{setMasterVolume()}{setMasterVolume()}}
+{\footnotesize\ttfamily \label{class_audio_service_afe54833581689c17c47af852fb49fcf4} 
+virtual void Audio\+Service\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{vol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_audio_manager_a6ace00915e164c145d425615dfa621b2}{Audio\+Manager}}.
+
+\Hypertarget{class_audio_service_a8d7d1d6ec9b6a5248b584e66232b1fce}\index{AudioService@{AudioService}!stopMusic@{stopMusic}}
+\index{stopMusic@{stopMusic}!AudioService@{AudioService}}
+\doxysubsubsection{\texorpdfstring{stopMusic()}{stopMusic()}}
+{\footnotesize\ttfamily \label{class_audio_service_a8d7d1d6ec9b6a5248b584e66232b1fce} 
+virtual void Audio\+Service\+::stop\+Music (\begin{DoxyParamCaption}\item[{float}]{fade\+Out\+Sec}{ = {\ttfamily 2.f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_audio_manager_aaaccf7d4d188bbaec8c4812da9c76727}{Audio\+Manager}}.
+
+\Hypertarget{class_audio_service_ab82787d31669a29e25ee1414cc11b6ec}\index{AudioService@{AudioService}!update@{update}}
+\index{update@{update}!AudioService@{AudioService}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_audio_service_ab82787d31669a29e25ee1414cc11b6ec} 
+virtual void Audio\+Service\+::update (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_audio_manager_a531d4972bde7ba362e3786765fab68ea}{Audio\+Manager}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_audio_service_8h}{Audio\+Service.\+h}}\end{DoxyCompactItemize}

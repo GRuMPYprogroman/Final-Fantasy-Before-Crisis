@@ -1,0 +1,23 @@
+\doxysection{State\+Stack.\+h}
+\hypertarget{_state_stack_8h_source}{}\label{_state_stack_8h_source}\index{Before Crisis/StateStack.h@{Before Crisis/StateStack.h}}
+\mbox{\hyperlink{_state_stack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_state_8h}{IGameState.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_service_8h}{StateService.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_state_stack}{StateStack}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state_service}{StateService}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ std::vector<std::unique\_ptr<IGameState>>\ \mbox{\hyperlink{class_state_stack_a4182aa04cf9c2e4bb5073e2854c5fc07}{states}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_stack_a8d56f77c17d2084d7e70eaaab9370ecb}{pushState}}(std::unique\_ptr<IGameState>\ state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_stack_aa915b78d6cfa2ee57a3c3018e3703e37}{popState}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_state_stack_ade1327fa62e27e2584815b2be97b726b}{empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::unique\_ptr<IGameState>>\&\ \mbox{\hyperlink{class_state_stack_af361fdcbe7b85252d63947d439833bfd}{getStates}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_i_game_state}{IGameState}}*\ \mbox{\hyperlink{class_state_stack_aa20616aab58449e434023036896baa49}{topState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ \};}
+
+\end{DoxyCode}

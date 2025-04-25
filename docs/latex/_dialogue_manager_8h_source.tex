@@ -1,0 +1,28 @@
+\doxysection{Dialogue\+Manager.\+h}
+\hypertarget{_dialogue_manager_8h_source}{}\label{_dialogue_manager_8h_source}\index{Before Crisis/DialogueManager.h@{Before Crisis/DialogueManager.h}}
+\mbox{\hyperlink{_dialogue_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_dialogue_manager_8h}{IDialogueManager.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_dialogue_node}{DialogueNode}}\{}
+\DoxyCodeLine{00007\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_dialogue_node_a1b455e724da204b5f221681839d95075}{text}};}
+\DoxyCodeLine{00008\ \ \ \ \ std::vector<std::pair<std::string,\ int>>\ \mbox{\hyperlink{struct_dialogue_node_affb43f13d9058300158af09807809fe3}{choices}};\ \textcolor{comment}{//\ text\ +\ next\ node\ ID}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_dialogue_node_a7d1c119f83ba57981ff0e85dccb1f825}{requiredRank}};\ \textcolor{comment}{//\ Unlock\ condition}}
+\DoxyCodeLine{00010\ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dialogue_manager_adbf006def906be673d67fd083607c6e5}{DialogueManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_dialogue_manager}{IDialogueManager}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector\ <DialogueNode>\ \mbox{\hyperlink{class_dialogue_manager_afada6502471f5de11931dc16e7c1f7d4}{nodes}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_dialogue_manager_ae397528874fac29aba049193fb402a6a}{currentNode}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_dialogue_manager_adbf006def906be673d67fd083607c6e5}{DialogueManager}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialogue_manager_a94286cbf31278f16da4af62601616d01}{LoadDialogue}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dialogue_manager_aaeaa5f5bc513b17cb7f47fb534e69293}{StartDialogue}}(\textcolor{keywordtype}{int}\ playerRank)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+
+\end{DoxyCode}

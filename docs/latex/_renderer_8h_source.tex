@@ -1,0 +1,36 @@
+\doxysection{Renderer.\+h}
+\hypertarget{_renderer_8h_source}{}\label{_renderer_8h_source}\index{Before Crisis/Renderer.h@{Before Crisis/Renderer.h}}
+\mbox{\hyperlink{_renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_button_8h}{Button.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_level_8h}{Level.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_render_service_8h}{RenderService.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button}{Button}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level}{Level}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_renderer_acfe2807ee1e42f52002fb9f78c6b9d63}{Renderer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_render_service}{RenderService}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ sf::RenderWindow\ \mbox{\hyperlink{class_renderer_a9bc2d445720d565550dc200ba1f47564}{window}};}
+\DoxyCodeLine{00016\ \ \ \ \ sf::Font\ \mbox{\hyperlink{class_renderer_a0178c692eb57eeb4db2dfa274ee62466}{font}};}
+\DoxyCodeLine{00017\ \ \ \ \ sf::Texture\ \mbox{\hyperlink{class_renderer_a42b64e3ff577db0721abcb8b90ac4a81}{atlas}};\ \ \ \ \ \ \textcolor{comment}{//\ Texture\ atlas\ for\ game\ world\ characters}}
+\DoxyCodeLine{00018\ \ \ \ \ sf::VertexArray\ \mbox{\hyperlink{class_renderer_a0fff1573fdf3d3295f78c0ccef02c87e}{vertices}};\ \textcolor{comment}{//\ For\ efficient\ world\ rendering}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_renderer_abbe39cc289df4fe9ac8a0d61b88a335e}{LoadResources}}();\ \ \ \textcolor{comment}{//\ Helper\ to\ load\ font\ and\ atlas}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_renderer_acfe2807ee1e42f52002fb9f78c6b9d63}{Renderer}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ std::string\&\ title\ =\ \textcolor{stringliteral}{"{}Before\ Crisis"{}});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_aeedbc2ffdccf51fa1384100446488746}{Clear}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_ab8c516ba9f7e77a1a55d6fbd071677f8}{Display}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_ad7fdc75f1fcd37b5935a9b317dff1398}{RenderWorld}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_level}{Level}}\&\ level,\ \textcolor{keyword}{const}\ sf::Vector2f\&\ playerPos);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a0eeafac5006aa962667577376d0f8eda}{RenderMessage}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00027\ \ \ \ \ sf::RenderWindow\&\ \mbox{\hyperlink{class_renderer_a05880198e33af61c843eb43a1e084d55}{getRenderWindow}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_renderer_a9bc2d445720d565550dc200ba1f47564}{window}};\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ sf::Vector2u\ \mbox{\hyperlink{class_renderer_a8c41b0b132b67b00ee93bf4e89c5a178}{getWindowSize}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_renderer_a9bc2d445720d565550dc200ba1f47564}{window}}.getSize();\ \}}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+
+\end{DoxyCode}

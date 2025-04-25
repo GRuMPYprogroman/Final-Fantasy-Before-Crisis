@@ -1,8 +1,0 @@
-<map id="detail::binary_writer::write_bson_boolean" name="detail::binary_writer::write_bson_boolean">
-<area shape="rect" id="Node000001" title="Writes a BSON element with key name and boolean value value." alt="" coords="5,5,150,48"/>
-<area shape="rect" id="Node000002" href="$classdetail_1_1binary__writer.html#a2822d4a58bbb0dc2198686da430e8906" title=" " alt="" coords="420,5,554,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,21,198,20,372,20,404,21,404,26,372,25,198,25,150,27"/>
-<area shape="rect" id="Node000003" href="$classdetail_1_1binary__writer.html#aec35b5420c48539db2959ef88ae296d5" title="Writes the given element_type and name to the output adapter." alt="" coords="198,35,372,77"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,34,183,39,182,44,149,39"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="372,41,404,36,405,41,373,46"/>
-</map>

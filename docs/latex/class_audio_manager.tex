@@ -1,0 +1,288 @@
+\doxysection{Audio\+Manager Class Reference}
+\hypertarget{class_audio_manager}{}\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+
+
+{\ttfamily \#include $<$Audio\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Audio\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_audio_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Audio\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_audio_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_audio_manager_af5b889c6fa18bed65044d42a946e4596}{init}} ()
+\item 
+void \mbox{\hyperlink{class_audio_manager_ae8e55be0b8ce52441b753df6f653cc01}{play\+Sound}} (\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}} id, float volume=100.f, float pitch=1.f) override
+\item 
+void \mbox{\hyperlink{class_audio_manager_a73760d6a91b6c7ca353e6518a4d4360a}{play\+Music}} (\mbox{\hyperlink{_audio_variables_8h_a68946471db0c45b6ce503ef14572f078}{Music\+ID}} id, float fade\+In\+Sec=0.\+5f) override
+\item 
+void \mbox{\hyperlink{class_audio_manager_aaaccf7d4d188bbaec8c4812da9c76727}{stop\+Music}} (float fade\+Out\+Sec=0.\+5f) override
+\item 
+void \mbox{\hyperlink{class_audio_manager_a6ace00915e164c145d425615dfa621b2}{set\+Master\+Volume}} (float vol) override
+\item 
+void \mbox{\hyperlink{class_audio_manager_a531d4972bde7ba362e3786765fab68ea}{update}} (float dt) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_audio_service}{Audio\+Service}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_audio_service_a6a00833c2e72f697660d9ecf46d5f739}{\texorpdfstring{$\sim$}{\string~}\+Audio\+Service}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20}{Fade\+State}} \{ \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20ae599161956d626eda4cb0a5ffb85271c}{Idle}}
+, \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20a6830a6bcb5563d6b8ba7bafda3eda348}{Fading\+In}}
+, \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20a2ddb22b5f505aaafbe118c502a5a56ac}{Fading\+Out}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_manager_a6123487a877dbed25f505664d99981bf}{load\+All\+Sounds}} ()
+\item 
+void \mbox{\hyperlink{class_audio_manager_a88643f22246dd1922ccb2f467d9f346a}{load\+All\+Music}} ()
+\item 
+sf\+::\+Sound \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_audio_manager_ae8b16b660da846da3030b2858488f8fd}{spawn\+Sound\+Instance}} (\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}} id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}}, sf\+::\+Sound\+Buffer $>$ \mbox{\hyperlink{class_audio_manager_a7b5509967469a09c56b3786cc6bc7d8b}{\+\_\+buffers}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{_audio_variables_8h_a68946471db0c45b6ce503ef14572f078}{Music\+ID}}, std\+::string $>$ \mbox{\hyperlink{class_audio_manager_abee5afd765c0b96eafc4ff0f46974271}{\+\_\+music\+Files}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Sound $>$ $>$ \mbox{\hyperlink{class_audio_manager_af52e2aef3e24ef13da6bf4ef18611843}{\+\_\+active\+Sounds}}
+\item 
+std\+::unique\+\_\+ptr$<$ sf\+::\+Music $>$ \mbox{\hyperlink{class_audio_manager_a9882ce937f862f7df04948acea895846}{\+\_\+current\+Music}}
+\item 
+float \mbox{\hyperlink{class_audio_manager_ab5cb8bced5b13555b1d501ac052122cc}{\+\_\+master\+Volume}} = 1.f
+\item 
+float \mbox{\hyperlink{class_audio_manager_a60614abe9454fe7eb62f58c23f1d6a05}{\+\_\+fade\+Duration}} = 0.f
+\item 
+float \mbox{\hyperlink{class_audio_manager_a1c634e2afe0836f3f621561cd5a2b23b}{\+\_\+fade\+Timer}} = 0.f
+\item 
+float \mbox{\hyperlink{class_audio_manager_a310d6ca9eff1cfe9f33ad501fc5aef83}{\+\_\+start\+Volume}} = 0.f
+\item 
+float \mbox{\hyperlink{class_audio_manager_af6d693c84cf30ef4d7ef32fa446edba2}{\+\_\+target\+Volume}} = 0.f
+\item 
+enum \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20}{Audio\+Manager\+::\+Fade\+State}} \mbox{\hyperlink{class_audio_manager_a26f14983fc89f3f1bea2758233e097fe}{\+\_\+fade\+State}} = \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20ae599161956d626eda4cb0a5ffb85271c}{Fade\+State\+::\+Idle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20}\index{AudioManager@{AudioManager}!FadeState@{FadeState}}
+\index{FadeState@{FadeState}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{FadeState}{FadeState}}
+{\footnotesize\ttfamily \label{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20} 
+enum class \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20}{Audio\+Manager\+::\+Fade\+State}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!AudioManager@{AudioManager}}\index{AudioManager@{AudioManager}!Idle@{Idle}}}\Hypertarget{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20ae599161956d626eda4cb0a5ffb85271c}\label{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20ae599161956d626eda4cb0a5ffb85271c} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FadingIn@{FadingIn}!AudioManager@{AudioManager}}\index{AudioManager@{AudioManager}!FadingIn@{FadingIn}}}\Hypertarget{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20a6830a6bcb5563d6b8ba7bafda3eda348}\label{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20a6830a6bcb5563d6b8ba7bafda3eda348} 
+Fading\+In&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FadingOut@{FadingOut}!AudioManager@{AudioManager}}\index{AudioManager@{AudioManager}!FadingOut@{FadingOut}}}\Hypertarget{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20a2ddb22b5f505aaafbe118c502a5a56ac}\label{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20a2ddb22b5f505aaafbe118c502a5a56ac} 
+Fading\+Out&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_manager_af5b889c6fa18bed65044d42a946e4596}\index{AudioManager@{AudioManager}!init@{init}}
+\index{init@{init}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_audio_manager_af5b889c6fa18bed65044d42a946e4596} 
+bool Audio\+Manager\+::init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_af5b889c6fa18bed65044d42a946e4596_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_a88643f22246dd1922ccb2f467d9f346a}\index{AudioManager@{AudioManager}!loadAllMusic@{loadAllMusic}}
+\index{loadAllMusic@{loadAllMusic}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{loadAllMusic()}{loadAllMusic()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a88643f22246dd1922ccb2f467d9f346a} 
+void Audio\+Manager\+::load\+All\+Music (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_a88643f22246dd1922ccb2f467d9f346a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_a6123487a877dbed25f505664d99981bf}\index{AudioManager@{AudioManager}!loadAllSounds@{loadAllSounds}}
+\index{loadAllSounds@{loadAllSounds}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{loadAllSounds()}{loadAllSounds()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a6123487a877dbed25f505664d99981bf} 
+void Audio\+Manager\+::load\+All\+Sounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_a6123487a877dbed25f505664d99981bf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_a73760d6a91b6c7ca353e6518a4d4360a}\index{AudioManager@{AudioManager}!playMusic@{playMusic}}
+\index{playMusic@{playMusic}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{playMusic()}{playMusic()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a73760d6a91b6c7ca353e6518a4d4360a} 
+void Audio\+Manager\+::play\+Music (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_audio_variables_8h_a68946471db0c45b6ce503ef14572f078}{Music\+ID}}}]{id}{, }\item[{float}]{fade\+In\+Sec}{ = {\ttfamily 0.5f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_audio_service_a69a8cec143952613ce6462fdc93c9fda}{Audio\+Service}}.
+
+\Hypertarget{class_audio_manager_ae8e55be0b8ce52441b753df6f653cc01}\index{AudioManager@{AudioManager}!playSound@{playSound}}
+\index{playSound@{playSound}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily \label{class_audio_manager_ae8e55be0b8ce52441b753df6f653cc01} 
+void Audio\+Manager\+::play\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}}}]{id}{, }\item[{float}]{volume}{ = {\ttfamily 100.f}, }\item[{float}]{pitch}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_audio_service_a77752b023b5c10f3fac8b0b8ab2cd987}{Audio\+Service}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_ae8e55be0b8ce52441b753df6f653cc01_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_a6ace00915e164c145d425615dfa621b2}\index{AudioManager@{AudioManager}!setMasterVolume@{setMasterVolume}}
+\index{setMasterVolume@{setMasterVolume}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{setMasterVolume()}{setMasterVolume()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a6ace00915e164c145d425615dfa621b2} 
+void Audio\+Manager\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{vol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_audio_service_afe54833581689c17c47af852fb49fcf4}{Audio\+Service}}.
+
+\Hypertarget{class_audio_manager_ae8b16b660da846da3030b2858488f8fd}\index{AudioManager@{AudioManager}!spawnSoundInstance@{spawnSoundInstance}}
+\index{spawnSoundInstance@{spawnSoundInstance}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{spawnSoundInstance()}{spawnSoundInstance()}}
+{\footnotesize\ttfamily \label{class_audio_manager_ae8b16b660da846da3030b2858488f8fd} 
+sf\+::\+Sound \texorpdfstring{$\ast$}{*} Audio\+Manager\+::spawn\+Sound\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}}}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_ae8b16b660da846da3030b2858488f8fd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_aaaccf7d4d188bbaec8c4812da9c76727}\index{AudioManager@{AudioManager}!stopMusic@{stopMusic}}
+\index{stopMusic@{stopMusic}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{stopMusic()}{stopMusic()}}
+{\footnotesize\ttfamily \label{class_audio_manager_aaaccf7d4d188bbaec8c4812da9c76727} 
+void Audio\+Manager\+::stop\+Music (\begin{DoxyParamCaption}\item[{float}]{fade\+Out\+Sec}{ = {\ttfamily 0.5f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_audio_service_a8d7d1d6ec9b6a5248b584e66232b1fce}{Audio\+Service}}.
+
+\Hypertarget{class_audio_manager_a531d4972bde7ba362e3786765fab68ea}\index{AudioManager@{AudioManager}!update@{update}}
+\index{update@{update}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a531d4972bde7ba362e3786765fab68ea} 
+void Audio\+Manager\+::update (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_audio_service_ab82787d31669a29e25ee1414cc11b6ec}{Audio\+Service}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_audio_manager_af52e2aef3e24ef13da6bf4ef18611843}\index{AudioManager@{AudioManager}!\_activeSounds@{\_activeSounds}}
+\index{\_activeSounds@{\_activeSounds}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_activeSounds}{\_activeSounds}}
+{\footnotesize\ttfamily \label{class_audio_manager_af52e2aef3e24ef13da6bf4ef18611843} 
+std\+::vector$<$std\+::unique\+\_\+ptr$<$sf\+::\+Sound$>$ $>$ Audio\+Manager\+::\+\_\+active\+Sounds\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a7b5509967469a09c56b3786cc6bc7d8b}\index{AudioManager@{AudioManager}!\_buffers@{\_buffers}}
+\index{\_buffers@{\_buffers}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_buffers}{\_buffers}}
+{\footnotesize\ttfamily \label{class_audio_manager_a7b5509967469a09c56b3786cc6bc7d8b} 
+std\+::unordered\+\_\+map$<$\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{Sound\+ID}}, sf\+::\+Sound\+Buffer$>$ Audio\+Manager\+::\+\_\+buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a9882ce937f862f7df04948acea895846}\index{AudioManager@{AudioManager}!\_currentMusic@{\_currentMusic}}
+\index{\_currentMusic@{\_currentMusic}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_currentMusic}{\_currentMusic}}
+{\footnotesize\ttfamily \label{class_audio_manager_a9882ce937f862f7df04948acea895846} 
+std\+::unique\+\_\+ptr$<$sf\+::\+Music$>$ Audio\+Manager\+::\+\_\+current\+Music\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a60614abe9454fe7eb62f58c23f1d6a05}\index{AudioManager@{AudioManager}!\_fadeDuration@{\_fadeDuration}}
+\index{\_fadeDuration@{\_fadeDuration}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_fadeDuration}{\_fadeDuration}}
+{\footnotesize\ttfamily \label{class_audio_manager_a60614abe9454fe7eb62f58c23f1d6a05} 
+float Audio\+Manager\+::\+\_\+fade\+Duration = 0.f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a26f14983fc89f3f1bea2758233e097fe}\index{AudioManager@{AudioManager}!\_fadeState@{\_fadeState}}
+\index{\_fadeState@{\_fadeState}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_fadeState}{\_fadeState}}
+{\footnotesize\ttfamily \label{class_audio_manager_a26f14983fc89f3f1bea2758233e097fe} 
+enum \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20}{Audio\+Manager\+::\+Fade\+State}} Audio\+Manager\+::\+\_\+fade\+State = \mbox{\hyperlink{class_audio_manager_a2866ac4b83d8a162369637e7ede12f20ae599161956d626eda4cb0a5ffb85271c}{Fade\+State\+::\+Idle}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a1c634e2afe0836f3f621561cd5a2b23b}\index{AudioManager@{AudioManager}!\_fadeTimer@{\_fadeTimer}}
+\index{\_fadeTimer@{\_fadeTimer}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_fadeTimer}{\_fadeTimer}}
+{\footnotesize\ttfamily \label{class_audio_manager_a1c634e2afe0836f3f621561cd5a2b23b} 
+float Audio\+Manager\+::\+\_\+fade\+Timer = 0.f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_ab5cb8bced5b13555b1d501ac052122cc}\index{AudioManager@{AudioManager}!\_masterVolume@{\_masterVolume}}
+\index{\_masterVolume@{\_masterVolume}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_masterVolume}{\_masterVolume}}
+{\footnotesize\ttfamily \label{class_audio_manager_ab5cb8bced5b13555b1d501ac052122cc} 
+float Audio\+Manager\+::\+\_\+master\+Volume = 1.f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_abee5afd765c0b96eafc4ff0f46974271}\index{AudioManager@{AudioManager}!\_musicFiles@{\_musicFiles}}
+\index{\_musicFiles@{\_musicFiles}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_musicFiles}{\_musicFiles}}
+{\footnotesize\ttfamily \label{class_audio_manager_abee5afd765c0b96eafc4ff0f46974271} 
+std\+::unordered\+\_\+map$<$\mbox{\hyperlink{_audio_variables_8h_a68946471db0c45b6ce503ef14572f078}{Music\+ID}}, std\+::string$>$ Audio\+Manager\+::\+\_\+music\+Files\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_a310d6ca9eff1cfe9f33ad501fc5aef83}\index{AudioManager@{AudioManager}!\_startVolume@{\_startVolume}}
+\index{\_startVolume@{\_startVolume}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_startVolume}{\_startVolume}}
+{\footnotesize\ttfamily \label{class_audio_manager_a310d6ca9eff1cfe9f33ad501fc5aef83} 
+float Audio\+Manager\+::\+\_\+start\+Volume = 0.f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_audio_manager_af6d693c84cf30ef4d7ef32fa446edba2}\index{AudioManager@{AudioManager}!\_targetVolume@{\_targetVolume}}
+\index{\_targetVolume@{\_targetVolume}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{\_targetVolume}{\_targetVolume}}
+{\footnotesize\ttfamily \label{class_audio_manager_af6d693c84cf30ef4d7ef32fa446edba2} 
+float Audio\+Manager\+::\+\_\+target\+Volume = 0.f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_audio_manager_8h}{Audio\+Manager.\+h}}\item 
+Before Crisis/\mbox{\hyperlink{_audio_manager_8cpp}{Audio\+Manager.\+cpp}}\end{DoxyCompactItemize}

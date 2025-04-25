@@ -1,0 +1,25 @@
+\doxysection{Game\+Manager.\+h}
+\hypertarget{_game_manager_8h_source}{}\label{_game_manager_8h_source}\index{Before Crisis/GameManager.h@{Before Crisis/GameManager.h}}
+\mbox{\hyperlink{_game_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_state_stack_8h}{StateStack.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_menu_state_8h}{MenuState.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_renderer_8h}{Renderer.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_audio_manager_8h}{AudioManager.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_manager_aa0e2424dc1a39d380e5b6605b179bf05}{GameManager}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ std::shared\_ptr<Renderer>\ \mbox{\hyperlink{class_game_manager_a4f2645f57f092228cde47423014b3191}{renderer}};}
+\DoxyCodeLine{00012\ \ \ \ \ std::shared\_ptr<StateStack>\ \mbox{\hyperlink{class_game_manager_a44eb2ab87c956f9dd1ad4f4005385e2a}{states}};}
+\DoxyCodeLine{00013\ \ \ \ \ std::shared\_ptr<AudioManager>\ \mbox{\hyperlink{class_game_manager_a456765cded8afd0804eea448346624ef}{audio}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_manager_a7e31b7ecb96c23cfd02002b00bbaca2c}{isRunning}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_game_manager_aa0e2424dc1a39d380e5b6605b179bf05}{GameManager}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_manager_a0098f9338a6129374ccfaeb1c7093d1b}{Run}}();}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+
+\end{DoxyCode}

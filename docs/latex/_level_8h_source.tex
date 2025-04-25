@@ -1,0 +1,27 @@
+\doxysection{Level.\+h}
+\hypertarget{_level_8h_source}{}\label{_level_8h_source}\index{Before Crisis/Level.h@{Before Crisis/Level.h}}
+\mbox{\hyperlink{_level_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_area_type_8h_a94d521aa6d0ba1d19859bd1697cdc542}{AreaType}}\ \{\mbox{\hyperlink{_area_type_8h_a94d521aa6d0ba1d19859bd1697cdc542aac12ee4aedb176eb73ce3f6c0d1e9036}{Forest}},\ \mbox{\hyperlink{_area_type_8h_a94d521aa6d0ba1d19859bd1697cdc542a1e8b2516fdcbb457e365167b8b060b47}{Cave}},\ \mbox{\hyperlink{_area_type_8h_a94d521aa6d0ba1d19859bd1697cdc542acd701b6fb06d4e424da1010f9bf86fe3}{Dungeon}}\};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_ade6d0f713eb80970d2ba634b74b5eb87}{Level}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_level_a33dc03f7e2e10ed198b75526d8e4e62f}{width}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_level_a16d1b735f7d513cf18bfff1ad4022f58}{height}};}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{AreaType}}\ \mbox{\hyperlink{class_level_a8535fefe87b3faa6be720c49942ceb99}{areaType}};}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_level_a824db6ed2efcea19f4ef01b4a24eaf23}{grid}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_level_ade6d0f713eb80970d2ba634b74b5eb87}{Level}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_level_a33dc03f7e2e10ed198b75526d8e4e62f}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_level_a16d1b735f7d513cf18bfff1ad4022f58}{height}},\ \mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{AreaType}}\ \mbox{\hyperlink{class_level_a8535fefe87b3faa6be720c49942ceb99}{areaType}});}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a69e683fe70d5a0696b701dd7267e8e98}{Generate}}();}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::string>\&\ \mbox{\hyperlink{class_level_a965065d03449ca0c89effd592abcee25}{GetGrid}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_level_a824db6ed2efcea19f4ef01b4a24eaf23}{grid}};\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{AreaType}}\ \mbox{\hyperlink{class_level_a2deda4cc6586db504da13d58ede1eab0}{GetAreaType}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_level_a8535fefe87b3faa6be720c49942ceb99}{areaType}};\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_level_a03f9e3526d0ac24a6c7fd27fae7f58b8}{IsWalkable}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+
+\end{DoxyCode}

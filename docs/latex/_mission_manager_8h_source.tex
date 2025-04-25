@@ -1,0 +1,20 @@
+\doxysection{Mission\+Manager.\+h}
+\hypertarget{_mission_manager_8h_source}{}\label{_mission_manager_8h_source}\index{Before Crisis/MissionManager.h@{Before Crisis/MissionManager.h}}
+\mbox{\hyperlink{_mission_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_mission_manager_8h}{IMissionManager.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mission_manager_a43758c0b04143e119400d7867173a6c9}{MissionManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_mission_manager}{IMissionManager}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ std::vector<Mission>\ \mbox{\hyperlink{class_mission_manager_afbddf33b90a063a1ccccc9bd00005edc}{missions}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_mission_manager_a43758c0b04143e119400d7867173a6c9}{MissionManager}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mission_manager_ae37235126f6867e7f51f0974eb2328e9}{AddMission}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_mission}{Mission}}\&\ mission)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mission_manager_a8c889b22cafa5521fe8177792655b602}{CompleteMission}}(\textcolor{keyword}{const}\ std::string\&\ missionName)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<Mission>\ \mbox{\hyperlink{class_mission_manager_a83918c2c39b9ee1054853217d047c0a4}{GetActiveMissions}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ }
+
+\end{DoxyCode}

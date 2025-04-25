@@ -1,0 +1,122 @@
+\doxysection{Level Class Reference}
+\hypertarget{class_level}{}\label{class_level}\index{Level@{Level}}
+
+
+{\ttfamily \#include $<$Level.\+h$>$}
+
+
+
+Collaboration diagram for Level\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_level__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_level_ade6d0f713eb80970d2ba634b74b5eb87}{Level}} (int \mbox{\hyperlink{class_level_a33dc03f7e2e10ed198b75526d8e4e62f}{width}}, int \mbox{\hyperlink{class_level_a16d1b735f7d513cf18bfff1ad4022f58}{height}}, \mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{Area\+Type}} \mbox{\hyperlink{class_level_a8535fefe87b3faa6be720c49942ceb99}{area\+Type}})
+\item 
+void \mbox{\hyperlink{class_level_a69e683fe70d5a0696b701dd7267e8e98}{Generate}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{class_level_a965065d03449ca0c89effd592abcee25}{Get\+Grid}} ()
+\item 
+\mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{Area\+Type}} \mbox{\hyperlink{class_level_a2deda4cc6586db504da13d58ede1eab0}{Get\+Area\+Type}} () const
+\item 
+bool \mbox{\hyperlink{class_level_a03f9e3526d0ac24a6c7fd27fae7f58b8}{Is\+Walkable}} (int x, int y) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_level_a33dc03f7e2e10ed198b75526d8e4e62f}{width}}
+\item 
+int \mbox{\hyperlink{class_level_a16d1b735f7d513cf18bfff1ad4022f58}{height}}
+\item 
+\mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{Area\+Type}} \mbox{\hyperlink{class_level_a8535fefe87b3faa6be720c49942ceb99}{area\+Type}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_level_a824db6ed2efcea19f4ef01b4a24eaf23}{grid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_level_ade6d0f713eb80970d2ba634b74b5eb87}\index{Level@{Level}!Level@{Level}}
+\index{Level@{Level}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Level()}{Level()}}
+{\footnotesize\ttfamily \label{class_level_ade6d0f713eb80970d2ba634b74b5eb87} 
+Level\+::\+Level (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{\mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{Area\+Type}}}]{area\+Type}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_level_ade6d0f713eb80970d2ba634b74b5eb87_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_a69e683fe70d5a0696b701dd7267e8e98}\index{Level@{Level}!Generate@{Generate}}
+\index{Generate@{Generate}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
+{\footnotesize\ttfamily \label{class_level_a69e683fe70d5a0696b701dd7267e8e98} 
+void Level\+::\+Generate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_level_a69e683fe70d5a0696b701dd7267e8e98_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_a2deda4cc6586db504da13d58ede1eab0}\index{Level@{Level}!GetAreaType@{GetAreaType}}
+\index{GetAreaType@{GetAreaType}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetAreaType()}{GetAreaType()}}
+{\footnotesize\ttfamily \label{class_level_a2deda4cc6586db504da13d58ede1eab0} 
+\mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{Area\+Type}} Level\+::\+Get\+Area\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_level_a965065d03449ca0c89effd592abcee25}\index{Level@{Level}!GetGrid@{GetGrid}}
+\index{GetGrid@{GetGrid}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetGrid()}{GetGrid()}}
+{\footnotesize\ttfamily \label{class_level_a965065d03449ca0c89effd592abcee25} 
+std\+::vector$<$ std\+::string $>$ \& Level\+::\+Get\+Grid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_level_a03f9e3526d0ac24a6c7fd27fae7f58b8}\index{Level@{Level}!IsWalkable@{IsWalkable}}
+\index{IsWalkable@{IsWalkable}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{IsWalkable()}{IsWalkable()}}
+{\footnotesize\ttfamily \label{class_level_a03f9e3526d0ac24a6c7fd27fae7f58b8} 
+bool Level\+::\+Is\+Walkable (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_level_a8535fefe87b3faa6be720c49942ceb99}\index{Level@{Level}!areaType@{areaType}}
+\index{areaType@{areaType}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{areaType}{areaType}}
+{\footnotesize\ttfamily \label{class_level_a8535fefe87b3faa6be720c49942ceb99} 
+\mbox{\hyperlink{_level_8h_a94d521aa6d0ba1d19859bd1697cdc542}{Area\+Type}} Level\+::area\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_a824db6ed2efcea19f4ef01b4a24eaf23}\index{Level@{Level}!grid@{grid}}
+\index{grid@{grid}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily \label{class_level_a824db6ed2efcea19f4ef01b4a24eaf23} 
+std\+::vector$<$std\+::string$>$ Level\+::grid\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_a16d1b735f7d513cf18bfff1ad4022f58}\index{Level@{Level}!height@{height}}
+\index{height@{height}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \label{class_level_a16d1b735f7d513cf18bfff1ad4022f58} 
+int Level\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_level_a33dc03f7e2e10ed198b75526d8e4e62f}\index{Level@{Level}!width@{width}}
+\index{width@{width}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \label{class_level_a33dc03f7e2e10ed198b75526d8e4e62f} 
+int Level\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Before Crisis/\mbox{\hyperlink{_level_8h}{Level.\+h}}\item 
+Before Crisis/\mbox{\hyperlink{_level_8cpp}{Level.\+cpp}}\end{DoxyCompactItemize}

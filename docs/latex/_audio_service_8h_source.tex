@@ -1,0 +1,18 @@
+\doxysection{Audio\+Service.\+h}
+\hypertarget{_audio_service_8h_source}{}\label{_audio_service_8h_source}\index{Before Crisis/AudioService.h@{Before Crisis/AudioService.h}}
+\mbox{\hyperlink{_audio_service_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_audio_variables_8h}{AudioVariables.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_audio_service}{AudioService}}\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_audio_service_a6a00833c2e72f697660d9ecf46d5f739}{\string~AudioService}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_service_a77752b023b5c10f3fac8b0b8ab2cd987}{playSound}}(\mbox{\hyperlink{_audio_variables_8h_aa4689ee7c9a692044aebd36cb0915e61}{SoundID}}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{float}\ volume\ =\ 100.f,\ \textcolor{keywordtype}{float}\ pitch\ =\ 1.f)\ =\ 0;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_service_a69a8cec143952613ce6462fdc93c9fda}{playMusic}}(\mbox{\hyperlink{_audio_variables_8h_a68946471db0c45b6ce503ef14572f078}{MusicID}}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{float}\ fadeInSec\ =\ 2.f)\ =\ 0;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_service_a8d7d1d6ec9b6a5248b584e66232b1fce}{stopMusic}}(\textcolor{keywordtype}{float}\ fadeOutSec\ =\ 2.f)\ =\ 0;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_service_afe54833581689c17c47af852fb49fcf4}{setMasterVolume}}(\textcolor{keywordtype}{float}\ vol)\ =\ 0;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_service_ab82787d31669a29e25ee1414cc11b6ec}{update}}(\textcolor{keywordtype}{float}\ dt)\ =\ 0;}
+\DoxyCodeLine{00012\ \};}
+
+\end{DoxyCode}
