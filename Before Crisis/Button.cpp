@@ -1,10 +1,7 @@
 #include "Button.h"
 
-sf::SoundBuffer Button::soundBuffer = sf::SoundBuffer("../audio/Menu Select.wav");
-sf::Sound Button::hoverSound = sf::Sound(Button::soundBuffer);
-
-Button::Button(const std::string& text, sf::Font& font, sf::Vector2f position, std::function<void()> onClick)
-    : onClick(onClick), isHovered(false){
+Button::Button(const std::string& text, sf::Font& font, sf::Vector2f position, std::function<void()> onClick, std::shared_ptr<AudioService> audio_service)
+    : onClick(onClick), isHovered(false), audio_service_(audio_service){
     background = std::make_unique<sf::RectangleShape>();
     background->setSize(sf::Vector2f(120, 50));
     background->setPosition(position);
@@ -32,7 +29,7 @@ void Button::handleInput(const sf::Event& event, sf::RenderWindow& window) {
         bool lastHovered = isHovered;
         isHovered = background->getGlobalBounds().contains(sf::Vector2f{ sf::Mouse::getPosition(window) });
         if (lastHovered != isHovered && lastHovered == false)
-            hoverSound.play();
+            audio_service_->playSound(SoundID::Choose);
     }
     if (event.is<sf::Event::MouseButtonPressed>() && isHovered) {
         onClick();

@@ -2,7 +2,8 @@
 
 
 GameManager::GameManager()
-	: states(std::make_unique<StateStack>()),
+	: states(std::make_shared<StateStack>()),
+      audio(std::make_shared<AudioManager>()),
 	  renderer(std::make_shared<Renderer>(1200, 900)),
 	  isRunning(true)
 {
@@ -12,8 +13,8 @@ GameManager::GameManager()
 void GameManager::Run()
 {
     sf::Clock clock;
-    states->pushState(std::make_unique<MenuState>(sf::Font("../fonts/Kenney Pixel Square.ttf"), renderer,audio));
-    while (isRunning) {
+    states->pushState(std::make_unique<MenuState>(sf::Font("../fonts/Brushstroke Horror.otf"), renderer,audio,states));
+    while (isRunning && !states->empty()) {
         std::optional<sf::Event> event;
         renderer->Clear();
         auto state = states->topState();
@@ -24,12 +25,16 @@ void GameManager::Run()
                 ChangeState(std::make_unique<MenuState>(*this, sf::Font{ "../fonts/Kenney Pixel Square.ttf" }));
             }**/
 
-            state->handleInput(event.value());
+            if (!states->empty())
+				state->handleInput(event.value());
         }
         float deltaTime = clock.restart().asSeconds();
-        state->update(deltaTime);
-        for (const auto& state : states->getStates())
-            state->render();
+        if (!states->empty())
+        {
+            state->update(deltaTime);
+            for (const auto& state : states->getStates())
+                state->render();
+        }
         renderer->Display();
     }
 }

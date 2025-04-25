@@ -157,6 +157,7 @@
     <ClInclude Include="ISubject.h" />
     <ClInclude Include="MonsterType.h" />
     <ClInclude Include="SaveData.h" />
+    <ClInclude Include="StateService.h" />
     <ClInclude Include="StateStack.h" />
     <ClInclude Include="WorldState.h" />
     <ClInclude Include="GameUtils.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="MissionManager.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="StateStack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

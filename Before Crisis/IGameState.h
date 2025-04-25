@@ -1,8 +1,7 @@
 #pragma once
-#include "ISubject.h"
 #include <SFML/Graphics.hpp>
 
-class IGameState : public ISubject {
+class IGameState {
 public:
     virtual ~IGameState() = default;
     virtual void update(float& deltaTime) = 0;

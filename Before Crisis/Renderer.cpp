@@ -52,24 +52,13 @@ void Renderer::Display() {
 
 void Renderer::RenderMessage(const std::string& message) {
 	sf::Text text(font, message, 20);
-	text.setPosition({ 10.f, 10.f });
+	sf::Vector2f pos = sf::Vector2f(getWindowSize());
+	float x = pos.x;
+	float y = pos.y;
+	x = x / 2.f;
+	y = y * 3.f / 8.f;
+	text.setOrigin(text.getLocalBounds().getCenter());
+	text.setPosition(pos);
 	text.setFillColor(sf::Color::White);
 	window.draw(text);
-}
-
-void Renderer::RenderButton(const Button& button) {
-	window.draw(button.getBackground());
-	window.draw(button.getLabel());
-}
-
-void Renderer::Update(const std::any message)
-{
-	if (std::any_cast<std::shared_ptr<sf::Text>>(&message)) {
-		auto message_ptr = std::any_cast<std::shared_ptr<sf::Text>>(&message);
-		window.draw(**message_ptr);
-	}
-	else if (std::any_cast<std::shared_ptr<Button>>(&message)) {
-		auto button_ptr = std::any_cast<std::shared_ptr<Button>>(&message);
-		RenderButton(**button_ptr);
-	}
 }

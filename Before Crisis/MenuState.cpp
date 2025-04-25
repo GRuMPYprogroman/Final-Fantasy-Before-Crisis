@@ -2,16 +2,26 @@
 #include "SaveData.h"
 #include "json.hpp"
 #include <fstream>
+#include <thread>
+#include <chrono>
 
-MenuState::MenuState(sf::Font&& font_, std::shared_ptr<RenderService> renderService_, std::shared_ptr<AudioService> audio_service)
-	: renderService(renderService_),
-	  audio_service_(audio_service)
+MenuState::MenuState(const sf::Font& font_, std::shared_ptr<RenderService> render_service, std::shared_ptr<AudioService> audio_service, std::shared_ptr<StateService> state_service)
+	: render_service_(render_service),
+	  audio_service_(audio_service),
+	  state_service_(state_service)
 {
 	font = std::make_shared<sf::Font>(font_);
-	title = std::make_shared<sf::Text>(*font);
 
-	list_observer_.push_back(std::dynamic_pointer_cast<IObserver>(renderService));
-	sf::Vector2f windowSize = sf::Vector2f{ renderService->getWindowSize() };
+	title_font_ = std::make_unique<sf::Font>("../fonts/Spooky Light.ttf");
+	title = std::make_shared<sf::Text>(*title_font_);
+	title->setFillColor(sf::Color{136,8,8});
+
+	background_texture_ = std::make_unique<sf::Texture>("../textures/mainMenu.png");
+	background_ = std::make_unique<sf::Sprite>(*background_texture_);
+	background_->scale(sf::Vector2f(render_service_->getRenderWindow().getSize().x / background_->getGlobalBounds().size.x,
+								          render_service_->getRenderWindow().getSize().y / background_->getGlobalBounds().size.y));
+
+	sf::Vector2f windowSize = sf::Vector2f{ render_service_->getWindowSize() };
 
 	float winX = windowSize.x;
 	float winY = windowSize.y;
@@ -22,6 +32,8 @@ MenuState::MenuState(sf::Font&& font_, std::shared_ptr<RenderService> renderServ
 	title->setOrigin(title->getLocalBounds().getCenter());
 	title->setPosition({ winX/2.f, 20});
 
+	audio_service_->playMusic(MusicID::MenuTheme);
+
 	float offset = 60;
 
 	if (isMainMenu)
@@ -29,67 +41,69 @@ MenuState::MenuState(sf::Font&& font_, std::shared_ptr<RenderService> renderServ
 		buttons.emplace_back(std::make_shared<Button>("Continue", *font, sf::Vector2f(winX / 2, 60),
 			[&]()
 			{
-
-			}));
+				audio_service_->playSound(SoundID::Click);
+			}, 
+			audio_service_));
 		buttons.emplace_back(std::make_shared<Button>("New Game", *font, sf::Vector2f(winX / 2, buttons[0]->getBackground().getSize().y + buttons[0]->getBackground().getPosition().y),
 			[&]()
 			{
-				
-			}));
+				audio_service_->playSound(SoundID::Click);
+			}, 
+			audio_service_));
 		buttons.emplace_back(std::make_shared<Button>("Settings", *font, sf::Vector2f(winX / 2, buttons[1]->getBackground().getSize().y + buttons[1]->getBackground().getPosition().y),
 			[&]()
 			{
-				
-			}));
+				audio_service_->playSound(SoundID::Click);
+			}, 
+			audio_service_));
 		buttons.emplace_back(std::make_shared<Button>("Exit", *font, sf::Vector2f(winX / 2, buttons[2]->getBackground().getSize().y + buttons[2]->getBackground().getPosition().y),
 			[&]()
 			{
-				
-			}));
+				audio_service_->playSound(SoundID::Click);
+				std::this_thread::sleep_for(std::chrono::milliseconds(100));
+				audio_service_->stopMusic();
+				state_service_->popState();
+			}, 
+			audio_service_));
 
 		for (auto& button:buttons)
 		{
-			button->setPosition(sf::Vector2f(winX / 2.f, 0.f) - sf::Vector2f{ button->getBackgroundSize().x / 2.f, 0.f} + sf::Vector2f{0.f,offset});
+			button->setPosition(sf::Vector2f(20.f, 0.f) - sf::Vector2f{0.f, 0.f} + sf::Vector2f{0.f,offset});
+			offset += button->getBackgroundSize().y;
+
+		}
+	}
+	else
+	{
+		for (auto& button : buttons)
+		{
+			button->setPosition(sf::Vector2f(winX / 2.f, 0.f) - sf::Vector2f{ button->getBackgroundSize().x / 2.f, 0.f } + sf::Vector2f{ 0.f,offset });
 			offset += button->getBackgroundSize().y;
 
 		}
 	}
 }
 
-void MenuState::Attach(std::shared_ptr<IObserver> observer)
-{
-	list_observer_.push_back(observer);
-}
-
-void MenuState::Detach(std::shared_ptr<IObserver> observer)
-{
-	list_observer_.remove(observer);
-}
-
-void MenuState::Notify(std::any message)
-{
-	std::list<std::shared_ptr<IObserver>>::iterator iterator = list_observer_.begin();
-	while (iterator != list_observer_.end()) {
-		(*iterator)->Update(message);
-		++iterator;
-	}
-}
-
 void MenuState::render()
 {
-	Notify(title);
+	render_service_->getRenderWindow().draw(*background_);
+	render_service_->getRenderWindow().draw(*title);
 	for (auto& button : buttons)
-		Notify(button);
+	{
+		render_service_->getRenderWindow().draw(button->getBackground());
+		render_service_->getRenderWindow().draw(button->getLabel());
+	}
 }
 
 void MenuState::handleInput(const sf::Event& event)
 {
 	for (auto& button : buttons)
-		button->handleInput(event, renderService->getRenderWindow());
+		button->handleInput(event, render_service_->getRenderWindow());
 }
 
 
 void MenuState::update(float& deltaTime) {
+	audio_service_->update(deltaTime);
 	for (auto& button : buttons)
 		button->update();
 }

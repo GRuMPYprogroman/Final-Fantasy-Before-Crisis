@@ -1,19 +1,17 @@
 #pragma once
-#include "IGameState.h"
 #include <vector>
 #include <memory>
+#include "IGameState.h"
+#include "StateService.h"
 
-class IGameState;
-
-class StateStack
+class StateStack : public StateService
 {
 private:
     std::vector<std::unique_ptr<IGameState>> states;
 public:
-    void pushState(std::unique_ptr<IGameState> state) { states.push_back(std::move(state)); }
-    void popState() { states.pop_back(); }
-    bool empty() const { return states.empty(); }
-    const std::vector<std::unique_ptr<IGameState>>& getStates() const { return states; }
-    IGameState* topState() const { return states.empty() ? nullptr : states.back().get();}
+    void pushState(std::unique_ptr<IGameState> state) override;
+    void popState() override;
+    bool empty() const;
+    const std::vector<std::unique_ptr<IGameState>>& getStates() const;
+    IGameState* topState() const;
 };
-

@@ -113,6 +113,9 @@
     <ClInclude Include="AudioVariables.h">
       <Filter>Resource and Audio Managment</Filter>
     </ClInclude>
+    <ClInclude Include="StateService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp">
@@ -162,6 +165,9 @@
     </ClCompile>
     <ClCompile Include="AudioService.h">
       <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="StateStack.cpp">
+      <Filter>Core Game Logic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
