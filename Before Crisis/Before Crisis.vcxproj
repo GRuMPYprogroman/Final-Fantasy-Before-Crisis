@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>ClangCL</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -112,7 +112,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>..\SFML\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SFML\include;..\OpenXLSX\headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,7 +130,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>..\SFML\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SFML\include;..\OpenXLSX\headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,19 +146,27 @@
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="AudioVariables.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="CharacterIO.h" />
     <ClInclude Include="CharacterManager.h" />
     <ClInclude Include="CombatManager.h" />
     <ClInclude Include="CombatState.h" />
+    <ClInclude Include="ContractsPanel.h" />
     <ClInclude Include="DialogueManager.h" />
+    <ClInclude Include="ExitPanel.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameplayState.h" />
+    <ClInclude Include="IGameplayPanel.h" />
+    <ClInclude Include="InventoryPanel.h" />
     <ClInclude Include="IObserver.h" />
     <ClInclude Include="RenderService.h" />
     <ClInclude Include="ISubject.h" />
     <ClInclude Include="MonsterType.h" />
     <ClInclude Include="SaveData.h" />
+    <ClInclude Include="SavePanel.h" />
+    <ClInclude Include="ShopPanel.h" />
     <ClInclude Include="StateService.h" />
     <ClInclude Include="StateStack.h" />
+    <ClInclude Include="UpgradePanel.h" />
     <ClInclude Include="WorldState.h" />
     <ClInclude Include="GameUtils.h" />
     <ClInclude Include="ICombatManager.h" />
@@ -175,20 +183,25 @@
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="AudioService.h" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="CharacterIO.cpp" />
     <ClCompile Include="CharacterManager.cpp" />
     <ClCompile Include="CombatManager.cpp" />
     <ClCompile Include="CombatState.cpp" />
+    <ClCompile Include="ContractsPanel.cpp" />
     <ClCompile Include="DialogueManager.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameplayState.cpp" />
     <ClCompile Include="GameUtils.cpp" />
+    <ClCompile Include="InventoryPanel.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="MissionManager.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="ShopPanel.cpp" />
     <ClCompile Include="StateStack.cpp" />
+    <ClCompile Include="UpgradePanel.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

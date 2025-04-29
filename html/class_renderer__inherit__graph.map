@@ -1,7 +1,0 @@
-<map id="Renderer" name="Renderer">
-<area shape="rect" id="Node000001" title=" " alt="" coords="106,213,299,715"/>
-<area shape="rect" id="Node000002" href="$class_i_observer.html" title=" " alt="" coords="5,24,192,147"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,161,137,213,131,214,117,162"/>
-<area shape="rect" id="Node000003" href="$class_i_render_service.html" title=" " alt="" coords="216,5,398,165"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,181,274,214,269,213,278,179"/>
-</map>

@@ -11,7 +11,7 @@ Renderer::Renderer(unsigned int width, unsigned int height, const std::string& t
 }
 
 bool Renderer::LoadResources() {
-	if (!font.openFromFile("../fonts/Kenney Pixel Square.ttf")) return false;
+	if (!default_font_.openFromFile("../fonts/Brushstroke Horror.otf")) return false;
 	if (!atlas.loadFromFile("assets/tiles.png")) return false; // Texture atlas for '@', '#', etc.
 	vertices.setPrimitiveType(sf::PrimitiveType::Triangles);
 	return true;
@@ -51,7 +51,7 @@ void Renderer::Display() {
 }**/
 
 void Renderer::RenderMessage(const std::string& message) {
-	sf::Text text(font, message, 20);
+	sf::Text text(default_font_, message, 20);
 	sf::Vector2f pos = sf::Vector2f(getWindowSize());
 	float x = pos.x;
 	float y = pos.y;

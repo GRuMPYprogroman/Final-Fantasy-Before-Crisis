@@ -1,0 +1,11 @@
+id;name;type;Effect;Effect Type;Price;Lvl;Remark
+0;Pistol;weapon;5;dmg;50;1;
+1;machete;weapon;10;dmg;100;3;
+2;Katana;weapon;20;dmg;150;5;
+3;Sniper Rifle;weapon;40;dmg;300;7;
+10;Suit;armor;-5;dmg;50;1;
+11;Suit with bulletproof vest;armor;-10;dmg;150;5;
+12;Military uniform;armor;-20;dmg;300;7;
+20;Medkit;consumable;5;hp;20;1;
+21;Energetic;consumable;5;mp;20;1;
+22;Adrenaline;consumable;9;dmg;50;3;3 turns

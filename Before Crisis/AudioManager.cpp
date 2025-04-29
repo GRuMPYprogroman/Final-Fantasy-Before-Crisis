@@ -19,7 +19,9 @@ void AudioManager::loadAllSounds()
 {
     std::unordered_map<SoundID, std::string> soundFiles = {
         { SoundID::Choose, "../sounds/Menu Selection Click.wav" },
-        { SoundID::Click,  "../sounds/Menu Selection Click.wav" }
+        { SoundID::Click,  "../sounds/Menu Selection Click.wav" },
+		{SoundID::Buy, "../sounds/buy.ogg"},
+        {SoundID::Inventory, "../sounds/inventory.wav"}
     };
 
     for (auto& [id, path] : soundFiles) {
@@ -34,9 +36,8 @@ void AudioManager::loadAllSounds()
 void AudioManager::loadAllMusic()
 {
      _musicFiles = {
-         { MusicID::MenuTheme,      "../music/mainMenuTheme.ogg" }
-         //{ MusicID::ForestOffBattle, "../music/forest_offbattle.ogg" },
-        //{ MusicID::ForestInBattle,  "../music/forest_inbattle.ogg" }
+         { MusicID::MenuTheme,      "../music/mainMenuTheme.ogg" },
+         { MusicID::GameplayTheme, "../music/GameplayTheme.ogg" }
     };
 }
 

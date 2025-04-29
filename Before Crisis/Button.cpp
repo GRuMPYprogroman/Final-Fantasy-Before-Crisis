@@ -19,8 +19,9 @@ Button::Button(const std::string& text, sf::Font& font, sf::Vector2f position, s
 }
 
 void Button::update() {
-    if (isHovered) background->setFillColor(sf::Color::Cyan);
-    else background->setFillColor(sf::Color(50, 50, 50));
+    if (isHovered && !isChosen) background->setFillColor(sf::Color::Black);
+    else if (isChosen) background->setFillColor(sf::Color::Red);
+    else background->setFillColor(sf::Color{ 136,8,8 });
 }
 
 

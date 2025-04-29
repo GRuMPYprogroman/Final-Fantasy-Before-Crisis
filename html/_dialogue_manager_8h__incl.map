@@ -1,9 +1,0 @@
-<map id="Before Crisis/DialogueManager.h" name="Before Crisis/DialogueManager.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,219,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,59,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,35,59,72,55,68,96,31"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="83,80,141,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,33,115,64,109,64,109,33"/>
-<area shape="rect" id="Node000004" href="$_i_dialogue_manager_8h.html" title=" " alt="" coords="165,80,302,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,30,200,69,198,74,132,35"/>
-</map>

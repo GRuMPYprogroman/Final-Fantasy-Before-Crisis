@@ -1,16 +1,17 @@
 #include "MenuState.h"
+#include "GameplayState.h"
 #include "SaveData.h"
 #include "json.hpp"
 #include <fstream>
 #include <thread>
 #include <chrono>
 
-MenuState::MenuState(const sf::Font& font_, std::shared_ptr<RenderService> render_service, std::shared_ptr<AudioService> audio_service, std::shared_ptr<StateService> state_service)
+MenuState::MenuState(std::shared_ptr<RenderService> render_service, std::shared_ptr<AudioService> audio_service, std::shared_ptr<StateService> state_service)
 	: render_service_(render_service),
 	  audio_service_(audio_service),
 	  state_service_(state_service)
 {
-	font = std::make_shared<sf::Font>(font_);
+	font = std::make_shared<sf::Font>(render_service->getDefaultFont());
 
 	title_font_ = std::make_unique<sf::Font>("../fonts/Spooky Light.ttf");
 	title = std::make_shared<sf::Text>(*title_font_);
@@ -28,11 +29,11 @@ MenuState::MenuState(const sf::Font& font_, std::shared_ptr<RenderService> rende
 
 	title->setOrigin(title->getLocalBounds().getCenter());
 	title->setString("Before Crisis");
-	title->setCharacterSize(24);
+	title->setCharacterSize(48);
 	title->setOrigin(title->getLocalBounds().getCenter());
 	title->setPosition({ winX/2.f, 20});
 
-	audio_service_->playMusic(MusicID::MenuTheme);
+	audio_service_->playMusic(MusicID::MenuTheme,0);
 
 	float offset = 60;
 
@@ -47,7 +48,12 @@ MenuState::MenuState(const sf::Font& font_, std::shared_ptr<RenderService> rende
 		buttons.emplace_back(std::make_shared<Button>("New Game", *font, sf::Vector2f(winX / 2, buttons[0]->getBackground().getSize().y + buttons[0]->getBackground().getPosition().y),
 			[&]()
 			{
+				std::unique_ptr<Character> player = std::make_unique<Character>();
 				audio_service_->playSound(SoundID::Click);
+				std::this_thread::sleep_for(std::chrono::milliseconds(100));
+				audio_service_->stopMusic();
+				state_service_->popState();
+				state_service_->pushState(std::make_unique<GameplayState>(render_service_, audio_service_, state_service_,std::move(player)));
 			}, 
 			audio_service_));
 		buttons.emplace_back(std::make_shared<Button>("Settings", *font, sf::Vector2f(winX / 2, buttons[1]->getBackground().getSize().y + buttons[1]->getBackground().getPosition().y),
@@ -98,7 +104,8 @@ void MenuState::render()
 void MenuState::handleInput(const sf::Event& event)
 {
 	for (auto& button : buttons)
-		button->handleInput(event, render_service_->getRenderWindow());
+		if (render_service_)
+			button->handleInput(event, render_service_->getRenderWindow());
 }
 
 

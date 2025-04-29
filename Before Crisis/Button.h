@@ -13,6 +13,7 @@ private:
 	std::function<void()> onClick;
 	std::shared_ptr<AudioService> audio_service_;
 	bool isHovered;
+	bool isChosen = false;
 public:
 	static sf::SoundBuffer soundBuffer;
 	static sf::Sound hoverSound;
@@ -26,4 +27,16 @@ public:
 
 	void setPosition(sf::Vector2f pos);
 	sf::Vector2f getBackgroundSize() const { return background->getSize(); }
+	void setBackgroundSize(sf::Vector2f size) { background->setSize(size); label->setPosition(background->getPosition() + background->getSize() / 2.f);}
+
+	void setChosen()
+	{
+		if (isChosen) isChosen = false;
+		else isChosen = true;
+	}
+
+	void setCallback(std::function<void()> callback)
+	{
+		onClick = callback;
+	}
 };

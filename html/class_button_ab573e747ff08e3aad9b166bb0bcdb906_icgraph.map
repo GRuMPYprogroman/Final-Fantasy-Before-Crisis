@@ -1,7 +1,0 @@
-<map id="Button::getLabel" name="Button::getLabel">
-<area shape="rect" id="Node000001" title=" " alt="" coords="388,5,504,32"/>
-<area shape="rect" id="Node000002" href="$class_renderer.html#adda2cfd24bde4ccfb8d495e3e2014fc4" title=" " alt="" coords="178,5,340,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="372,21,341,21,341,16,372,16"/>
-<area shape="rect" id="Node000003" href="$class_renderer.html#a846189ec4da1321ee0337540e4c0fd11" title=" " alt="" coords="5,5,130,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,21,130,21,130,16,163,16"/>
-</map>

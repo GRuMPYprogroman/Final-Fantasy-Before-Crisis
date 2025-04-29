@@ -1,4 +1,6 @@
 #include "GameManager.h"
+#include "GameplayState.h"
+
 
 
 GameManager::GameManager()
@@ -13,11 +15,14 @@ GameManager::GameManager()
 void GameManager::Run()
 {
     sf::Clock clock;
-    states->pushState(std::make_unique<MenuState>(sf::Font("../fonts/Brushstroke Horror.otf"), renderer,audio,states));
+    states->pushState(std::make_unique<MenuState>(renderer,audio,states));
+    //\
+    //states->pushState(std::make_unique<GameplayState>(renderer, audio, states, std::make_unique<Character>()));
+    states->applyPendingChanges();
     while (isRunning && !states->empty()) {
         std::optional<sf::Event> event;
         renderer->Clear();
-        auto state = states->topState();
+
         while (event = renderer->getRenderWindow().pollEvent()) {
             if (event->is<sf::Event::Closed>()) isRunning = false;
 
@@ -26,15 +31,23 @@ void GameManager::Run()
             }**/
 
             if (!states->empty())
-				state->handleInput(event.value());
+				states->topState()->handleInput(event.value());
         }
+
+        states->applyPendingChanges();
+
         float deltaTime = clock.restart().asSeconds();
         if (!states->empty())
         {
-            state->update(deltaTime);
+            states->topState()->update(deltaTime);
+           
+        }
+
+        if (!states->empty()) {
             for (const auto& state : states->getStates())
                 state->render();
         }
+
         renderer->Display();
     }
 }

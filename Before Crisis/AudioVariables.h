@@ -4,15 +4,12 @@ enum class SoundID
 {
     Choose,
     Click,
-    Explosion,
-    Jump
+    Buy,
+    Inventory
 };
 
 enum class MusicID
 {
     MenuTheme,
-    ForestOffBattle,
-    ForestInBattle,
-    CorporationOffBattle,
-    CorporationInBattle
+    GameplayTheme
 };

@@ -13,7 +13,7 @@ class Renderer : public RenderService
 {
 private:
     sf::RenderWindow window;
-    sf::Font font;
+    sf::Font default_font_;
     sf::Texture atlas;      // Texture atlas for game world characters
     sf::VertexArray vertices; // For efficient world rendering
     bool LoadResources();   // Helper to load font and atlas
@@ -24,6 +24,7 @@ public:
     void Display();
     void RenderWorld(const Level& level, const sf::Vector2f& playerPos);
     void RenderMessage(const std::string& message);
+	sf::Font getDefaultFont() override { return default_font_; }
     sf::RenderWindow& getRenderWindow() override { return window; }
     sf::Vector2u getWindowSize() const override { return window.getSize(); }
 };

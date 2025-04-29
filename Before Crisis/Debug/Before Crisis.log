@@ -1,11 +1,4 @@
-﻿  AudioManager.cpp
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'AudioManager.cpp')
-      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
+﻿  AudioService.h
   Button.cpp
 D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'Button.cpp')
@@ -14,29 +7,52 @@ D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Except
       D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  GameManager.cpp
+  GameplayState.cpp
 D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameManager.cpp')
+  (compiling source file 'GameplayState.cpp')
       D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  MenuState.cpp
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:         with
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:         [
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:             T=unsigned int
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:         ]
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:         with
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:         [
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:             T=unsigned int
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:         ]
+  InventoryPanel.cpp
 D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'MenuState.cpp')
+  (compiling source file 'InventoryPanel.cpp')
       D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  main.cpp
+  Renderer.cpp
 D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'main.cpp')
+  (compiling source file 'Renderer.cpp')
       D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
+  ShopPanel.cpp
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'ShopPanel.cpp')
+      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:         with
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:         [
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:             T=unsigned int
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:         ]
   Generating Code...
   Before Crisis.vcxproj -> D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Debug\Before Crisis.exe

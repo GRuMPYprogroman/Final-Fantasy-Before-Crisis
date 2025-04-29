@@ -1,9 +1,8 @@
 #pragma once
 #include "IGameState.h"
-#include "Renderer.h"
-#include "AudioManager.h"
+#include "AudioService.h"
 #include "StateService.h"
-#include "StateStack.h"
+#include "RenderService.h"
 #include "Button.h"
 #include <vector>
 
@@ -23,7 +22,7 @@ private:
 	void SaveGame();
 	void LoadGame();
 public:
-	MenuState(const sf::Font& font_, std::shared_ptr<RenderService> render_service, std::shared_ptr<AudioService> audio_service, std::shared_ptr<StateService> state_service);
+	MenuState(std::shared_ptr<RenderService> render_service, std::shared_ptr<AudioService> audio_service, std::shared_ptr<StateService> state_service);
 	~MenuState() override = default;
 	void update(float& deltaTime) override;
 	void render() override;
