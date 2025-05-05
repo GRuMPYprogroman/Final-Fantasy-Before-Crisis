@@ -1,58 +1,32 @@
-﻿  AudioService.h
-  Button.cpp
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Button.cpp')
-      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  GameplayState.cpp
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameplayState.cpp')
-      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:         with
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:         [
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:             T=unsigned int
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(81,16): warning C4244:         ]
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:         with
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:         [
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:             T=unsigned int
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(82,16): warning C4244:         ]
-  InventoryPanel.cpp
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'InventoryPanel.cpp')
-      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  Renderer.cpp
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Renderer.cpp')
-      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  ShopPanel.cpp
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'ShopPanel.cpp')
-      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:         with
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:         [
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:             T=unsigned int
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ShopPanel.cpp(87,16): warning C4244:         ]
-  Generating Code...
-  Before Crisis.vcxproj -> D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Debug\Before Crisis.exe
+﻿AudioService.h(1,12): warning : #pragma once in main file [-Wpragma-once-outside-header]
+  In file included from CharacterIO.cpp:1:
+  In file included from .\CharacterIO.h:2:
+  In file included from .\CharacterManager.h:5:
+  In file included from .\SaveData.h:5:
+.\GameUtils.h(18,33): warning : unused function 'GetMonstersForArea' [-Wunused-function]
+.\GameUtils.h(19,29): warning : unused function 'SpawnEnemies' [-Wunused-function]
+CharacterManager.cpp(58,1): warning : non-void function does not return a value in all control paths [-Wreturn-type]
+  In file included from CharacterManager.cpp:1:
+  In file included from .\CharacterManager.h:5:
+  In file included from .\SaveData.h:5:
+.\GameUtils.h(18,33): warning : unused function 'GetMonstersForArea' [-Wunused-function]
+.\GameUtils.h(19,29): warning : unused function 'SpawnEnemies' [-Wunused-function]
+  In file included from CombatManager.cpp:1:
+  In file included from .\CombatManager.h:2:
+  In file included from .\CharacterManager.h:5:
+  In file included from .\SaveData.h:5:
+.\GameUtils.h(18,33): warning : unused function 'GetMonstersForArea' [-Wunused-function]
+.\GameUtils.h(19,29): warning : unused function 'SpawnEnemies' [-Wunused-function]
+CombatState.cpp(41,13): warning : 7 enumeration values not handled in switch: 'Goblin', 'Dragon', 'Wolf'... [-Wswitch]
+  In file included from CombatState.cpp:1:
+  In file included from .\CombatState.h:6:
+  In file included from .\CharacterManager.h:5:
+  In file included from .\SaveData.h:5:
+.\GameUtils.h(18,33): warning : unused function 'GetMonstersForArea' [-Wunused-function]
+.\GameUtils.h(19,29): warning : unused function 'SpawnEnemies' [-Wunused-function]
+ContractsPanel.cpp(79,21): warning : lambda capture 'id' is not used [-Wunused-lambda-capture]
+  In file included from ContractsPanel.cpp:1:
+  In file included from .\ContractsPanel.h:2:
+D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\memory(3594,32): error : allocating an object of abstract class type 'ExplorationState'
+ContractsPanel.cpp(83,26): message : in instantiation of function template specialization 'std::make_unique<ExplorationState, 0>' requested here
+.\ExplorationState.h(39,10): message : unimplemented pure virtual method 'update' in 'ExplorationState'

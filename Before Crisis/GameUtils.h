@@ -9,6 +9,7 @@ struct Item {
     std::string type;
     int effect;
     std::string effect_type;
+    int instanceID;
 };
 
 class Level;

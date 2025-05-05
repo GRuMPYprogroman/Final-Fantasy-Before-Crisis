@@ -1,15 +1,14 @@
 ﻿#include "CharacterManager.h"
 
-Character::Character() : level(1), exp(0), ability_points_(0), money_(50) {
+
+Character::Character() : level(1), exp(0), ability_points_(1), money_(50), rank_(3) {
     stats.hp = 100;
     stats.mp = 50;
     stats.strength = 10;
 
-    inventory_ = {
-        { 0, "Pistol", "weapon"},
-        { 10, "Suit", "armor"},
-        { 20,"Medkit", "consumable"}
-    };
+    AddItem({ 0, "Pistol", "weapon" , 5, "dmg"});
+    AddItem({ 10, "Suit", "armor",-5,"dmg" });
+    AddItem({ 20,"Medkit", "consumable",5,"hp" });
 }
 
 void Character::GainExp(int amount) {
@@ -24,15 +23,15 @@ void Character::GainExp(int amount) {
 
 void Character::EquipItem(const int itemId) {
     for (const auto& item : inventory_) {
-        if (item.id == itemId) {
+        if (item.instanceID == itemId) {
             if (item.type == "weapon") {
-				if (equippedWeapon_ && item.id == equippedWeapon_->id)
+				if (equippedWeapon_ && item.instanceID == equippedWeapon_->instanceID)
 					equippedWeapon_ = std::nullopt;
                 else
 					equippedWeapon_ = item;
             }
             else if (item.type == "armor") {
-				if (equippedArmor_ && item.id == equippedArmor_->id)
+				if (equippedArmor_ && item.instanceID == equippedArmor_->instanceID)
 					equippedArmor_ = std::nullopt;
 				else
 					equippedArmor_ = item;
@@ -45,11 +44,11 @@ void Character::EquipItem(const int itemId) {
 bool Character::canEquip(const int itemId)
 {
     for (const auto& item : inventory_) {
-        if (item.id == itemId) {
-            if (item.type == "weapon" && (!equippedWeapon_ || equippedWeapon_->id == item.id)) {
+        if (item.instanceID == itemId) {
+            if (item.type == "weapon" && (!equippedWeapon_ || equippedWeapon_->instanceID == item.instanceID)) {
                 return true;
             }
-            else if (item.type == "armor" && (!equippedArmor_ || equippedArmor_->id == item.id)) {
+            else if (item.type == "armor" && (!equippedArmor_ || equippedArmor_->instanceID == item.instanceID)) {
                 return true;
             }
             else
@@ -95,4 +94,17 @@ void Character::FromSaveData(const SaveData& data) {
             equippedArmor_ = item;
         }
     }
+}
+
+bool Character::RemoveItem(int id) {
+    auto it = std::find_if(inventory_.begin(), inventory_.end(),
+        [id](const Item& item) { return item.id == id; });
+    if (it != inventory_.end()) {
+		if (equippedWeapon_ && equippedWeapon_->id == id) {
+			equippedWeapon_.reset();
+		}
+        inventory_.erase(it);
+        return true;
+    }
+    return false;
 }

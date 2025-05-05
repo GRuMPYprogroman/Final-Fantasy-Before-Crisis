@@ -3,6 +3,8 @@
 #include "ExitPanel.h"
 #include "SavePanel.h"
 #include "ShopPanel.h"
+#include "UpgradePanel.h"
+#include "ContractsPanel.h"
 
 GameplayState::GameplayState(
 	std::shared_ptr<RenderService> renderService,
@@ -66,7 +68,16 @@ void GameplayState::registerPanels() {
             return std::make_unique<ShopPanel>(render_service_, audio_service_, player_, "../tables/Items.csv");
         }
     );
-    // register new panels similarly...
+    panelFactories_.emplace("Upgrade",
+        [this]() -> std::unique_ptr<IGameplayPanel> {
+            return std::make_unique<UpgradePanel>(render_service_, audio_service_, player_);
+        }
+    );
+    panelFactories_.emplace("Contracts",
+        [this]() -> std::unique_ptr<IGameplayPanel> {
+            return std::make_unique<ContractsPanel>(render_service_, audio_service_, state_service_, player_, "../tables/Locations.csv");
+        }
+    );
 }
 
 
@@ -93,9 +104,9 @@ void GameplayState::setupNavButtons() {
     for (auto& [key, factory] : panelFactories_) {
         float xPos = startX + idx * (buttonWidth + spacing);
         navButtons_.emplace_back(
-            std::make_shared<Button>(key, *font_, sf::Vector2f(xPos, yPos), [this, key]() {
+            std::make_shared<Button>(key, *font_, sf::Vector2f(xPos, yPos), [this, &key_ = key]() {
                 audio_service_->playSound(SoundID::Click);
-                switchTo(key);
+                switchTo(key_);
                 },audio_service_)
         );
         ++idx;

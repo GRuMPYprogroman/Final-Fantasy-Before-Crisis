@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
-
-enum class MonsterType { Goblin, Dragon, Wolf, Bear, Bat, Spider, Troll };
+#include "MonsterType.h"
 
 class Monster
 {

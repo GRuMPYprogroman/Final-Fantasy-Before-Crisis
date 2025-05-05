@@ -14,6 +14,7 @@ private:
     std::vector<std::shared_ptr<Button>> item_buttons_;
     std::unique_ptr<sf::Text> title_;
     std::unique_ptr<sf::Font> font_;
+    std::vector<std::unique_ptr<sf::Text>> column_labels_;
 public:
     InventoryPanel(std::shared_ptr<RenderService> renderService, std::shared_ptr<AudioService> audio_service,std::shared_ptr<Character> player);
 

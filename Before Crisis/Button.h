@@ -39,4 +39,6 @@ public:
 	{
 		onClick = callback;
 	}
+
+	void setHovered(bool state) { isHovered = state; }
 };

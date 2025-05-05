@@ -33,11 +33,11 @@
     <Filter Include="State Managment\Panels">
       <UniqueIdentifier>{0643130f-c266-4b2a-81d5-1f5c78b47b9c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="State Managment\OnMissionStates">
+      <UniqueIdentifier>{72c4fbee-cbc0-4102-8642-89bde01f00a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="WorldState.h">
-      <Filter>Resource and Audio Managment</Filter>
-    </ClInclude>
     <ClInclude Include="IDialogueManager.h">
       <Filter>Interfaces</Filter>
     </ClInclude>
@@ -58,9 +58,6 @@
     </ClInclude>
     <ClInclude Include="SaveData.h">
       <Filter>UI and Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="CombatState.h">
-      <Filter>State Managment</Filter>
     </ClInclude>
     <ClInclude Include="GameplayState.h">
       <Filter>State Managment</Filter>
@@ -143,6 +140,12 @@
     <ClInclude Include="ShopPanel.h">
       <Filter>State Managment\Panels</Filter>
     </ClInclude>
+    <ClInclude Include="CombatState.h">
+      <Filter>State Managment\OnMissionStates</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplorationState.h">
+      <Filter>State Managment\OnMissionStates</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp">
@@ -152,9 +155,6 @@
       <Filter>State Managment</Filter>
     </ClCompile>
     <ClCompile Include="GameplayState.cpp">
-      <Filter>State Managment</Filter>
-    </ClCompile>
-    <ClCompile Include="CombatState.cpp">
       <Filter>State Managment</Filter>
     </ClCompile>
     <ClCompile Include="GameUtils.cpp">
@@ -210,6 +210,12 @@
     </ClCompile>
     <ClCompile Include="ShopPanel.cpp">
       <Filter>State Managment\Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatState.cpp">
+      <Filter>State Managment\OnMissionStates</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplorationState.cpp">
+      <Filter>State Managment\OnMissionStates</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

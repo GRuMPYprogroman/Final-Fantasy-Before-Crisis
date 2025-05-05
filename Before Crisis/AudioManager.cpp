@@ -21,7 +21,8 @@ void AudioManager::loadAllSounds()
         { SoundID::Choose, "../sounds/Menu Selection Click.wav" },
         { SoundID::Click,  "../sounds/Menu Selection Click.wav" },
 		{SoundID::Buy, "../sounds/buy.ogg"},
-        {SoundID::Inventory, "../sounds/inventory.wav"}
+        {SoundID::Inventory, "../sounds/inventory.wav"},
+		{SoundID::Upgrade, "../sounds/upgrade.wav"}
     };
 
     for (auto& [id, path] : soundFiles) {

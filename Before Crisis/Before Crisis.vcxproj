@@ -29,13 +29,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>ClangCL</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>ClangCL</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -153,6 +153,7 @@
     <ClInclude Include="ContractsPanel.h" />
     <ClInclude Include="DialogueManager.h" />
     <ClInclude Include="ExitPanel.h" />
+    <ClInclude Include="ExplorationState.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameplayState.h" />
     <ClInclude Include="IGameplayPanel.h" />
@@ -167,7 +168,6 @@
     <ClInclude Include="StateService.h" />
     <ClInclude Include="StateStack.h" />
     <ClInclude Include="UpgradePanel.h" />
-    <ClInclude Include="WorldState.h" />
     <ClInclude Include="GameUtils.h" />
     <ClInclude Include="ICombatManager.h" />
     <ClInclude Include="IDialogueManager.h" />
@@ -189,6 +189,7 @@
     <ClCompile Include="CombatState.cpp" />
     <ClCompile Include="ContractsPanel.cpp" />
     <ClCompile Include="DialogueManager.cpp" />
+    <ClCompile Include="ExplorationState.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameplayState.cpp" />
     <ClCompile Include="GameUtils.cpp" />

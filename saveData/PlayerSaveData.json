@@ -1,0 +1,26 @@
+{
+    "equippedArmorId": -858993460,
+    "equippedWeaponId": -858993460,
+    "exp": 0,
+    "hp": 100,
+    "inventory": [
+        {
+            "id": 0,
+            "name": "Pistol",
+            "type": "weapon"
+        },
+        {
+            "id": 10,
+            "name": "Suit",
+            "type": "armor"
+        },
+        {
+            "id": 20,
+            "name": "Medkit",
+            "type": "consumable"
+        }
+    ],
+    "level": 1,
+    "mp": 50,
+    "strength": 10
+}

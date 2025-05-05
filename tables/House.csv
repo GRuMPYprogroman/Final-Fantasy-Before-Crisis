@@ -1,0 +1,6 @@
+id;title;description;neighbours;lootTable;;
+1;Hall;You entered private house;2 3 4 5;consumables;;
+2;Kitchen;You enter kitchen;1;consumables;;
+3;Bathroom;You enter bathroom;1;consumables;;
+4;Living Room;You enter living room;1;consumables;;
+5;Bedroom;You enter bedroom;1;consumables;;
