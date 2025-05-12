@@ -1,5 +1,5 @@
-id;title;rank;reward_exp;reward_money;min_enemies;max_enemies;locations_data
-1;Living house;3;20;40;1;4;House.csv
-2;Office;2;40;60;5;8;Office.csv
-3;Rival organisation;1;80;120;9;15;Rival.csv
-4;Organisation highest floors;1;0;0;1;1;Organisation.csv
+id;title;rank;reward_exp;reward_money;min_enemies;max_enemies;locations_data;enemies_data
+1;Living house;3;20;40;1;4;../locations/House.csv;../locations/HouseEnemies.csv
+2;Office;2;40;60;5;8;../locations/Office.csv;../locations/OfficeEnemies.csv
+3;Rival organisation;1;80;120;9;15;../locations/Rival.csv;../locations/RivalEnemies.csv
+4;Organisation highest floors;1;0;0;1;1;../locations/Organisation.csv;../locations/OrganisationEnemies.csv

@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Release\\AudioService.h.obj",
+            "outputs": [
+                "D:\\VS STUDIO PROJECTS\\beforeCrisis\\Before Crisis\\Before Crisis\\Release\\vc143.pdb",
+                "Release\\",
+                "D:\\VS STUDIO PROJECTS\\beforeCrisis\\Before Crisis\\Before Crisis\\Release\\AudioService.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "AudioService.h",
+                    "source-path": "d:\\vs studio projects\\beforecrisis\\before crisis\\before crisis\\audioservice.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

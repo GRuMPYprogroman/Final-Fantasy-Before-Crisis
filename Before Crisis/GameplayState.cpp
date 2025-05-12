@@ -5,6 +5,8 @@
 #include "ShopPanel.h"
 #include "UpgradePanel.h"
 #include "ContractsPanel.h"
+#include "fstream"
+#include "Message.h"
 
 GameplayState::GameplayState(
 	std::shared_ptr<RenderService> renderService,
@@ -23,6 +25,8 @@ GameplayState::GameplayState(
     }
 
     audio_service_->playMusic(MusicID::GameplayTheme, 0);
+
+    Message mes(story_flags_::Initial,render_service_,audio_service_);
 }
 
 void GameplayState::update(float& dt)

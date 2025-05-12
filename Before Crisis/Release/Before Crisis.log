@@ -1,0 +1,25 @@
+﻿  Scanning sources for module dependencies...
+  ExplorationState.cpp
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'ExplorationState.cpp')
+      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(156,17): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(156,17): warning C4244:         with
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(156,17): warning C4244:         [
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(156,17): warning C4244:             T=unsigned int
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(156,17): warning C4244:         ]
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(157,18): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(157,18): warning C4244:         with
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(157,18): warning C4244:         [
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(157,18): warning C4244:             T=unsigned int
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\ExplorationState.cpp(157,18): warning C4244:         ]
+  Generating code
+  2 of 4548 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    12 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Before Crisis.vcxproj -> D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Release\Before Crisis.exe

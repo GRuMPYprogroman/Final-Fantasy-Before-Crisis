@@ -5,6 +5,8 @@
 #include <fstream>
 #include <thread>
 #include <chrono>
+#include "CharacterIO.h"
+#include <iostream>
 
 MenuState::MenuState(std::shared_ptr<RenderService> render_service, std::shared_ptr<AudioService> audio_service, std::shared_ptr<StateService> state_service)
 	: render_service_(render_service),
@@ -42,27 +44,49 @@ MenuState::MenuState(std::shared_ptr<RenderService> render_service, std::shared_
 		buttons.emplace_back(std::make_shared<Button>("Continue", *font, sf::Vector2f(winX / 2, 60),
 			[&]()
 			{
+				std::shared_ptr<Character> player = std::make_unique<Character>();
+				LoadCharacterFromJsonFile(player, "../saveData/PlayerSaveData.json");
 				audio_service_->playSound(SoundID::Click);
+				std::this_thread::sleep_for(std::chrono::milliseconds(100));
+				audio_service_->stopMusic();
+				state_service_->popState();
+				state_service_->pushState(std::make_unique<GameplayState>(render_service_, audio_service_, state_service_, std::move(player)));
 			}, 
 			audio_service_));
 		buttons.emplace_back(std::make_shared<Button>("New Game", *font, sf::Vector2f(winX / 2, buttons[0]->getBackground().getSize().y + buttons[0]->getBackground().getPosition().y),
 			[&]()
 			{
-				std::unique_ptr<Character> player = std::make_unique<Character>();
-				audio_service_->playSound(SoundID::Click);
-				std::this_thread::sleep_for(std::chrono::milliseconds(100));
-				audio_service_->stopMusic();
-				state_service_->popState();
-				state_service_->pushState(std::make_unique<GameplayState>(render_service_, audio_service_, state_service_,std::move(player)));
+				try {
+					SaveData defaultData;
+					nlohmann::json j = defaultData;
+
+					std::ofstream file("../saveData/PlayerSaveData.json",std::ios::out | std::ios::trunc);
+					if (!file.is_open())
+						throw std::runtime_error("Failed to open save file for writing");
+
+					file << j.dump(4);
+					file.close();
+
+					auto player = std::make_unique<Character>();
+					audio_service_->playSound(SoundID::Click);
+					std::this_thread::sleep_for(std::chrono::milliseconds(100));
+					audio_service_->stopMusic();
+					state_service_->popState();
+					state_service_->pushState(
+						std::make_unique<GameplayState>(
+							render_service_,
+							audio_service_,
+							state_service_,
+							std::move(player)
+						)
+					);
+				}
+				catch (const std::exception& e) {
+					std::cout << "Error resetting save data: " << e.what() << std::endl;
+				}
 			}, 
 			audio_service_));
-		buttons.emplace_back(std::make_shared<Button>("Settings", *font, sf::Vector2f(winX / 2, buttons[1]->getBackground().getSize().y + buttons[1]->getBackground().getPosition().y),
-			[&]()
-			{
-				audio_service_->playSound(SoundID::Click);
-			}, 
-			audio_service_));
-		buttons.emplace_back(std::make_shared<Button>("Exit", *font, sf::Vector2f(winX / 2, buttons[2]->getBackground().getSize().y + buttons[2]->getBackground().getPosition().y),
+		buttons.emplace_back(std::make_shared<Button>("Exit", *font, sf::Vector2f(winX / 2, buttons[1]->getBackground().getSize().y + buttons[1]->getBackground().getPosition().y),
 			[&]()
 			{
 				audio_service_->playSound(SoundID::Click);

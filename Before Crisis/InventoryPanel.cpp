@@ -54,6 +54,14 @@ InventoryPanel::InventoryPanel(std::shared_ptr<RenderService> renderService,std:
                 }
                 });
 
+            if (player_->GetEquippedArmor())
+                if (player_->GetEquippedArmor()->instanceID == item.instanceID)
+                    button->setChosen();
+
+            if (player_->GetEquippedWeapon())
+                if (player_->GetEquippedWeapon()->instanceID == item.instanceID)
+                    button->setChosen();
+
             item_buttons_.push_back(button);
             y += spacingY;
         }

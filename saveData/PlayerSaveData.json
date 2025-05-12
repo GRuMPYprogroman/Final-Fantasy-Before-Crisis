@@ -1,6 +1,7 @@
 {
-    "equippedArmorId": -858993460,
-    "equippedWeaponId": -858993460,
+    "ability_points": 0,
+    "equippedArmorId": -1,
+    "equippedWeaponId": -1,
     "exp": 0,
     "hp": 100,
     "inventory": [
@@ -21,6 +22,15 @@
         }
     ],
     "level": 1,
+    "money": 50,
     "mp": 50,
-    "strength": 10
+    "rank": 3,
+    "story_flags": [
+        true,
+        false,
+        false,
+        false
+    ],
+    "strength": 10,
+    "successful_contracts": 0
 }

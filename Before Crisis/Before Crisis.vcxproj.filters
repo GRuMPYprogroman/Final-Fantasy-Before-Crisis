@@ -38,22 +38,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IDialogueManager.h">
-      <Filter>Interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="IGameState.h">
       <Filter>Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="GameUtils.h">
-      <Filter>UI and Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="ICombatManager.h">
-      <Filter>Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="IMissionManager.h">
-      <Filter>Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
       <Filter>UI and Utilities</Filter>
     </ClInclude>
     <ClInclude Include="SaveData.h">
@@ -71,25 +59,10 @@
     <ClInclude Include="GameManager.h">
       <Filter>Core Game Logic</Filter>
     </ClInclude>
-    <ClInclude Include="CombatManager.h">
-      <Filter>Entity-Component-System</Filter>
-    </ClInclude>
-    <ClInclude Include="DialogueManager.h">
-      <Filter>Entity-Component-System</Filter>
-    </ClInclude>
-    <ClInclude Include="Level.h">
+    <ClInclude Include="Location.h">
       <Filter>Game-Specific Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="MissionManager.h">
-      <Filter>Entity-Component-System</Filter>
     </ClInclude>
     <ClInclude Include="Monster.h">
-      <Filter>Game-Specific Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="AreaType.h">
-      <Filter>Game-Specific Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="MonsterType.h">
       <Filter>Game-Specific Classes</Filter>
     </ClInclude>
     <ClInclude Include="StateStack.h">
@@ -146,6 +119,15 @@
     <ClInclude Include="ExplorationState.h">
       <Filter>State Managment\OnMissionStates</Filter>
     </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Entity-Component-System</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Entity-Component-System</Filter>
+    </ClInclude>
+    <ClInclude Include="StoryPoints.h">
+      <Filter>UI and Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp">
@@ -157,25 +139,10 @@
     <ClCompile Include="GameplayState.cpp">
       <Filter>State Managment</Filter>
     </ClCompile>
-    <ClCompile Include="GameUtils.cpp">
-      <Filter>UI and Utilities</Filter>
-    </ClCompile>
     <ClCompile Include="Renderer.cpp">
       <Filter>Core Game Logic</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>UI and Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="CombatManager.cpp">
-      <Filter>Entity-Component-System</Filter>
-    </ClCompile>
-    <ClCompile Include="DialogueManager.cpp">
-      <Filter>Entity-Component-System</Filter>
-    </ClCompile>
-    <ClCompile Include="Level.cpp">
-      <Filter>Game-Specific Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="MissionManager.cpp">
+    <ClCompile Include="Message.cpp">
       <Filter>Entity-Component-System</Filter>
     </ClCompile>
     <ClCompile Include="CharacterManager.cpp">
@@ -216,6 +183,9 @@
     </ClCompile>
     <ClCompile Include="ExplorationState.cpp">
       <Filter>State Managment\OnMissionStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Entity-Component-System</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

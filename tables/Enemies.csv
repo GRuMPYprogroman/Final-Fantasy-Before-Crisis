@@ -1,10 +1,10 @@
-loc_id;name;hp;dmg;exp;possible_loot
-1;male civilian;20;5;10;
-1;female civilian;20;5;10;
-2;male office worker;50;7;15;
-2;female office worker;50;7;15;
-2;security;80;10;25;
-3;ninja;90;15;35;
-3;thug;130;12;35;
-3;killer;110;18;50;
-4;The sixth son of the Antichrist;300;20;5000;
+loc_id;name;hp;dmg;exp
+1;male civilian;20;5;10
+1;female civilian;20;5;10
+2;male office worker;50;7;15
+2;female office worker;50;7;15
+2;security;80;10;25
+3;ninja;90;15;35
+3;thug;130;12;35
+3;killer;110;18;50
+4;The sixth son of the Antichrist;300;20;5000

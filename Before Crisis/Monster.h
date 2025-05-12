@@ -1,22 +1,18 @@
 #pragma once
 #include <string>
-#include "MonsterType.h"
 
 class Monster
 {
 private:
-    MonsterType type;
-    int x;
-    int y;
-    int health;
-    int attack;
-    std::string name;
+    int hp_;
+    int dmg_;
+    int exp_;
+    std::string name_;
 public:
-	Monster(MonsterType type, int x, int y);
-    std::string GetName() const { return name; }
-    int GetX() const { return x; }
-    int GetY() const { return y; }
-    int GetHealth() const { return health; }
-    int GetAttack() const { return attack; }
-    void TakeDamage(int damage) { health -= damage; }
+	Monster(int hp, int dmg, int exp, std::string& name_);
+    int GetHp() const { return hp_; }
+    int GetDmg() const { return dmg_; }
+    int getExp() const { return exp_; }
+    std::string GetName() const { return name_; }
+    void TakeDamage(int damage) { hp_ -= damage; }
 };

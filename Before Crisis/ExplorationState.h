@@ -5,8 +5,8 @@
 #include "StateService.h"
 #include "CharacterManager.h"
 #include "CombatState.h"
-#include "MonsterType.h"
 #include "GameUtils.h"
+#include "Location.h"
 #include <deque>
 #include <string>
 #include "string_view"
@@ -14,18 +14,14 @@
 #include <map>
 #include <random>
 
-struct LocationData {
-    std::string name;
-    std::string description;
-    std::array<int, 4> neighbors;
-    std::string lootTable;
-    std::string enemyTable;
-    std::string backgroundImage;
-    std::string musicTrack;
-};
-
 class ExplorationState : public IGameState {
 private:
+    std::shared_ptr<RenderService> render_;
+    std::shared_ptr<AudioService> audio_;
+    std::shared_ptr<StateService> states_;
+    std::shared_ptr<Character> player_;
+    std::function<void(bool)> onFinish_;
+
     sf::RectangleShape messageArea_;
     sf::RectangleShape inputArea_;
     std::unique_ptr<sf::Text> messageText_;
@@ -36,46 +32,39 @@ private:
     unsigned int fontSize_ = 18;
 
     int locationId_;
-    LocationData locData_;
-    std::vector<std::pair<MonsterType, int>> enemyWeights_;
-    std::vector<std::pair<Item, int>> lootWeights_;
+    int total_enemies_;
 
-    std::shared_ptr<RenderService> render_;
-    std::shared_ptr<AudioService> audio_;
-    std::shared_ptr<StateService> states_;
-    std::shared_ptr<Character> player_;
+    std::map<int, Location> locationsMap_;
+    std::map<int, Monster> enemies_;
+    Location current_loc;
 
-    std::map<int, LocationData> locationsMap_;
-    std::map<std::string, std::vector<std::pair<MonsterType, int>>> enemiesMap_;
-    std::map<std::string, std::vector<std::pair<Item, int>>> lootMap_;
+    int current_hp_;
 
-    std::mt19937 rng_;
+    std::mt19937 mt_randomizer_;
 
-    void loadLevel(int contractId);
     void loadLocations(std::string_view path);
-    void loadEnemies(std::string_view path);
-    void loadLoot(std::string_view path);
     void initUI();
 
     void addLog(std::string_view line);
     std::vector<std::string> wrapText(std::string_view text, float maxWidth);
-    MonsterType pickRandomEnemy();
-    Item pickRandomLoot();
+
+    Monster pickRandomEnemy(std::vector<Monster>& possible_enemies);
 
     void processCommand(std::string cmd);
     void describeRoom();
-    void tryRandomEvent();
+    void finishMission(bool victory);
 public:
     ExplorationState(std::shared_ptr<RenderService> renderService,
         std::shared_ptr<AudioService>  audioService,
         std::shared_ptr<StateService>  stateService,
         std::shared_ptr<Character> player,
         int locationId,
-        std::string_view locationsCsv,
-        std::string_view enemiesCsv,
-        std::string_view lootCsv);
+        std::function<void(bool)> onFinish);
 
-    void update(float& deltaTime) override = 0;
+    void update(float& deltaTime) override;
     void render() override;
     void handleInput(const sf::Event& evt) override;
+
+    friend void loadMap(ExplorationState& obj,std::string_view pathToLocation);
+    friend void loadEnemies(ExplorationState& obj,int min_enemies,int max_enemies, std::string_view pathToEnemies);
 };

@@ -1,2 +1,2 @@
-PlatformToolSet=ClangCL:VCToolArchitecture=Native32Bit:VCToolsVersion=14.43.34808:TargetPlatformVersion=10.0.20348.0:
-D:\Visual studio\VC\Tools\Llvm|19.1.1|Debug|Win32|D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\|
+PlatformToolSet=v143:VCToolArchitecture=Native32Bit:VCToolsVersion=14.43.34808:TargetPlatformVersion=10.0.20348.0:
+Debug|Win32|D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\|

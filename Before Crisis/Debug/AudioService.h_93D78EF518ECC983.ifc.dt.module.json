@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Debug\\AudioService.obj",
+            "outputs": [
+                "Debug\\AudioService.h_93D78EF518ECC983.ifc.dt.module.json",
+                "Debug\\AudioService.h_93D78EF518ECC983.ifc.dt.d.json",
+                "Debug\\AudioService.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "D:\\VS STUDIO PROJECTS\\beforeCrisis\\Before Crisis\\Before Crisis\\AudioService.h",
+                    "source-path": "d:\\vs studio projects\\beforecrisis\\before crisis\\before crisis\\audioservice.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

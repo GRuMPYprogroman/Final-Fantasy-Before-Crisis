@@ -1,139 +1,187 @@
 ﻿#include "ExplorationState.h"
 #include <fstream>
 #include <sstream>
+#include "iostream"
 
 ExplorationState::ExplorationState(
     std::shared_ptr<RenderService> renderService,
     std::shared_ptr<AudioService>  audioService,
     std::shared_ptr<StateService>  stateService,
     std::shared_ptr<Character> player,
-    std::string_view locationsCsv,
-    std::string_view enemiesCsv,
-    std::string_view lootCsv)
-    : render_(renderService)
-    , audio_(audioService)
-    , states_(stateService)
-    , player_(player)
-    , locationId_(contractId)
-    , rng_(std::random_device{}())
+    int locationId,
+    std::function<void(bool)> onFinish)
+    : render_(renderService),
+      audio_(audioService),
+      states_(stateService),
+      player_(player),
+      locationId_(locationId),
+      mt_randomizer_(std::random_device{}()),
+	  onFinish_(std::move(onFinish))
 {
+    std::string locationsCsv = "../tables/Locations.csv";
+
     font_ = std::make_unique<sf::Font>(render_->getDefaultFont());
 
     loadLocations(locationsCsv);
-    loadEnemies(enemiesCsv);
-    loadLoot(lootCsv);
 
-    locData_ = locationsMap_.at(locationId_);
-    enemyWeights_ = enemiesMap_[locData_.enemyTable];
-    lootWeights_ = lootMap_[locData_.lootTable];
+    current_loc = locationsMap_.at(1);
+    current_hp_ = player_->GetStats().hp;
 
     initUI();
-    addLog("Entering area: " + locData_.name);
+    addLog("Entering area: " + locationsMap_.at(1).title);
     describeRoom();
 }
 
 void ExplorationState::loadLocations(std::string_view path) {
     std::ifstream file(path.data());
-    if (!file.is_open()) return;
+    if (!file.is_open())
+    {
+        std::cout << "file cannot be opened";
+        return;
+    }
+
     std::string line;
     std::getline(file, line);
-    while (std::getline(file, line)) {
+
+    std::string pathToLocation;
+    std::string pathToEnemies;
+    std::string minEnemies;
+    std::string maxEnemies;
+
+    while (std::getline(file, line, ';')) {
         std::stringstream ss(line);
-        std::string cell;
-        LocationData ld;
+
         int id;
-        // id
-        std::getline(ss, cell, ';'); id = std::stoi(cell);
-        // name
-        std::getline(ss, ld.name, ';');
-        // description
-        std::getline(ss, ld.description, ';');
-        // neighbors
-        std::getline(ss, cell, ';');
-        std::stringstream ns(cell);
-        for (int i = 0;i < 4;++i) {
-            std::getline(ns, cell, '|');
-            ld.neighbors[i] = cell.empty() ? 0 : std::stoi(cell);
-        }
-        // lootTable
-        std::getline(ss, ld.lootTable, ';');
-        // enemyTable
-        std::getline(ss, ld.enemyTable, ';');
-        // backgroundImage
-        std::getline(ss, ld.backgroundImage, ';');
-        // musicTrack
-        std::getline(ss, ld.musicTrack, ';');
-        locationsMap_[id] = ld;
+        ss >> id;
+
+        if (id != locationId_) continue;
+        std::getline(file, line);
+        ss.clear();
+        ss.str(line);
+
+        std::string otherData;
+        std::getline(ss, otherData, ';');
+        std::getline(ss, otherData, ';');
+        std::getline(ss, otherData, ';');
+        std::getline(ss, otherData, ';');
+        std::getline(ss, minEnemies, ';');
+        std::getline(ss, maxEnemies, ';');
+        std::getline(ss, pathToLocation, ';');
+        std::getline(ss, pathToEnemies, ';');
+
+        std::cout << pathToLocation << pathToEnemies << '\n';
+        file.close();
+        break;
     }
+
+    loadMap(*this, pathToLocation);
+    loadEnemies(*this, std::stoi(minEnemies), std::stoi(maxEnemies),pathToEnemies);
+
 }
 
-void ExplorationState::loadEnemies(std::string_view path) {
-    std::ifstream file(path.data());
-    if (!file.is_open()) return;
+void loadMap(ExplorationState& obj,std::string_view pathToLocation)
+{
     std::string line;
-    std::getline(file, line);
-    while (std::getline(file, line)) {
-        std::stringstream ss(line);
-        std::string key, mtStr, wtStr;
-        std::getline(ss, key, ';');
-        std::getline(ss, mtStr, ';');
-        std::getline(ss, wtStr, ';');
-        int w = std::stoi(wtStr);
-        MonsterType mt = MonsterType::Goblin;
-        if (mtStr == "Goblin") mt = MonsterType::Goblin;
-        else if (mtStr == "Spider") mt = MonsterType::Spider;
-        else if (mtStr == "Wolf")   mt = MonsterType::Wolf;
-        else if (mtStr == "Troll")  mt = MonsterType::Troll;
-        else if (mtStr == "Dragon") mt = MonsterType::Dragon;
-        enemiesMap_[key].emplace_back(mt, w);
-    }
-}
+    std::ifstream fileLoc(pathToLocation.data());
+    if (!fileLoc.is_open()) return;
 
-void ExplorationState::loadLoot(std::string_view path) {
-    std::ifstream file(path.data());
-    if (!file.is_open()) return;
-    std::string line;
-    std::getline(file, line);
-    while (std::getline(file, line)) {
+    std::getline(fileLoc, line);
+
+    while (std::getline(fileLoc, line))
+    {
         std::stringstream ss(line);
-        std::string key, idStr, wtStr;
-        std::getline(ss, key, ';');
+
+        std::string idStr, title, description, neighborsStr;
         std::getline(ss, idStr, ';');
-        std::getline(ss, wtStr, ';');
-        int id = std::stoi(idStr);
-        int w = std::stoi(wtStr);
-        // найдём Item по id (из GameUtils)
-        /**for (auto& it : GameUtils::allItems) {
-            if (it.id == id) {
-                lootMap_[key].emplace_back(it, w);
-                break;
-            }
-        }**/
+        std::getline(ss, title, ';');
+        std::getline(ss, description, ';');
+        std::getline(ss, neighborsStr);
+
+        Location newLoc;
+        newLoc.id = std::stoi(idStr);
+        newLoc.title = title;
+        newLoc.description = description;
+
+        std::stringstream neighborStream(neighborsStr);
+        int neighbor;
+        while (neighborStream >> neighbor) {
+            newLoc.neighbors.push_back(neighbor);
+        }
+
+        obj.locationsMap_.emplace(newLoc.id, newLoc);
     }
+}
+
+void loadEnemies(ExplorationState& obj, int min_enemies, int max_enemies, std::string_view pathToEnemies)
+{
+    int enemies_amount;
+    std::uniform_int_distribution rand_int{ min_enemies, max_enemies };
+
+    enemies_amount = rand_int(obj.mt_randomizer_);
+
+    rand_int = std::uniform_int_distribution{ 0,1 };
+
+    std::ifstream file(pathToEnemies.data());
+    if (!file.is_open()) return;
+
+    std::string line;
+    std::getline(file, line);
+
+    std::vector<Monster> possible_enemies;
+
+    while (std::getline(file, line))
+    {
+        std::stringstream ss(line);
+
+        std::string name, hp, dmg, exp;
+        std::getline(ss, name, ';');
+        std::getline(ss, hp, ';');
+        std::getline(ss, dmg, ';');
+        std::getline(ss, exp, ';');
+
+        Monster new_enemy{ std::stoi(hp),std::stoi(dmg), std::stoi(exp),name };
+        possible_enemies.push_back(new_enemy);
+    }
+
+    for (auto& loc: obj.locationsMap_)
+    {
+	    if (loc.first != 1 && rand_int(obj.mt_randomizer_))
+	    {
+            loc.second.has_enemy = true;
+            obj.enemies_.emplace(loc.first, obj.pickRandomEnemy(possible_enemies));
+
+	    }
+    }
+
+}
+
+Monster ExplorationState::pickRandomEnemy(std::vector<Monster>& possible_enemies)
+{
+    int size = possible_enemies.size();
+    std::uniform_int_distribution which_enemy(0, size-1);
+    return possible_enemies.at(which_enemy(mt_randomizer_));
 }
 
 void ExplorationState::initUI() {
-    auto& win = render_->getRenderWindow();
-    float W = win.getSize().x;
-    float H = win.getSize().y;
-    float inputH = H * 0.25f, msgH = H - inputH;
+    float width = render_->getRenderWindow().getSize().x;
+    float height = render_->getRenderWindow().getSize().y;
+    float inputH = height * 0.25f;
+	float msgH = height - inputH;
 
     messageText_ = std::make_unique<sf::Text>(*font_);
     inputPrompt_ = std::make_unique<sf::Text>(*font_);
 
-    messageArea_.setSize({ W,msgH });
+    messageArea_.setSize({ width,msgH });
     messageArea_.setFillColor({ 15,15,15 });
-    inputArea_.setSize({ W,inputH });
+    inputArea_.setSize({ width,inputH });
     inputArea_.setPosition({ 0, msgH });
     inputArea_.setFillColor({ 25,25,25 });
 
     auto font = render_->getDefaultFont();
 
-    messageText_->setFont(font);
     messageText_->setCharacterSize(fontSize_);
     messageText_->setFillColor(sf::Color::White);
     messageText_->setPosition({ 5, 5 });
-    inputPrompt_->setFont(font);
     inputPrompt_->setCharacterSize(fontSize_);
     inputPrompt_->setFillColor(sf::Color::Green);
     inputPrompt_->setPosition({5, msgH + 5});
@@ -150,115 +198,104 @@ std::vector<std::string> ExplorationState::wrapText(std::string_view text, float
     std::vector<std::string> out;
     std::istringstream iss(text.data());
     std::string word, line;
+
     while (iss >> word) {
-        std::string cand = line.empty() ? word : line + " " + word;
-        messageText_->setString(cand);
+        std::string cant = line.empty() ? word : line + " " + word;
+        messageText_->setString(cant);
         if (messageText_->getGlobalBounds().size.x > maxWidth) {
             if (!line.empty()) out.push_back(line);
             line = word;
         }
-        else line = cand;
+        else line = cant;
     }
+
     if (!line.empty()) out.push_back(line);
     return out;
 }
 
-MonsterType ExplorationState::pickRandomEnemy() {
-    int total = 0;
-    for (auto& p : enemyWeights_) total += p.second;
-    std::uniform_int_distribution<int> d(1, total);
-    int r = d(rng_);
-    for (auto& p : enemyWeights_) {
-        r -= p.second;
-        if (r <= 0) return p.first;
-    }
-    return enemyWeights_.front().first;
-}
-
-Item ExplorationState::pickRandomLoot() {
-    int total = 0;
-    for (auto& p : lootWeights_) total += p.second;
-    std::uniform_int_distribution<int> d(1, total);
-    int r = d(rng_);
-    for (auto& p : lootWeights_) {
-        r -= p.second;
-        if (r <= 0) return p.first;
-    }
-    return lootWeights_.front().first;
-}
-
 void ExplorationState::describeRoom() {
-    addLog(locData_.description);
+    addLog(current_loc.description);
 }
 
-void ExplorationState::tryRandomEvent() {
-    std::uniform_int_distribution<int> d(0, 2);
-    int ev = d(rng_);
-    if (ev == 0 && !lootWeights_.empty()) {
-        Item it = pickRandomLoot();
-        addLog("Found " + it.name + "!");
-        player_->AddItem(it);
-    }
-    else if (ev == 1 && !enemyWeights_.empty()) {
-        MonsterType m = pickRandomEnemy();
-        addLog("A wild " + std::string((m)) + " appears!");
-        states_->pushState(std::make_unique<CombatState>(
-            render_, audio_, states_, player_, m,
-            [this](bool victory) {
-                if (victory) addLog("You defeated the foe.");
-                else        addLog("You fled.");
-                describeRoom();
-            }
-        ));
-    }
-    else addLog("Nothing happens.");
+void ExplorationState::finishMission(bool victory)
+{
+    onFinish_(victory);
+    states_->popState();
 }
 
 void ExplorationState::processCommand(std::string cmd) {
-    if (cmd == "help") {
-        addLog("Commands: left,forward,right,backward,attack,use,help");
-    }
-    else if (cmd == "left" || cmd == "forward" || cmd == "right" || cmd == "backward") {
-        addLog("You move " + cmd + ".");
-        int idx = cmd == "left" ? 0 : cmd == "forward" ? 1 : cmd == "right" ? 2 : 3;
-        int nxt = locData_.neighbors[idx];
-        if (nxt == 0) addLog("You can't go that way.");
-        else {
-            states_->popState();
-            states_->pushState(std::make_unique<ExplorationState>(
-                render_, audio_, states_, player_, nxt,
-                /*paths*/"", "", ""
-            ));
+    std::stringstream ss(cmd);
+    int loc;
+
+    if (ss >> loc && loc <= current_loc.neighbors.back() && loc > 0) {
+        if (loc != current_loc.id)
+        {
+            addLog("You enter: " + locationsMap_.at(loc).title);
+            current_loc = locationsMap_.at(loc);
         }
     }
-    else if (cmd == "attack") {
-        addLog("You swing at thin air.");
+    else
+    {
+        addLog("Unknown command...");
     }
-    else if (cmd == "use") {
-        addLog("You rummage.");
-    }
-    else if (!cmd.empty()) {
-        addLog("Unknown: " + cmd);
+
+    if (current_loc.has_enemy)
+    {
+        states_->pushState(std::make_unique<CombatState>(
+            render_, audio_, states_, player_, enemies_.at(current_loc.id),
+            [this](bool victory) {
+                if (victory)
+                {
+                    addLog("You defeated the foe.");
+                    enemies_.erase(current_loc.id);
+                    locationsMap_.at(current_loc.id).has_enemy = false;
+                    if (enemies_.empty()) finishMission(true);
+                    describeRoom();
+                }
+                else
+                {
+                    addLog("You Lost");
+                    finishMission(false);
+                }},current_hp_));
     }
 }
+
+void ExplorationState::update(float& deltaTime){}
 
 void ExplorationState::render() {
     render_->getRenderWindow().draw(messageArea_);
     float y = 5;
     size_t start = logLines_.size() > 25 ? logLines_.size() - 25 : 0;
+
+
     for (size_t i = start;i < logLines_.size();++i) {
         messageText_->setString(logLines_[i]);
         messageText_->setPosition({ 5, y });
         render_->getRenderWindow().draw(*messageText_);
         y += fontSize_ + 2;
     }
+
+    messageText_->setString("You can go to:\n");
+    messageText_->setPosition({ 5, y });
+    render_->getRenderWindow().draw(*messageText_);
+    y += fontSize_ + 2;
+
+    for (auto& loc : current_loc.neighbors)
+    {
+        messageText_->setString(std::to_string(loc) + ". " + locationsMap_.at(loc).title + "\n");
+        messageText_->setPosition({ 5, y });
+        render_->getRenderWindow().draw(*messageText_);
+        y += fontSize_ + 2;
+
+    }
+
     render_->getRenderWindow().draw(inputArea_);
     inputPrompt_->setString("> " + inputBuffer_);
     render_->getRenderWindow().draw(*inputPrompt_);
 }
 
 void ExplorationState::handleInput(const sf::Event& evt) {
-    if (evt.is<sf::Event::TextEntered>) {
+    if (evt.is<sf::Event::TextEntered>()) {
         if (evt.getIf<sf::Event::TextEntered>()->unicode == '\r' || evt.getIf<sf::Event::TextEntered>()->unicode == '\n') {
             processCommand(inputBuffer_);
             inputBuffer_.clear();

@@ -6,7 +6,8 @@ enum class SoundID
     Click,
     Buy,
     Inventory,
-    Upgrade
+    Upgrade,
+    Flip
 };
 
 enum class MusicID

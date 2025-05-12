@@ -1,7 +1,5 @@
 #include "Monster.h"
 
-Monster::Monster(MonsterType type, int x, int y) :
-type(type),
-x(x),
-y(y)
+Monster::Monster(int hp, int dmg, int exp, std::string& name) :
+hp_(hp), dmg_(dmg), exp_(exp), name_(name)
 {}

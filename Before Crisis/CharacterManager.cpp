@@ -1,7 +1,7 @@
 ﻿#include "CharacterManager.h"
+#include "iostream"
 
-
-Character::Character() : level(1), exp(0), ability_points_(1), money_(50), rank_(3) {
+Character::Character() : level(1), exp(0), ability_points_(1), money_(50), rank_(3), successful_contracts_(0){
     stats.hp = 100;
     stats.mp = 50;
     stats.strength = 10;
@@ -60,8 +60,28 @@ bool Character::canEquip(const int itemId)
 
 SaveData Character::ToSaveData() const {
     SaveData data;
+
+    try {
+        std::ifstream file("../saveData/PlayerSaveData.json");
+        if (file.is_open()) {
+            nlohmann::json j;
+            file >> j;
+            file.close();
+
+            SaveData existing = j.get<SaveData>();
+            data.story_flags = existing.story_flags;  // <-- сохраняем старые флаги
+        }
+    }
+    catch (...) {
+        std::cout << "Warning: couldn't load existing story flags, using defaults.\n";
+    }
+
     data.level = level;
     data.exp = exp;
+    data.rank = rank_;
+    data.ability_points = ability_points_;
+    data.money = money_;
+    data.successful_contracts = successful_contracts_;
     data.hp = stats.hp;
     data.mp = stats.mp;
     data.strength = stats.strength;
@@ -69,7 +89,10 @@ SaveData Character::ToSaveData() const {
     data.inventory = inventory_;
 
     if (equippedWeapon_) data.equippedWeaponId = equippedWeapon_->id;
+    else data.equippedWeaponId = -1;
+
     if (equippedArmor_) data.equippedArmorId = equippedArmor_->id;
+    else data.equippedArmorId = -1;
 
     return data;
 }
@@ -80,6 +103,10 @@ void Character::FromSaveData(const SaveData& data) {
     stats.hp = data.hp;
     stats.mp = data.mp;
     stats.strength = data.strength;
+    rank_ = data.rank;
+    ability_points_ = data.ability_points ;
+    money_ = data.money;
+    successful_contracts_ = data.successful_contracts;
 
     inventory_ = data.inventory;
 

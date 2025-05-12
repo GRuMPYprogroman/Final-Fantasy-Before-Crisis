@@ -28,13 +28,16 @@ private:
     std::shared_ptr<RenderService> render_service_;
     std::shared_ptr<AudioService>  audio_service_;
     std::shared_ptr<StateService> state_service_;
-    std::shared_ptr<Character>     player_;
+    std::shared_ptr<Character> player_;
 
-    std::unique_ptr<sf::Font>      font_;
-    std::unique_ptr<sf::Text>      title_;
+    std::unique_ptr<sf::Font> font_;
+    std::unique_ptr<sf::Text> title_;
+    std::unique_ptr<sf::Text> player_info_;
 
-    std::vector<Contract>          all_contracts_;
+    std::vector<Contract>  all_contracts_;
     std::vector<std::shared_ptr<Button>> contract_buttons_;
+
+    int required_contract_id_;
 public:
     ContractsPanel(std::shared_ptr<RenderService> render_service,
         std::shared_ptr<AudioService> audio_service,
@@ -45,4 +48,5 @@ public:
     void update(float dt) override;
     void render() override;
     void handleInput(const sf::Event& evt) override;
+    void updatePlayerInfo();
 };

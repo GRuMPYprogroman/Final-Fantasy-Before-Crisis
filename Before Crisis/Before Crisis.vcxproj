@@ -29,13 +29,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -77,7 +77,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\SFML\include</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -95,6 +95,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\SFML\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,16 +143,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AreaType.h" />
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="AudioVariables.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="CharacterIO.h" />
     <ClInclude Include="CharacterManager.h" />
-    <ClInclude Include="CombatManager.h" />
     <ClInclude Include="CombatState.h" />
     <ClInclude Include="ContractsPanel.h" />
-    <ClInclude Include="DialogueManager.h" />
+    <ClInclude Include="Message.h" />
     <ClInclude Include="ExitPanel.h" />
     <ClInclude Include="ExplorationState.h" />
     <ClInclude Include="GameManager.h" />
@@ -161,21 +160,17 @@
     <ClInclude Include="IObserver.h" />
     <ClInclude Include="RenderService.h" />
     <ClInclude Include="ISubject.h" />
-    <ClInclude Include="MonsterType.h" />
     <ClInclude Include="SaveData.h" />
     <ClInclude Include="SavePanel.h" />
     <ClInclude Include="ShopPanel.h" />
     <ClInclude Include="StateService.h" />
     <ClInclude Include="StateStack.h" />
+    <ClInclude Include="StoryPoints.h" />
     <ClInclude Include="UpgradePanel.h" />
     <ClInclude Include="GameUtils.h" />
-    <ClInclude Include="ICombatManager.h" />
-    <ClInclude Include="IDialogueManager.h" />
     <ClInclude Include="IGameState.h" />
-    <ClInclude Include="IMissionManager.h" />
-    <ClInclude Include="Level.h" />
+    <ClInclude Include="Location.h" />
     <ClInclude Include="MenuState.h" />
-    <ClInclude Include="MissionManager.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Renderer.h" />
   </ItemGroup>
@@ -185,19 +180,15 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="CharacterIO.cpp" />
     <ClCompile Include="CharacterManager.cpp" />
-    <ClCompile Include="CombatManager.cpp" />
     <ClCompile Include="CombatState.cpp" />
     <ClCompile Include="ContractsPanel.cpp" />
-    <ClCompile Include="DialogueManager.cpp" />
+    <ClCompile Include="Message.cpp" />
     <ClCompile Include="ExplorationState.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameplayState.cpp" />
-    <ClCompile Include="GameUtils.cpp" />
     <ClCompile Include="InventoryPanel.cpp" />
-    <ClCompile Include="Level.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuState.cpp" />
-    <ClCompile Include="MissionManager.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ShopPanel.cpp" />

@@ -1,0 +1,12 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\vs studio projects\\beforecrisis\\before crisis\\before crisis\\audioservice.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "d:\\vs studio projects\\beforecrisis\\before crisis\\before crisis\\audiovariables.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

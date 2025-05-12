@@ -12,8 +12,6 @@ Renderer::Renderer(unsigned int width, unsigned int height, const std::string& t
 
 bool Renderer::LoadResources() {
 	if (!default_font_.openFromFile("../fonts/Brushstroke Horror.otf")) return false;
-	if (!atlas.loadFromFile("assets/tiles.png")) return false; // Texture atlas for '@', '#', etc.
-	vertices.setPrimitiveType(sf::PrimitiveType::Triangles);
 	return true;
 }
 
