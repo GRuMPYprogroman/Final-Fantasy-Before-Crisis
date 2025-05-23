@@ -18,6 +18,8 @@ ExplorationState::ExplorationState(
       mt_randomizer_(std::random_device{}()),
 	  onFinish_(std::move(onFinish))
 {
+    audio_->playMusic(MusicID::ExplorationTheme, 0);
+
     std::string locationsCsv = "../tables/Locations.csv";
 
     font_ = std::make_unique<sf::Font>(render_->getDefaultFont());
@@ -48,35 +50,47 @@ void ExplorationState::loadLocations(std::string_view path) {
     std::string minEnemies;
     std::string maxEnemies;
 
-    while (std::getline(file, line, ';')) {
+    while (std::getline(file, line)) {
         std::stringstream ss(line);
+        std::string token;
 
-        int id;
-        ss >> id;
+        std::getline(ss, token, ';');
+        int id = std::stoi(token);
 
         if (id != locationId_) continue;
-        std::getline(file, line);
-        ss.clear();
-        ss.str(line);
 
-        std::string otherData;
-        std::getline(ss, otherData, ';');
-        std::getline(ss, otherData, ';');
-        std::getline(ss, otherData, ';');
-        std::getline(ss, otherData, ';');
+        std::string title;
+        std::getline(ss, title, ';');
+
+        std::getline(ss, token, ';');
+
+        std::getline(ss, token, ';');
+
+        std::getline(ss, token, ';');
+
+        std::string minEnemies;
         std::getline(ss, minEnemies, ';');
+
+        std::string maxEnemies;
         std::getline(ss, maxEnemies, ';');
+
+        std::string pathToLocation;
         std::getline(ss, pathToLocation, ';');
+
+        std::string pathToEnemies;
         std::getline(ss, pathToEnemies, ';');
 
-        std::cout << pathToLocation << pathToEnemies << '\n';
-        file.close();
+        std::cout << "Loaded location paths: "
+            << pathToLocation << " | " << pathToEnemies << "\n";
+
+        loadMap(*this, pathToLocation);
+        loadEnemies(*this,
+            std::stoi(minEnemies),
+            std::stoi(maxEnemies),
+            pathToEnemies);
         break;
     }
-
-    loadMap(*this, pathToLocation);
-    loadEnemies(*this, std::stoi(minEnemies), std::stoi(maxEnemies),pathToEnemies);
-
+    file.close();
 }
 
 void loadMap(ExplorationState& obj,std::string_view pathToLocation)
@@ -133,13 +147,14 @@ void loadEnemies(ExplorationState& obj, int min_enemies, int max_enemies, std::s
     {
         std::stringstream ss(line);
 
-        std::string name, hp, dmg, exp;
+        std::string name, hp, dmg, exp,sex;
         std::getline(ss, name, ';');
         std::getline(ss, hp, ';');
         std::getline(ss, dmg, ';');
         std::getline(ss, exp, ';');
+        std::getline(ss, sex, ';');
 
-        Monster new_enemy{ std::stoi(hp),std::stoi(dmg), std::stoi(exp),name };
+        Monster new_enemy{ std::stoi(hp),std::stoi(dmg), std::stoi(exp),name, std::stoi(sex) };
         possible_enemies.push_back(new_enemy);
     }
 
@@ -246,6 +261,7 @@ void ExplorationState::processCommand(std::string cmd) {
             [this](bool victory) {
                 if (victory)
                 {
+                    audio_->playMusic(MusicID::ExplorationTheme, 0);
                     addLog("You defeated the foe.");
                     enemies_.erase(current_loc.id);
                     locationsMap_.at(current_loc.id).has_enemy = false;
@@ -260,7 +276,7 @@ void ExplorationState::processCommand(std::string cmd) {
     }
 }
 
-void ExplorationState::update(float& deltaTime){}
+void ExplorationState::update(float& deltaTime){ audio_->update(deltaTime); }
 
 void ExplorationState::render() {
     render_->getRenderWindow().draw(messageArea_);

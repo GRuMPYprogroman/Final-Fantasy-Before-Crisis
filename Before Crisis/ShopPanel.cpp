@@ -13,11 +13,11 @@ ShopPanel::ShopPanel(std::shared_ptr<RenderService> renderService,
 {
 	font_ = std::make_unique<sf::Font>(render_service_->getDefaultFont());
 
-	title_ = std::make_unique<sf::Text>(*font_, "Shop", 36);
+	title_ = std::make_unique<sf::Text>(*font_, "Shop", 32);
 	title_->setPosition({ render_service_->getWindowSize().x / 2.f, 20.f });
 	title_->setFillColor(sf::Color::White);
 
-	player_info_ = std::make_unique<sf::Text>(*font_, "", 36);
+	player_info_ = std::make_unique<sf::Text>(*font_, "", 30);
 	player_info_->setPosition({ 30.f,30.f });
 	updatePlayerInfo();
 
@@ -55,10 +55,13 @@ void ShopPanel::loadItemsFromCSV(const std::string& path) {
 		si.data.effect = std::stoi(cell);
 		if (!std::getline(ss, cell, ';')) continue;
 		si.data.effect_type = cell;
+		si.data.instanceID = 0;
 		if (!std::getline(ss, cell, ';')) continue;
 		si.price = std::stoi(cell);
 		if (!std::getline(ss, cell, ';')) continue;
 		si.required_level = std::stoi(cell);
+		if (!std::getline(ss, cell, ';')) continue;
+		si.data.item_sound = std::stoi(cell);
 
 		shopItems_.push_back(si);
 	}
@@ -67,9 +70,9 @@ void ShopPanel::loadItemsFromCSV(const std::string& path) {
 void ShopPanel::buildButtons() {
 	float winX = render_service_->getWindowSize().x;
 	float winY = render_service_->getWindowSize().y;
-	float colWidth = winX / 3.f;
-	float topY = winY * 0.1f;
-	float spacingY = 100.f;
+	float colWidth = winX / 4.f;
+	float topY = winY * 0.07f;
+	float spacingY = 120.f;
 
 	std::vector<std::pair<std::string, float>> columns = {
 		{"weapon", colWidth * 0.5f},
@@ -84,6 +87,7 @@ void ShopPanel::buildButtons() {
 		columnHeaders_.push_back(std::move(hdr));
 
 		float y = topY + 40.f;
+		sf::Vector2f max_size{ 0,0 };
 
 		for (auto& item : groupedItems_[type]) {
 			std::string label = item.data.name + " - " + std::to_string(item.price) + "$\n" +
@@ -99,10 +103,16 @@ void ShopPanel::buildButtons() {
 					}
 				},
 				audio_service_);
-			btn->setBackgroundSize(btn->getLabel().getGlobalBounds().size + sf::Vector2f{ 20.f, 20.f });
+			//btn->setBackgroundSize(btn->getLabel().getGlobalBounds().size + sf::Vector2f{ 20.f, 20.f });
+			if ((btn->getLabel().getGlobalBounds().size + sf::Vector2f{ 20.f, 20.f }).x > max_size.x ||
+				(btn->getLabel().getGlobalBounds().size + sf::Vector2f{ 20.f, 20.f }).y > max_size.y)
+				max_size = (btn->getLabel().getGlobalBounds().size + sf::Vector2f{ 20.f, 20.f });
 			itemButtons_.push_back(btn);
 			y += spacingY;
 		}
+
+		for (auto& btn : itemButtons_)
+			btn->setBackgroundSize(max_size + sf::Vector2f{ 40.f, 20.f });
 	}
 }
 

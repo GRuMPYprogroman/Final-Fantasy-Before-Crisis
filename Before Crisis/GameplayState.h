@@ -13,7 +13,7 @@ using PanelFactory = std::function<std::unique_ptr<IGameplayPanel>()>;
 
 class GameplayState : public IGameState {
 private:
-    std::map<std::string, PanelFactory> panelFactories_;
+    std::unordered_map<std::string, PanelFactory> panelFactories_;
     std::unique_ptr<IGameplayPanel> activePanel_;
     std::vector<std::shared_ptr<Button>> navButtons_;
     std::shared_ptr<RenderService> render_service_;
@@ -21,6 +21,9 @@ private:
     std::shared_ptr<StateService> state_service_;
 	std::shared_ptr<Character> player_;
 	std::shared_ptr<sf::Font> font_;
+    std::vector<std::string> panelOrder_;
+
+    sf::RectangleShape panels_area_;
 
     void registerPanels();
     void switchTo(const std::string& panelKey);

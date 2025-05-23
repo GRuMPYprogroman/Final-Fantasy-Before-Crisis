@@ -80,7 +80,7 @@ void UpgradePanel::updatePlayerInfo()
 	player_info_->setString("Level: " + std::to_string(player_->GetLevel()) +
 		"\nHP: " + std::to_string(player_->GetStats().hp) +
 		"\nMP: " + std::to_string(player_->GetStats().mp) +
-		"\nStrength: " + std::to_string(player_->GetStats().mp) +
+		"\nStrength: " + std::to_string(player_->GetStats().strength) +
 		"\nAbility Points: " + std::to_string(player_->getAbilityPoints()) +
 		"\nExp: " + std::to_string(player_->getExp()) + 
 		"\nNeed exp till lvl up: " + std::to_string(player_->GetLevel() * 100 - player_->getExp()));

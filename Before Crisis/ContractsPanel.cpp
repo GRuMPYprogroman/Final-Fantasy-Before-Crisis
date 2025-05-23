@@ -3,7 +3,8 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#define CONTRACT_TO_RANK_UP 5
+#include "Message.h"
+#define CONTRACT_TO_RANK_UP 2
 
 ContractsPanel::ContractsPanel(
     std::shared_ptr<RenderService> render_service,
@@ -14,8 +15,7 @@ ContractsPanel::ContractsPanel(
     : render_service_(render_service),
     audio_service_(audio_service),
     state_service_(state_service),
-    player_(player),
-    required_contract_id_(1)
+    player_(player)
 {
     font_ = std::make_unique<sf::Font>(render_service_->getDefaultFont());
     title_ = std::make_unique<sf::Text>(*font_, "Contracts", 36);
@@ -65,9 +65,9 @@ void ContractsPanel::buildButtons() {
 
     sf::Vector2f pos = sf::Vector2f{ render_service_->getWindowSize() };
 	float centerX = pos.x / 2.f - 100.f;
-	float centerY = pos.y * 3.f / 8.f - 100.f;
+	float centerY = pos.y * 3.f / 8.f - 200.f;
 
-    float spacing = 100.f;
+    float spacing = 120.f;
     int playerRank = player_->getRank();
 
     for (auto& c : all_contracts_) {
@@ -89,7 +89,6 @@ void ContractsPanel::buildButtons() {
             [this, contractId, rewardExp, rewardMoney]()
             {
                 audio_service_->playSound(SoundID::Click);
-				//state_service_->popState();
                 state_service_->pushState(
                     std::make_unique<ExplorationState>(
                         render_service_,
@@ -99,16 +98,23 @@ void ContractsPanel::buildButtons() {
                         contractId,
                 [this, rewardExp, rewardMoney, contractId](bool victory)
                         {
+                            player_->setMoney(rewardMoney);
+                            player_->GainExp(rewardExp);
+
+                            audio_service_->stopMusic();
+                            audio_service_->playMusic(MusicID::GameplayTheme, 0);
+
                             if (victory && contractId == required_contract_id_)
                             {
-                                player_->setMoney(rewardMoney);
-                                player_->GainExp(rewardExp);
+                                Message mes(static_cast<story_flags_>(player_->getRank() + 4), render_service_, audio_service_);
                                 player_->setContracts(1);
                                 if (player_->getCompletedMissions() >= CONTRACT_TO_RANK_UP) 
                                 {
+                                    Message mes(static_cast<story_flags_>(player_->getRank()), render_service_, audio_service_);
                                     player_->setContracts(-CONTRACT_TO_RANK_UP);
                                     player_->setRank(1);
-                                    ++required_contract_id_;
+                                    if (required_contract_id_ < 4)
+                                        ++required_contract_id_;
                                 }
                                 updatePlayerInfo();
                             }
@@ -121,7 +127,7 @@ void ContractsPanel::buildButtons() {
             },
             audio_service_
         );
-        btn->setBackgroundSize({ 120,120 });
+        btn->setBackgroundSize({ 220,120 });
         contract_buttons_.push_back(btn);
         centerY += spacing;
     }
@@ -137,7 +143,9 @@ void ContractsPanel::render() {
         render_service_->getRenderWindow().draw(b->getBackground());
         render_service_->getRenderWindow().draw(b->getLabel());
     }
-    render_service_->getRenderWindow().draw(*player_info_);
+
+    if (required_contract_id_ != 4)
+        render_service_->getRenderWindow().draw(*player_info_);
 }
 
 void ContractsPanel::handleInput(const sf::Event& evt) {
@@ -148,5 +156,5 @@ void ContractsPanel::handleInput(const sf::Event& evt) {
 void ContractsPanel::updatePlayerInfo()
 {
     player_info_->setString("Successful contracts: " + std::to_string(player_->getCompletedMissions()) 
-                           +"\nNeeded contracts of type "+ std::to_string(required_contract_id_) + " to rank up : " + std::to_string(CONTRACT_TO_RANK_UP));
+                           +"\nNeeded contracts\n of type "+ std::to_string(required_contract_id_) + " to rank up : " + std::to_string(CONTRACT_TO_RANK_UP));
 }

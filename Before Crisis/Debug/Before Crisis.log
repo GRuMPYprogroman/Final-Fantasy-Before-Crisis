@@ -1,25 +1,20 @@
 ﻿  Scanning sources for module dependencies...
-  Message.cpp
+  GameplayState.cpp
 D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Message.cpp')
+  (compiling source file 'GameplayState.cpp')
       D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\SFML\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\SaveData.h(17,31): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  (compiling source file 'Message.cpp')
-  
-D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\Message.cpp(121,27): warning C4018: '<': signed/unsigned mismatch
-D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\memory(3594,56): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-  (compiling source file 'Message.cpp')
-      D:\Visual studio\VC\Tools\MSVC\14.43.34808\include\memory(3594,56):
-      the template instantiation context (the oldest one first) is
-          D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\Message.cpp(33,18):
-          see reference to function template instantiation 'std::unique_ptr<sf::Text,std::default_delete<sf::Text>> std::make_unique<sf::Text,_Ty&,const char(&)[1],float&,0>(_Ty &,const char (&)[1],float &)' being compiled
-          with
-          [
-              _Ty=sf::Font
-          ]
-  
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(109,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(109,16): warning C4244:         with
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(109,16): warning C4244:         [
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(109,16): warning C4244:             T=unsigned int
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(109,16): warning C4244:         ]
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(110,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(110,16): warning C4244:         with
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(110,16): warning C4244:         [
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(110,16): warning C4244:             T=unsigned int
+D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Before Crisis\GameplayState.cpp(110,16): warning C4244:         ]
   Before Crisis.vcxproj -> D:\VS STUDIO PROJECTS\beforeCrisis\Before Crisis\Debug\Before Crisis.exe

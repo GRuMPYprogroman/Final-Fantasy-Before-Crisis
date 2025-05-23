@@ -22,8 +22,8 @@ private:
     int successful_contracts_;
 
     std::vector<Item> inventory_;
-    std::optional<Item> equippedWeapon_;
-    std::optional<Item> equippedArmor_;
+    Item* equippedWeapon_;
+    Item* equippedArmor_;
 
     int next_item_id_ = 0;
 public:
@@ -41,8 +41,8 @@ public:
     int getCompletedMissions() const { return successful_contracts_; }
     Stats GetStats() const { return stats; }
     const std::vector<Item>& GetInventory() const { return inventory_; }
-    std::optional<Item> GetEquippedWeapon() const { return equippedWeapon_; }
-    std::optional<Item> GetEquippedArmor() const { return equippedArmor_; }
+    Item* GetEquippedWeapon() const { return equippedWeapon_; }
+    Item* GetEquippedArmor() const { return equippedArmor_; }
     void setMoney(int toAdd) { money_ += toAdd; }
 	void setAbilityPoints(int points) { ability_points_ += points; }
 	void setHp(int hp) { stats.hp += hp; }

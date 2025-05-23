@@ -1,3 +1,3 @@
-name;hp;dmg;exp
-male civilian;20;5;10
-female civilian;20;5;10
+name;hp;dmg;exp;sex
+male civilian;20;5;10;0
+female civilian;20;5;10;1

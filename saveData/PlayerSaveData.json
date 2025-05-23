@@ -6,17 +6,29 @@
     "hp": 100,
     "inventory": [
         {
+            "effect": 5,
+            "effect_type": "dmg",
             "id": 0,
+            "instanceID": 1,
+            "item_sound": 6,
             "name": "Pistol",
             "type": "weapon"
         },
         {
+            "effect": -5,
+            "effect_type": "dmg",
             "id": 10,
+            "instanceID": 2,
+            "item_sound": -1,
             "name": "Suit",
             "type": "armor"
         },
         {
+            "effect": 5,
+            "effect_type": "hp",
             "id": 20,
+            "instanceID": 3,
+            "item_sound": -1,
             "name": "Medkit",
             "type": "consumable"
         }
@@ -24,9 +36,14 @@
     "level": 1,
     "money": 50,
     "mp": 50,
-    "rank": 3,
+    "rank": 4,
     "story_flags": [
         true,
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false,
         false

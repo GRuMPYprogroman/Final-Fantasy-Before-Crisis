@@ -47,7 +47,7 @@ Message::Message(story_flags_ numb, std::shared_ptr<RenderService> render_servic
 
 		SaveData data = j.get<SaveData>();
 
-		if (!data.story_flags[static_cast<int>(story_flags_::Initial)]) {
+		if (!data.story_flags[static_cast<int>(numb)]) {
 			displayMessage();
 		}
 

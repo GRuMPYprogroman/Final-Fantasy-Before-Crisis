@@ -37,7 +37,7 @@ private:
     std::vector<Contract>  all_contracts_;
     std::vector<std::shared_ptr<Button>> contract_buttons_;
 
-    int required_contract_id_;
+    static inline int required_contract_id_ = 1;
 public:
     ContractsPanel(std::shared_ptr<RenderService> render_service,
         std::shared_ptr<AudioService> audio_service,

@@ -21,7 +21,7 @@ GameplayState::GameplayState(
 	registerPanels();
 	setupNavButtons();
     if (!panelFactories_.empty()) {
-        switchTo(panelFactories_.begin()->first);
+        switchTo(panelOrder_.at(2));
     }
 
     audio_service_->playMusic(MusicID::GameplayTheme, 0);
@@ -38,6 +38,8 @@ void GameplayState::update(float& dt)
 
 void GameplayState::render()
 {
+    render_service_->getRenderWindow().draw(panels_area_);
+
     if (activePanel_) activePanel_->render();
     for (auto& button : navButtons_) {
         render_service_->getRenderWindow().draw(button->getBackground());
@@ -52,36 +54,47 @@ void GameplayState::handleInput(const sf::Event& evt)
 }
 
 void GameplayState::registerPanels() {
-    panelFactories_.emplace("Inventory",
-        [this]() -> std::unique_ptr<IGameplayPanel> {
-            return std::make_unique<InventoryPanel>(render_service_,audio_service_,player_);
-        }
-    );
-    panelFactories_.emplace("Save",
-        [this]() -> std::unique_ptr<IGameplayPanel> {
-            return std::make_unique<SavePanel>(render_service_, audio_service_,player_);
-        }
-    );
-    panelFactories_.emplace("Exit",
-        [this]() -> std::unique_ptr<IGameplayPanel> {
-            return std::make_unique<PauseMenuPanel>(render_service_, audio_service_, state_service_);
-        }
-    );
-    panelFactories_.emplace("Shop",
-        [this]() -> std::unique_ptr<IGameplayPanel> {
-            return std::make_unique<ShopPanel>(render_service_, audio_service_, player_, "../tables/Items.csv");
-        }
-    );
-    panelFactories_.emplace("Upgrade",
-        [this]() -> std::unique_ptr<IGameplayPanel> {
-            return std::make_unique<UpgradePanel>(render_service_, audio_service_, player_);
-        }
-    );
     panelFactories_.emplace("Contracts",
         [this]() -> std::unique_ptr<IGameplayPanel> {
             return std::make_unique<ContractsPanel>(render_service_, audio_service_, state_service_, player_, "../tables/Locations.csv");
         }
     );
+    panelOrder_.push_back("Contracts");
+
+    panelFactories_.emplace("Shop",
+        [this]() -> std::unique_ptr<IGameplayPanel> {
+            return std::make_unique<ShopPanel>(render_service_, audio_service_, player_, "../tables/Items.csv");
+        }
+    );
+    panelOrder_.push_back("Shop");
+
+    panelFactories_.emplace("Inventory",
+        [this]() -> std::unique_ptr<IGameplayPanel> {
+            return std::make_unique<InventoryPanel>(render_service_,audio_service_,player_);
+        }
+    );
+    panelOrder_.push_back("Inventory");
+
+    panelFactories_.emplace("Upgrade",
+        [this]() -> std::unique_ptr<IGameplayPanel> {
+            return std::make_unique<UpgradePanel>(render_service_, audio_service_, player_);
+        }
+    );
+    panelOrder_.push_back("Upgrade");
+
+    panelFactories_.emplace("Save",
+        [this]() -> std::unique_ptr<IGameplayPanel> {
+            return std::make_unique<SavePanel>(render_service_, audio_service_,player_);
+        }
+    );
+    panelOrder_.push_back("Save");
+
+    panelFactories_.emplace("Exit",
+        [this]() -> std::unique_ptr<IGameplayPanel> {
+            return std::make_unique<PauseMenuPanel>(render_service_, audio_service_, state_service_);
+        }
+    );
+    panelOrder_.push_back("Exit");
 }
 
 
@@ -101,17 +114,26 @@ void GameplayState::setupNavButtons() {
 
     float totalWidth = count * buttonWidth + (count - 1) * spacing;
     float startX = (winX - totalWidth) / 2.f;
-    float yPos = winY * 0.75f + 30.f;
+    float yPos = winY * 0.75f + 70.f;
+
+    panels_area_.setPosition({ 0.f, yPos - 20.f });
+    panels_area_.setSize({ winX,winY / 4.f});
+    panels_area_.setFillColor({ 40,40,40});
 
     font_ = std::make_shared<sf::Font>(render_service_->getDefaultFont());
     size_t idx = 0;
-    for (auto& [key, factory] : panelFactories_) {
+    for (auto& key : panelOrder_) {
+        auto& factory = panelFactories_.at(key);
         float xPos = startX + idx * (buttonWidth + spacing);
         navButtons_.emplace_back(
-            std::make_shared<Button>(key, *font_, sf::Vector2f(xPos, yPos), [this, &key_ = key]() {
-                audio_service_->playSound(SoundID::Click);
-                switchTo(key_);
-                },audio_service_)
+            std::make_shared<Button>(
+                key, *font_, sf::Vector2f(xPos, yPos),
+                [this, key]() {
+                    audio_service_->playSound(SoundID::Click);
+                    switchTo(key);
+                },
+                audio_service_
+            )
         );
         ++idx;
     }

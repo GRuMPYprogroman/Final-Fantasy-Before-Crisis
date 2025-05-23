@@ -1,14 +1,16 @@
 ﻿#include "CharacterManager.h"
 #include "iostream"
+#define startRank = 4
+ 
 
-Character::Character() : level(1), exp(0), ability_points_(1), money_(50), rank_(3), successful_contracts_(0){
-    stats.hp = 100;
+Character::Character() : level(10), exp(0), ability_points_(1), money_(5000), rank_(4), successful_contracts_(0){
+    stats.hp = 100000;
     stats.mp = 50;
     stats.strength = 10;
 
-    AddItem({ 0, "Pistol", "weapon" , 5, "dmg"});
-    AddItem({ 10, "Suit", "armor",-5,"dmg" });
-    AddItem({ 20,"Medkit", "consumable",5,"hp" });
+    AddItem({ 0, "Pistol", "weapon" , 5, "dmg",1,6});
+    AddItem({ 10, "Suit", "armor",-5,"dmg" ,2,-1 });
+    AddItem({ 20,"Medkit", "consumable",5,"hp",3,-1 });
 }
 
 void Character::GainExp(int amount) {
@@ -26,15 +28,15 @@ void Character::EquipItem(const int itemId) {
         if (item.instanceID == itemId) {
             if (item.type == "weapon") {
 				if (equippedWeapon_ && item.instanceID == equippedWeapon_->instanceID)
-					equippedWeapon_ = std::nullopt;
+					equippedWeapon_ = nullptr;
                 else
-					equippedWeapon_ = item;
+					equippedWeapon_ = new Item(item);
             }
             else if (item.type == "armor") {
 				if (equippedArmor_ && item.instanceID == equippedArmor_->instanceID)
-					equippedArmor_ = std::nullopt;
+					equippedArmor_ = nullptr;
 				else
-					equippedArmor_ = item;
+					equippedArmor_ = new Item(item);
             }
             return;
         }
@@ -69,7 +71,7 @@ SaveData Character::ToSaveData() const {
             file.close();
 
             SaveData existing = j.get<SaveData>();
-            data.story_flags = existing.story_flags;  // <-- сохраняем старые флаги
+            data.story_flags = existing.story_flags;
         }
     }
     catch (...) {
@@ -110,15 +112,15 @@ void Character::FromSaveData(const SaveData& data) {
 
     inventory_ = data.inventory;
 
-    equippedWeapon_.reset();
-    equippedArmor_.reset();
+    equippedWeapon_ = nullptr;
+    equippedArmor_ = nullptr;
 
     for (const auto& item : inventory_) {
         if (data.equippedWeaponId && item.id == data.equippedWeaponId) {
-            equippedWeapon_ = item;
+            equippedWeapon_ = new Item(item);
         }
         if (data.equippedArmorId && item.id == data.equippedArmorId) {
-            equippedArmor_ = item;
+            equippedArmor_ = new Item(item);
         }
     }
 }
@@ -128,8 +130,11 @@ bool Character::RemoveItem(int id) {
         [id](const Item& item) { return item.id == id; });
     if (it != inventory_.end()) {
 		if (equippedWeapon_ && equippedWeapon_->id == id) {
-			equippedWeapon_.reset();
+			equippedWeapon_ = nullptr;
 		}
+        if (equippedArmor_ && equippedArmor_->id == id) {
+            equippedArmor_ = nullptr;
+        }
         inventory_.erase(it);
         return true;
     }

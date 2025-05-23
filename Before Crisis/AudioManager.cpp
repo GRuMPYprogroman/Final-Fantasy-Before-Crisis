@@ -23,7 +23,13 @@ void AudioManager::loadAllSounds()
 		{SoundID::Buy, "../sounds/buy.ogg"},
         {SoundID::Inventory, "../sounds/inventory.wav"},
 		{SoundID::Upgrade, "../sounds/upgrade.wav"},
-        {SoundID::Flip, "../sounds/book_flip.ogg"}
+        {SoundID::Flip, "../sounds/book_flip.ogg"},
+        {SoundID::Pistol, "../sounds/pistol.wav"},
+        {SoundID::Rifle, "../sounds/rifle.wav"},
+        {SoundID::ColdWeapon, "../sounds/coldWeapon.ogg"},
+        {SoundID::Punch, "../sounds/Punch.flac"},
+        {SoundID::MaleScream, "../sounds/maleScream.ogg"},
+        {SoundID::FemaleScream, "../sounds/female.ogg"},
     };
 
     for (auto& [id, path] : soundFiles) {
@@ -39,7 +45,9 @@ void AudioManager::loadAllMusic()
 {
      _musicFiles = {
          { MusicID::MenuTheme,      "../music/mainMenuTheme.ogg" },
-         { MusicID::GameplayTheme, "../music/GameplayTheme.ogg" }
+         { MusicID::GameplayTheme, "../music/GameplayTheme.ogg" },
+         { MusicID::ExplorationTheme, "../music/explorationTheme.ogg" },
+         { MusicID::BattleTheme, "../music/battleTheme.mp3" }
     };
 }
 
@@ -76,6 +84,11 @@ void AudioManager::playMusic(MusicID id, float fadeInSec)
     if (it == _musicFiles.end()) {
         std::cerr << "Music ID not found" << std::endl;
         return;
+    }
+
+    if (_currentMusic) {
+        _currentMusic->stop();
+        _currentMusic.reset();
     }
 
     _currentMusic = std::make_unique<sf::Music>();

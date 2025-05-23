@@ -1,18 +1,38 @@
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\vc143.pdb
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\vc143.idb
-d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\statestack.obj
-d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\renderer.obj
-d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\monster.obj
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\main.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\upgradepanel.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\shoppanel.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\message.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\menustate.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\inventorypanel.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\gameplaystate.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\gamemanager.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\explorationstate.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\contractspanel.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\combatstate.obj
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\button.obj
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\audiomanager.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\monster.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\statestack.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\renderer.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\charactermanager.obj
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\characterio.obj
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\audioservice.h.ifc
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\audioservice.h.ifc.d.json
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\audioservice.h.obj
+d:\vs studio projects\beforecrisis\before crisis\debug\before crisis.exe
+d:\vs studio projects\beforecrisis\before crisis\debug\before crisis.pdb
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\audioservice.h.module.json
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.ilk
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\cl.command.1.tlog
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\cl.items.tlog
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\cl.read.1.tlog
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\cl.write.1.tlog
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\link.command.1.tlog
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\link.read.1.tlog
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\link.secondary.1.tlog
+d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis.tlog\link.write.1.tlog
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis_md.tlog\cl.command.1.tlog
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis_md.tlog\microsoft.build.cpptasks.cl.read.1.tlog
 d:\vs studio projects\beforecrisis\before crisis\before crisis\debug\before crisis_md.tlog\microsoft.build.cpptasks.cl.write.1.tlog

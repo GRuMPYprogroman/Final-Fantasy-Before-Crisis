@@ -7,11 +7,19 @@ enum class SoundID
     Buy,
     Inventory,
     Upgrade,
-    Flip
+    Flip,
+    Pistol = 6,
+    Rifle = 7,
+    ColdWeapon = 8,
+    Punch,
+    MaleScream,
+    FemaleScream
 };
 
 enum class MusicID
 {
     MenuTheme,
-    GameplayTheme
+    GameplayTheme,
+    BattleTheme,
+    ExplorationTheme
 };

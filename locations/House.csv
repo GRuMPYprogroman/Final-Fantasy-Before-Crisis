@@ -1,6 +1,6 @@
 id;title;description;neighbours
-1;Hall;You entered private house;2 3 4 5
-2;Kitchen;You enter kitchen;1
-3;Bathroom;You enter bathroom;1
-4;Living Room;You enter living room;1
-5;Bedroom;You enter bedroom;1
+1;Hall;You surreptitiously unlock the door and enter private house;2 3 4 5
+2;Kitchen;There is some unfinished food on the table;1
+3;Bathroom;Cozy little room;1
+4;Living Room;Here was hustle and bustle once, but now there's only silence…;1
+5;Bedroom;Ordinary room with an unmade bed;1

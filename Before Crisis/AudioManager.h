@@ -10,7 +10,7 @@ private:
 	std::unordered_map<MusicID, std::string> _musicFiles;
 	std::vector<std::unique_ptr<sf::Sound>> _activeSounds;
 	std::unique_ptr<sf::Music> _currentMusic;
-	float _masterVolume = 1.f;
+	float _masterVolume = 0.5f;
 	void loadAllSounds();
 	void loadAllMusic();
 	sf::Sound* spawnSoundInstance(SoundID id);
@@ -22,7 +22,7 @@ private:
 	enum class FadeState { Idle, FadingIn, FadingOut } _fadeState = FadeState::Idle;
 public:
 	bool init();
-	void playSound(SoundID id, float volume = 60.f, float pitch = 1.f) override;
+	void playSound(SoundID id, float volume = 30.f, float pitch = 1.f) override;
 	void playMusic(MusicID id, float fadeInSec = 0.5f) override;
 	void stopMusic(float fadeOutSec = 0.5f) override;
 	void setMasterVolume(float vol) override;
